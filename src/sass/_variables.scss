@@ -1,0 +1,24 @@
+/* Основні кольори */
+$white-color: #fcfcfc;
+$black-color: #131313;
+
+/* Колір фону*/
+$background-color: #84a278;
+
+/* Колір кнопок */
+$default-color: #f8d24e;
+$accent-color: #0a8817;
+$disabled-color: #ababab;
+
+/* Анімація */
+$display-time: 250ms;
+$function-time: cubic-bezier(0.4, 0, 0.2, 1);
+
+/* z-index */
+$main-index: 1000;
+$second-index: 100;
+$third-index: 10;
+
+$mob: 480px;
+$tab: 768px;
+$desk: 1200px;
