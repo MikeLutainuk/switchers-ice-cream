@@ -1,3 +1,6 @@
 @import './common';
 @import './example';
-@import './variables';
+
+@import './utils/variables';
+@import './utils/reset';
+@import './components/products';
