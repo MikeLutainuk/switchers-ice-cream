@@ -1,0 +1,73 @@
+<section class="section hero">
+    <div class="container">
+        <div class="hero__left-side">
+            <h1 class="hero__title">
+                ice cream made with
+                <span class="hero__passion">passion</span>
+            </h1>
+
+            <div class="hero__buttons">
+                <a class="hero__link-products contour-btn contour-btn--smaller" href="#products">
+                    Products
+                </a>
+                <a class="hero__link-how-its invisible-btn invisible-btn--smaller" href="#about">
+                    How it’s made?
+                </a>
+            </div>
+            <div class="hero__lorem-block">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="
+              ./images/hero/many-ice-creams_desktop@1х.png 1x,
+              ./images/hero/many-ice-creams_desktop@2x.png 2x
+            " type="image/png" />
+                    <source media="(min-width: 768px)" srcset="
+              ./images/hero/many-ice-creams_tablet@1x.png 1x,
+              ./images/hero/many-ice-creams_tablet@2x.png 2x
+            " type="image/png" />
+                    <img src="./images/hero/many-ice-creams_tablet@1x.png" alt="Many ice Creams on the plate"
+                        class="hero__ice-cream-plate" />
+                </picture>
+
+                <div class="hero__lorem-ipsum">
+                    <p class="hero__lorem-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et
+                    </p>
+                    <button class="invisible-btn invisible-btn--arrow" type="button" data-modal-open="0">
+                        <svg width="32" height="40" class="hero__arrowhead-icon">
+                            <use href="./icons/icons.svg#arrow"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__right-side">
+            <picture>
+                <source media="(min-width: 1200px)" srcset="
+            ./images/hero/ice-cream_desktop@1x.png 1x,
+            ./images/hero/ice-cream_desktop@2x.png 2x
+          " type="image/png" />
+                <source media="(min-width: 768px)" srcset="
+            ./images/hero/ice-cream_tablet@1x.png 1x,
+            ./images/hero/ice-cream_tablet@2x.png 2x
+          " type="image/png" />
+                <source media="(min-width: 480px)" srcset="
+            ./images/hero/ice-cream_mobile@1x.png 1x,
+            ./images/hero/ice-cream_mobile@2x.png 2x
+          " type="image/png" />
+                <img src="./images/hero/ice-cream_mobile@1x.png" alt="Ice Creame Company"
+                    class="hero__ice-cream animate__animated animate__tada animate__delay-1s" />
+            </picture>
+
+            <div class="hero__advantages">
+                <p class="hero__advant-text">
+                    <span class="hero__advant-span">16<br /></span> cafes
+                </p>
+                <p class="hero__advant-text">
+                    <span class="hero__advant-span">23<br /></span> food trucks
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
