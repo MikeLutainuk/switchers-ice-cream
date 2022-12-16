@@ -1,0 +1,85 @@
+<header class="header">
+    <div class="container flex-container">      
+        <a href="./index.html" class="logo">
+            <img 
+            src="./images/header/logo_480.png" 
+            alt="Логотип сайту"
+            width="40"
+            height="37"
+            loading="lazy" />
+        </a>
+
+        <!--Navigation-->
+      <nav class="navigation-container"></nav>
+         <ul class="navigation">
+          <li class="navigation__item">
+            <a href="./index.html" class="navigation__link">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#advantages" class="navigation__link">How it’s made?</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#products" class="navigation__link">Our products</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#contacts" class="navigation__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      
+      <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+      <svg class="icon-menu_open" width="32" height="32">
+        <use href="./images/header/icons.svg#icon_open"></use>
+      </svg>
+        </svg>
+      </button>
+
+      <button type="button" class="button" data-modal-open>Buy now
+        <svg class="icon-arrow" width="12" height="12">
+         <use href="./images/header/icons.svg#arrow-right-bold"></use>
+        </svg>
+      </button>
+
+      <!--Mobile menu-->
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg class="icon-menu_close" width="32" height="32">
+            <use href="./images/header/icons.svg#icon_close"></use>
+          </svg>
+        </button>
+  
+        <ul class="mobile-nav">
+          <li class="mobile-nav__item">
+            <a href="#Home" class="mobile-nav__link current">Home</a>
+          </li>
+          <li class="mobile-nav__item">
+            <a href="#How it’s made?" class="mobile-nav__link">How it’s made?</a>
+          </li>
+          <li class="mobile-nav__item">
+            <a href="#Our products" class="mobile-nav__link">Our products</a>
+        </li>
+          <li class="mobile-nav__item">
+            <a href="#Contact" class="mobile-nav__link">Contact</a>
+        </li>
+        </ul>
+  
+        <ul class="mobile-cont">
+          <li class="mobile-cont__item">
+            <a href="tel:+380961111111" class="mobile-cont__link">
+              +38 096 111 11 11</a>
+          </li>
+          <li class="mobile-cont__item">
+            <a href="mailto:info@devstudio.com" class="mobile-cont__link-mail">
+              info@devstudio.com</a>
+          </li>
+        </ul>
+  
+      </div>
+    </div>
+</header> 
+

@@ -1,0 +1,254 @@
+.header {
+    padding-top: 12px;
+
+    @media screen and (min-width: $tab) {
+        padding-top: 20px; 
+    }
+
+    @media screen and (min-width: $desk) {
+        padding-top: 8px; 
+    }
+       
+  & .flex-container {
+     display: flex;
+     align-items: center;    
+
+      @media screen and (min-width: $desk) {
+        justify-content: space-between;
+        }
+    }
+
+}  
+
+.navigation-container {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    display: none;
+
+    @media screen and (min-width: $desk) {
+        display: flex;
+    }
+}
+.navigation__item:not(:last-child) {
+    margin-right: 28px;
+}
+.navigation-link {
+
+       display: block;
+       padding-bottom: 13px;
+        
+       font-weight: 700;
+       font-size: 16px; 
+       line-height: 1.25;
+       color: #FCFCFC;
+       text-decoration: none;
+    
+    
+
+
+
+}
+  
+
+//button
+.button {
+
+    display: none;
+
+    @media screen and (min-width: $tab) {
+        display: block;
+
+        padding: 12px 35px;
+        margin-left: 32px;
+  
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 1.2;
+        cursor: pointer;
+        border-color: transparent;
+        border-radius: 10px;
+        color: #000;
+        background-color: #F8D24E;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        transition: background-color $display-time $function-time;
+        text-align: center;
+        
+      &:hover,
+      &:focus {
+         background-color: #188ce8;
+         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        }
+        
+    }
+    
+
+  @media screen and (min-width: $desk) {
+     padding: 10px 32px;
+     margin: 0;
+    }
+}
+.icon-arrow {
+    margin-left: 4px;
+}
+
+//mobile menu
+.menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin-left: auto;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+  }
+  
+  @media (min-width: $desk) {
+    .menu-toggle {
+      display: none;
+    }
+  }
+  
+  .menu-toggle:hover,
+  .menu-toggle:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  
+    padding: 48px 40px;
+  
+    display: flex;
+    flex-direction: column;
+  
+    background-color: $white-color;
+    z-index: 999;
+  
+    transform: translateX(100%);
+    transition: transform $display-time $function-time;
+  }
+  
+  .menu-container.is-open {
+    transform: translateX(0);
+  }
+  
+  .menu-container .menu-toggle {
+    position: absolute;
+    top: 21px;
+    right: 25px;
+  
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    
+  }
+  
+  .mobile-nav {
+      margin-bottom: auto;  
+  
+    &__item:not(:last-child){
+      margin-bottom:  32px;
+      }
+  
+  
+    &__link {
+      
+      
+  
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+      color: $black-color;
+      text-decoration: none;
+  
+  
+      &.current {
+        color: $accent-color;
+      }
+    }
+  }
+  
+  .mobile-cont {
+     margin-bottom: 64px;
+  
+  
+      &__item:not(:last-child){
+        margin-bottom:  32px;
+      }
+  
+      &__link {       
+      
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        color: $accent-color;
+        text-decoration: none;
+          
+      }
+      
+      &__link-mail {
+  
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1.16;
+        letter-spacing: 0.02em;
+        color: $black-color;        
+        text-decoration: none;
+      }
+        
+  }
+  
+  .mobile-soc {
+    
+    display: flex;  
+      
+    &__item:not(:last-child) {
+  
+      display: flex;
+      align-items: center;
+  
+  
+      &::after {
+        content: '';
+  
+        width: 22px;
+        
+        border: border rgba(33, 33, 33, 0.2);
+        transform: rotate(90deg);
+      }
+  
+    }
+  
+    &__link {        
+      
+      line-height: 1.22;
+      letter-spacing: 0.02em;
+      color: $accent-color;        
+      text-decoration: none;
+      font-weight: 500;        
+      font-size: 18px;
+    }
+  
+  }
+  
+  
+  
+  
+  
