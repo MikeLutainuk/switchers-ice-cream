@@ -239,3 +239,15 @@
         }
      }
 }
+@media screen and (min-width: $tab) {
+    .about__list > .about__item {
+        width: 152x;
+        margin-right: 80px;
+    }
+}
+@media screen and (min-width: $desk) {
+    .about__list > .about__item {
+        width: 368px;
+        margin-right: 32px;
+    }
+}
