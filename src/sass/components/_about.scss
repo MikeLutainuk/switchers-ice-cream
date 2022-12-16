@@ -5,7 +5,7 @@
     margin-right: auto;
     margin-left: auto;
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: $mob) {
         width: 450px;
         
       }
@@ -14,7 +14,7 @@
         flex-direction: column;
         align-items: center;
       }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $tab) {
         align-items: baseline;
     
       }
@@ -38,10 +38,10 @@
         color: $white-color;
         margin-bottom: 12px;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $tab) {
             font-size: 22px;
         }
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: $desk) {
             font-size: 30px;
         }
       }
@@ -56,11 +56,11 @@
         text-transform: uppercase;
         color: $white-color;
         margin-bottom: 32px;
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $tab) {
             font-size: 34px;
             margin-bottom: 72px;
         }
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: $desk) {
             font-size: 36px;
             margin-bottom: 82px;
         }
@@ -70,22 +70,27 @@
         display: block;
         text-align: center;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $tab) {
             display: flex;
             align-items: baseline;
+            margin-bottom: 60px;
         }
       }
       &.img {
         border-radius: 140px;
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $tab) {
             border-radius: 1228px;
         }
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: $desk) {
             border-radius: 1852.2px;
         }
       }
       &__content {
         list-style: none;
+        
+        @media screen and (max-width: $mob) {
+            margin-top: 40px;
+        }
       }
       &__text {
         text-align: center;
@@ -98,14 +103,14 @@
         color: $white-color;
         
 
-        @media screen and (min-width: 480px) {
+        @media screen and (min-width: $mob) {
             width: 220px;
         }
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $tab) {
             width: 334px;
             line-height: calc(21 / 12);
         }
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: $desk) {
             width: 463px;
             font-size: 16px;
             line-height: calc(28 / 16);
@@ -119,9 +124,118 @@
             margin-bottom: 4px;
         }
       }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $tab) {
         &__text:not(:last-child) {
             margin-bottom: 8px;
         }
       }
+      &-button {
+        position: relative;
+        cursor: pointer;
+        width: 164px;
+        height: 42px;
+        border-radius: 10px;
+        background-color: $default-color;
+        border: none;
+        @media screen and (max-width: 767px) {
+           margin-top: 10px; 
+        }
+        @media screen and (min-width: $tab) {
+            margin-top: 32px;
+        }
+        @media screen and (min-width: $desk) {
+            margin-top: 54px;
+        }
+      }
+      &-button__text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: calc(18 / 14);
+        text-align: center;
+        color: #000000;
+      }
+      &-button__icon {
+        position: absolute;
+        top: 20%;
+        left: 121px;
+        fill: #000000;;
+      }
+      &-button:hover {
+        background-color: $accent-color;
+        color: #000000;
+        fill: #000000;
+      }
+      &-button:focus {
+        background-color: $accent-color;
+        color: $white-color;
+        fill: $white-color;
+      }
+      &-button:disabled {
+        background-color: $disabled-color;
+        color: #000000;
+        fill: #000000;
+      }
+      &__list {
+        list-style: none;
+        @media screen and (max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media screen and (min-width: $tab) {
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+      }
+      &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background-color: $default-color;
+        border-radius: 25px;
+      }
+      &__icon {
+        fill: #000000;
+      }
+     &__name {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: calc(44 / 36);
+        text-align: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $white-color;
+        @media screen and (min-width: $tab) {
+            font-size: 48px;
+            line-height: calc(59 / 48);
+        }
+        @media screen and (min-width: $desk) {
+            font-size: 58px;
+            line-height: calc(71 / 58);
+        }
+     }
+     &__description {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: calc(28 / 12);
+        text-align: center;
+        color: $white-color;
+        @media screen and (min-width: $tab) {
+            font-size: 14px;
+            line-height: calc(24 / 14);
+        }
+        @media screen and (min-width: $desk) {
+            font-size: 16px;
+            line-height: calc(28 / 16);
+            letter-spacing: 0.02em;
+        }
+     }
 }
