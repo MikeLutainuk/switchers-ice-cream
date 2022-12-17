@@ -1,7 +1,22 @@
 <header class="header">
   <div class="container flex-container">
     <a href="./index.html" class="logo">
-      <img src="./images/header/logo_480.png" alt="Логотип сайту" width="40" height="37" loading="lazy" />
+      <img 
+      srcset="
+      ./images/header/logo_40.png 40w,  
+      ./images/header/logo_48.png 48w, 
+      ./images/header/logo_60.png 60w,
+      ./images/header/logo_80.png 80w,
+      ./images/header/logo_96.png 96w,
+      ./images/header/logo_120.png 120w
+      "
+      sizes="(min-width: 1200px) 60px, (min-width: 768px) 48px, (min-width: 480px) 40px, 100vw"
+      src="./images/header/logo_40.png" 
+      alt="Логотип сайту" 
+      width="40" 
+      height="37" 
+      loading="lazy" 
+      />
     </a>
 
     <!--Navigation-->
@@ -23,7 +38,11 @@
     </nav>
 
 
-    <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+    <button 
+      class="menu-toggle js-open-menu" 
+      aria-expanded="false" 
+      aria-controls="mobile-menu"
+      >
       <svg class="icon-menu_open" width="32" height="32">
         <use href="./images/header/icons.svg#icon_open"></use>
       </svg>
