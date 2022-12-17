@@ -1,9 +1,9 @@
-.contacts {
-    @extend %section;
-}
+// .contacts {
+//     @extend %section;
+// }
 
 .contacts__list {
-    @extend %list;
+    // @extend %list;
     display: flex;
     
     @media screen and (max-width: 767px) {
