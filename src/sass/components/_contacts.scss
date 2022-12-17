@@ -257,6 +257,7 @@
 
 .contacts__btn--transparent {
     color: #000000;
+    background-color: transparent;
     border: 2px solid #F8D24E;
     border-radius: 10px;
     cursor: pointer;
@@ -267,7 +268,7 @@
     &:hover, 
     &:focus {
     color: #131313;
-    background-color: #F8D24E;
+    background-color: #FCFCFC;
     }
 }
 
