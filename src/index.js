@@ -3,3 +3,4 @@
 // import './js/customer-reviews';
 import './js/header-modal';
 // import './js/sliding-menu';
+import './js/modal-prod-menu';

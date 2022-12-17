@@ -1,0 +1,60 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="modal__close" data-modal-close>
+      <svg class="modal__button-X" width="12" height="12">
+        <use href="./images/modal-mob-menu/modal_x.svg#cross"></use>
+      </svg>
+    </button>
+
+    <form class="order">
+      <div><h2 class="order__text">Buy now</h2></div>
+      <ul class="assortment-list list">
+        <li class="assortment__item assortment__item--first">
+          <div class="assortment__decor assortment__decor--first"></div>
+          <h3 class="assortment-list__title">ice cream</h3>
+        </li>
+        <li class="assortment__item assortment__item--second">
+          <div class="assortment__decor assortment__decor--second"></div>
+          <h3 class="assortment-list__title">ice coffee</h3>
+        </li>
+        <li class="assortment__item assortment__item--third">
+          <div class="assortment__decor assortment__decor--third"></div>
+          <h3 class="assortment-list__title">milkshakes</h3>
+        </li>
+      </ul>
+      <div class="order__form">
+        <label class="order__lable" for="name"></label>
+        <input
+          class="order__input"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Name"
+        />
+      </div>
+      <div class="order__form">
+        <label class="order__lable" for="tel"> </label>
+        <input
+          class="order__input"
+          type="tel"
+          name="phone"
+          id="tel"
+          placeholder="Phone"
+        />
+      </div>
+
+      <div class="order__form">
+        <label for="comment"> </label>
+        <textarea
+          class="order__textarea"
+          name="comment"
+          rows="2"
+          id="comment"
+          placeholder="Comment"
+        ></textarea>
+      </div>
+      <button class="submint" data-modal-close>Submint</button>
+    </form>
+  </div>
+</div>
+<script src="./js/modal-prod-menu.js"></script>
