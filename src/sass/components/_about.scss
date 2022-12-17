@@ -124,4 +124,53 @@
             margin-bottom: 8px;
         }
       }
+      &-button {
+        position: relative;
+        cursor: pointer;
+        width: 164px;
+        height: 42px;
+        border-radius: 10px;
+        background-color: $default-color;
+        border: none;
+        @media screen and (max-width: 767px) {
+           margin-top: 10px; 
+        }
+        @media screen and (min-width: $tab) {
+            margin-top: 32px;
+        }
+        @media screen and (min-width: $desk) {
+            margin-top: 54px;
+        }
+      }
+      &-button__text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: calc(18 / 14);
+        text-align: center;
+        color: #000000;
+      }
+      &-button__icon {
+        position: absolute;
+        top: 20%;
+        left: 121px;
+        fill: #000000;;
+      }
+      &-button:hover {
+        background-color: $accent-color;
+        color: #000000;
+        fill: #000000;
+      }
+      &-button:focus {
+        background-color: $accent-color;
+        color: $white-color;
+        fill: $white-color;
+      }
+      &-button:disabled {
+        background-color: $disabled-color;
+        color: #000000;
+        fill: #000000;
+      }
+     
 }
