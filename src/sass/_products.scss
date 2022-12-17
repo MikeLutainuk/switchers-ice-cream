@@ -1,16 +1,15 @@
 .product {
     background-position: center;
-    background-color: #FCFCFC;
+    background-color: $white-color;
     background-image: url(../images/products/bg_mobile.svg);
+        @media screen and (min-width: $tab) {
+            background-image: url(../images/products/bg_tablet.svg);
+        }
+    
+        @media screen and (min-width: $desk) {
+            background-image: url(../images/products/bg_desktop.svg);
+        }
 }
-
-    @media screen and (min-width: 768px) {
-        background-image: url(../images/products/bg_tablet.svg);
-    }
-
-    @media screen and (min-width: 1200px) {
-        background-image: url(../images/products/bg_desktop.svg);
-    }
 .product__label {
     margin-bottom: 12px;
     font-family: 'Montserrat';
@@ -20,12 +19,12 @@
     line-height: 1.22;
     text-align: center;
     text-transform: uppercase;
-        @media screen and (min-width: 768px) {
-                font-size: 22px;
-            }
-            @media screen and (min-width: 1200px) {
-                font-size: 30px;
-            }
+        @media screen and (min-width: $tab) {
+            font-size: 22px;
+        }
+        @media screen and (min-width: $desk) {
+            font-size: 30px;
+        }
 }
 .product__title {
     margin-bottom: 148px;
@@ -35,13 +34,12 @@
     text-align: center;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    @media screen and (min-width: 768px) {
-            margin-bottom: 200px;
+    @media screen and (min-width: $tab) {
+        margin-bottom: 200px;
         }
-    
-        @media screen and (min-width: 1200px) {
-            margin-bottom: 300px;
-        }
+    @media screen and (min-width: $desk) {
+        margin-bottom: 300px;
+    }
 }
 .product__item {
     display: flex;
@@ -59,13 +57,13 @@
             max-width: 440px;
         }
     
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $tab) {
             flex-basis: calc((100% - 32px) / 2);
             min-height: 430px;
             padding: 108px 26px 12px 26px;
         }
     
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: $desk) {
             flex-basis: calc((100% - 58px) / 2);
             min-height: 540px;
             padding: 165px 64px 60px 64px;
@@ -97,7 +95,7 @@
     box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
     width: 200px;
     height: 200px;
-    @media screen and (min-width: 1200px) {
+        @media screen and (min-width: $desk) {
             width: 300px;
             height: 300px;
         }
@@ -115,79 +113,78 @@
             background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
             box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
         }
-                &::before {
-                    content: '';
-                    position: absolute;
-                    top: -11px;
-                    left: 0;
-                    border-radius: 50%;
-                    width: 200px;
-                    height: 200px;
-                    display: block;
-                    @media screen and (min-width: 1200px) {
-                            top: -16px;
-                            width: 300px;
-                            height: 300px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: -11px;
+            left: 0;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: block;
+                 @media screen and (min-width: $desk) {
+                    top: -16px;
+                    width: 300px;
+                    height: 300px;
                     
+                 }
+                }
+        &--first::before {
+                background-image: url(../images/products/img_1_mobile@1x.jpg);
+                
+                @media (min-device-pixel-ratio: 2),
+                   (min-resolution: 192dpi),
+                   (min-resolution: 2dppx) {
+                    background-image: url(../images/products/img_1_mobile@2x.jpg)
+                   }
+                
+                @media screen and (min-width: $desk) {
+                    background-image: url(../images/products/img_1_desktop@1x.jpg);
+                    @media (min-device-pixel-ratio: 2),
+                       (min-resolution: 192dpi),
+                       (min-resolution: 2dppx) {
+                            background-image: url(../images/products/img_1_desktop@2x.jpg)
                         }
                 }
-                                &--first::before {
-                                    background-image: url(../images/products/img_1_mobile@1x.jpg);
+        }
+        &--second::before {
+                background-image: url(../images/products/img_2_mobile@1x.jpg);
                 
-                                    @media (min-device-pixel-ratio: 2),
-                                    (min-resolution: 192dpi),
-                                    (min-resolution: 2dppx) {
-                                        background-image: url(../images/products/img_1_mobile@2x.jpg)
-                                    }
+                @media (min-device-pixel-ratio: 2),
+                    (min-resolution: 192dpi),
+                    (min-resolution: 2dppx) {
+                    background-image: url(../images/products/img_2_mobile@2x.jpg)
+                    }
                 
-                                    @media screen and (min-width: 1200px) {
-                                        background-image: url(../images/products/img_1_desktop@1x.jpg);
+                @media screen and (min-width: $desk) {
+                    background-image: url(../images/products/img_2_desktop@1x.jpg);
                 
-                                        @media (min-device-pixel-ratio: 2),
-                                        (min-resolution: 192dpi),
-                                        (min-resolution: 2dppx) {
-                                            background-image: url(../images/products/img_1_desktop@2x.jpg)
-                                        }
-                                    }
-                                }
-                                &--second::before {
-                                    background-image: url(../images/products/img_2_mobile@1x.jpg);
-                
-                                    @media (min-device-pixel-ratio: 2),
-                                    (min-resolution: 192dpi),
-                                    (min-resolution: 2dppx) {
-                                        background-image: url(../images/products/img_2_mobile@2x.jpg)
-                                    }
-                
-                                    @media screen and (min-width: 1200px) {
-                                        background-image: url(../images/products/img_2_desktop@1x.jpg);
-                
-                                        @media (min-device-pixel-ratio: 2),
-                                        (min-resolution: 192dpi),
-                                        (min-resolution: 2dppx) {
-                                            background-image: url(../images/products/img_2_desktop@2x.jpg)
-                                        }
-                                    }
-                                }
-                                        &--third::before {
-                                            background-image: url(../images/products/img_3_mobile@1x.jpg);
+                    @media (min-device-pixel-ratio: 2),
+                        (min-resolution: 192dpi),
+                        (min-resolution: 2dppx) {
+                            background-image: url(../images/products/img_2_desktop@2x.jpg)
+                        }
+                }
+        }
+        &--third::before {
+                background-image: url(../images/products/img_3_mobile@1x.jpg);
                     
-                                            @media (min-device-pixel-ratio: 2),
-                                            (min-resolution: 192dpi),
-                                            (min-resolution: 2dppx) {
-                                                background-image: url(../images/products/img_3_mobile@2x.jpg)
-                                            }
+                @media (min-device-pixel-ratio: 2),
+                    (min-resolution: 192dpi),
+                    (min-resolution: 2dppx) {
+                    background-image: url(../images/products/img_3_mobile@2x.jpg)
+                    }
                     
-                                            @media screen and (min-width: 1200px) {
-                                                background-image: url(../images/products/img_3_desktop@1x.jpg);
+                @media screen and (min-width: $desk) {
+                    background-image: url(../images/products/img_3_desktop@1x.jpg);
                     
-                                                @media (min-device-pixel-ratio: 2),
-                                                (min-resolution: 192dpi),
-                                                (min-resolution: 2dppx) {
-                                                    background-image: url(../images/products/img_3_desktop@2x.jpg)
-                                                }
-                                            }
-                                        }
+                    @media (min-device-pixel-ratio: 2),
+                        (min-resolution: 192dpi),
+                        (min-resolution: 2dppx) {
+                            background-image: url(../images/products/img_3_desktop@2x.jpg)
+                        }
+                }
+        }
 }
 .product-list__title {
     margin-bottom: 40px;
@@ -198,12 +195,12 @@
     line-height: 1.22;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #131313;
-        @media screen and (min-width: 768px) {
+    color: $black-color;
+        @media screen and (min-width: $tab) {
                 font-size: 22px;
             }
         
-            @media screen and (min-width: 1200px) {
+        @media screen and (min-width: $desk) {
                 font-size: 30px;
             }
 }
@@ -216,8 +213,8 @@
     line-height: 1.78;
     text-align: center;
     letter-spacing: 0.04em;
-    color: #131313;
-        @media screen and (min-width: 1200px) {
+    color: $black-color;
+        @media screen and (min-width: $desk) {
                 font-size: 16px;
             }
 }
