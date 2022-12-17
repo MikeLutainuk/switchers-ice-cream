@@ -1,0 +1,296 @@
+.hero {
+  padding-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 45px;
+  }
+}
+
+.hero__left-side {
+  @media screen and (min-width: 768px) {
+    margin-right: auto;
+  }
+}
+
+.hero__title {
+  width: 247px;
+  margin-bottom: 32px;
+  font-family: 'Seymour One';
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 33px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $white-color;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 367px;
+    font-size: 38px;
+    line-height: 48px;
+    margin-bottom: 28px;
+  }
+}
+
+.hero__passion {
+  font-size: 34px;
+  line-height: calc(33 / 34);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 38px;
+    line-height: calc(38 / 48);
+  }
+}
+
+.hero__lorem-block {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-top: 28px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 60px;
+  }
+}
+
+.hero__lorem-ipsum {
+  position: relative;
+  margin-left: 33px;
+  width: 151px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.hero__arrowhead-icon {
+  fill: $white-color;
+}
+
+.hero__ice-cream-plate {
+  width: 152px;
+
+  // animation
+  scale: 1;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: linear;
+  transition-delay: 50ms;
+  // end animation
+
+  // @media screen and (min-width: 1200px) {
+  //   width: 225px;
+  // }
+}
+
+.hero__ice-cream-plate:hover {
+  transform: scale(1.05) rotate(360deg);
+}
+
+.hero__lorem-text {
+  font-size: 12px;
+  line-height: 1.4;
+  color: $white-color;
+
+  @media screen and (min-width: 1200px) {
+    width: 230px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: $white-color;
+  }
+}
+
+.hero__right-side {
+  height: 239px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
+}
+
+.hero__ice-cream {
+  position: absolute;
+  height: 325px;
+  left: 16%;
+  bottom: -53px;
+
+  @media screen and (min-width: 480px) {
+    height: 390px;
+    bottom: -64px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 470px;
+    bottom: -59px;
+    left: 45%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 760px;
+    bottom: -100px;
+    left: 45%;
+  }
+}
+
+.hero__advantages {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 2px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 34px;
+  }
+}
+
+.hero__advant-text {
+  font-size: 8px;
+  line-height: calc(10 / 8);
+  text-align: right;
+  color: $white-color;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: calc(17 / 14);
+  }
+}
+
+.hero__advant-span {
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: right;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $background-color;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 46px;
+    line-height: calc(56 / 46);
+  }
+}
+
+// -----------------------
+// BUTTONS
+// -----------------------
+.hero__buttons {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  z-index: 10;
+}
+.hero__buttons--smaller {
+  width: 62px;
+  height: 24px;
+}
+
+.contour-btn--smaller,
+.invisible-btn--smaller {
+  @media screen and (max-width: 1199px) {
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 5px 10px;
+    color: $black-color;
+  }
+}
+
+.contour-btn--smaller:focus .hero__link-products {
+  color: $white-color;
+}
+
+.invisible-btn--smaller:hover .hero__link-how-its,
+.invisible-btn--smaller:focus .hero__link-how-its {
+  color: $accent-color;}
+
+.invisible-btn--arrow {
+  padding: 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 0px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    left: 0px;
+    bottom: 25px;
+  }
+}
+
+.hero__link-products {
+  color: $black-color;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: calc(10 / 8);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: calc(18 / 14);
+  }
+}
+
+.hero__link-how-its {
+  color: $default-color;
+  text-decoration: underline;
+}
+
+// ----------------------------
+// FRAME: DOTS
+// ----------------------------
+.hero .container {
+  position: relative;
+//   background-image: url('../images/hero/frame_mobile@1x.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    height: 350px;
+    // background-image: url('../images/hero/frame_tablet@1x.png');
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    height: 572px;
+    // background-image: url('../images/hero/frame_desktop@1x.png');
+  }
+}
+
+// @media (min-device-pixel-ratio: 2),
+//   (-webkit-min-device-pixel-ratio: 2),
+//   (min-resolution: 192dpi),
+//   (min-resolution: 2dppx) {
+  // .hero .container {
+  //   background-image: url('../images/hero/frame_mobile@2x.png');
+
+  //   @media screen and (min-width: 768px) {
+  //     background-image: url('../images/hero/frame_tablet@2x.png');
+  //   }
+
+  //   @media screen and (min-width: 1200px) {
+  //     background-image: url('../images/hero/frame_desktop@2x.png');
+  //   }
+  // }

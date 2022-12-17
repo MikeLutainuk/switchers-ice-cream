@@ -1,7 +1,9 @@
 @import './common';
-@import './example';
-@import './products';
-
+// @import './example';
 
 @import './utils/variables';
-@import './components/reset';
+@import './utils/reset';
+@import './components/products';
+@import './components/hero';
+@import './components/header';
+@import './components/advantages';
