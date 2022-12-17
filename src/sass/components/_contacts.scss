@@ -102,6 +102,107 @@
     }  
 }
 
+.contacts__address {
+    display: block;
+    height: 95px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #E1E1E1;
+
+    @media screen and (min-width: 768px) {
+        height: 142px;
+        margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        height: 121px;
+    }
+}
+
+.contacts__title {
+    display: block;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(22/12);
+    letter-spacing: 0.04em;
+    color: #131313;
+
+    &.location {
+        color: #D6936D;
+    }
+
+    &.time {
+        color: #ABABAB;;
+    }
+
+    &.weekend {
+        margin-top: 8px;
+    }
+    
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: calc(26/14);   
+    }
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 16px;
+        line-height: calc(30/16);
+        
+        &.weekend {
+            margin-top: 12px;
+        }
+    }
+}
+
+.contacts__schedule {
+    display: block;
+    height: 121px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #E1E1E1;
+
+    @media screen and (min-width: 768px) {
+        height: 145px;
+        margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        height: 165px;
+    }
+}
+
+.contacts__tel {
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: calc(19/12);
+    
+    @media screen and (min-width: 768px) {
+        margin-bottom: 4px;
+        font-size: 14px;
+        line-height: calc(21/14);
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 16px;
+        line-height: calc(24/16);
+    }
+}
+
+.contacts__mail {
+    font-size: 12px;
+    line-height: calc(19/12);
+
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: calc(21/14);
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 16px;
+        line-height: calc(24/16);
+    }
+}
+
 .contacts__btn-wrap {
     display: flex;
     gap: 16px;
