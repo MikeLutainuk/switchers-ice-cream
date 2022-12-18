@@ -1,5 +1,6 @@
-.hero {
+.hero-container {
   height: 405px;
+  position: relative;
   @media screen and (min-width: $tab) {
     display: flex;
     height: 349px;
@@ -57,19 +58,19 @@
   }
 }
 .hero__title {
-  width: 247px;
+  width: 280px;
   margin-bottom: 32px;
 
   font-family: 'Seymour One';
   font-style: normal;
   font-weight: 400;
-  font-size: 26px;
+  font-size: 30px;
   line-height: 1.27;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $white-color;
   @media screen and (min-width: $tab) {
     margin-bottom: 24px;
+    font-size: 26px;
   }
   @media screen and (min-width: $desk) {
     margin-bottom: 28px;
@@ -91,34 +92,61 @@
   margin-right: 12px;
 
   text-decoration: none;
-  font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.29;
   color: #000000;
+
+  &:hover {
+    border: 2px solid $accent-color;
+  }
+  &:focus {
+    color: $white-color;
+    border: 2px solid $accent-color;
+  }
+  &:disabled {
+    border: 2px solid $disabled-color;
+  }
 
   @media screen and (min-width: $desk) {
     font-size: 14px;
   }
 }
 .main-btn__how {
-  font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.29;
   text-decoration-line: underline;
 
   color: $default-color;
+
+  &:hover {
+    color: $accent-color;
+  }
+  &:focus {
+    color: $white-color;
+  }
+  &:disabled {
+    color: $disabled-color;
+  }
+  @media screen and (min-width: $tab) {
+    padding: 5px 13px;
+  }
   @media screen and (min-width: $desk) {
     font-size: 14px;
+    padding: 10px 26px;
   }
 }
 .main__img {
-  margin: 0 auto;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
   @media screen and (min-width: $tab) {
-    margin: 0 0 0 auto;
+    transform: translate(0, -100%);
+  }
+  @media screen and (min-width: $desk) {
+    transform: translate(10%, -100%);
   }
 }
 .hero-product {
@@ -132,26 +160,32 @@
   display: none;
   @media screen and (min-width: $tab) {
     display: block;
-    margin-right: 32px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(32px, 185px);
+  }
+  @media screen and (min-width: $desk) {
+    transform: translate(16px, 301px);
   }
 }
 .hero-product__text {
   display: none;
   @media screen and (min-width: $tab) {
     display: block;
-    font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.42;
     color: $white-color;
 
     width: 150px;
+    margin-left: 184px;
   }
   @media screen and (min-width: $desk) {
     font-size: 14px;
     width: 200px;
     margin-top: 67px;
+    margin-left: 241px;
   }
 }
 .hero-product__icon {
@@ -171,13 +205,13 @@
     display: block;
     max-width: 79px;
     margin-top: 53px;
+    margin-left: auto;
   }
 }
 .sale-place__text {
   display: none;
   @media screen and (min-width: $tab) {
     display: block;
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 8px;
@@ -195,13 +229,11 @@
   display: none;
   @media screen and (min-width: $tab) {
     display: block;
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 900;
     font-size: 28px;
     line-height: 1.21;
     text-align: right;
-    letter-spacing: 0.04em;
     text-transform: uppercase;
 
     color: $black-color;
