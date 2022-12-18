@@ -105,9 +105,11 @@
         width: 279px;
         height: 278px;
         border-radius: 140px;
-        margin-left: auto;
-        margin-right: auto;
         
+        @media screen and (max-width: 767px) {
+          margin-left: auto;
+          margin-right: auto;
+        }
         
         @media screen and (min-width: $tab) {
           border-radius: 165px;
