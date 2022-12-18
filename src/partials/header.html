@@ -87,7 +87,7 @@
         </li>
       </ul>
 
-      <button type="button" class="button-mobile" data-modal-open>Buy now
+      <button type="button" class="button button__button-mobile" data-modal-open="333">Buy now
         <svg class="icon-arrow" width="12" height="12">
           <use href="./images/header/icons.svg#arrow-right-bold"></use>
         </svg>
@@ -96,13 +96,28 @@
     </div>
 
     <!--Modal menu  is-hidden  -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop " data-modal="333">
       <div class="modal">
-        <p class="modal-form">Buy now</p>
-       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+        <button class="modal-button" data-modal-close="333">
+          <svg class="modal-icon" width="14" height="14">
+            <use href="./images/header/icons.svg#close_modal"></use>
+          </svg>
+        </button>
+
+        <h1 class="modal-form">Buy now</h1>
+        
+       <ul class="card__list">
+        <li class="card__item card__item--first">
+          <div class="card__decor card__decor--first"></div>
+          <p class="card__title">ice cream</p>
+        </li>
+        <li class="card__item card__item--second">
+          <div class="card__decor card__decor--second"></div>
+          <p class="card__title">ice coffee</p>
+        </li>
+        <li class="card__item card__item--third">
+          <div class="card__decor card__decor--third"></div>
+          <p class="card__title">milkshakes</p>
        </ul>
 
         <form class="form">
@@ -130,15 +145,12 @@
           <button type="submit" class="button">Submit</button>
         </form>
 
-        <button class="modal-button" data-modal-close>
-          <svg class="modal-icon" width="14" height="14">
-            <use href="./images/header/icons.svg#close_modal"></use>
-          </svg>
-        </button>
+ 
       </div>
     </div>
   </div>
 
+  <script src="./js/modal-header.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
     integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
     crossorigin="anonymous"></script>
