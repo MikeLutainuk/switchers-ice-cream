@@ -1,20 +1,15 @@
 <header class="header">
   <div class="container flex-container">
     <a href="./index.html" class="logo">
-      <img 
-      srcset="
+      <img srcset="
       ./images/header/logo_40.png 40w,  
       ./images/header/logo_48.png 48w, 
       ./images/header/logo_60.png 60w,
       ./images/header/logo_80.png 80w,
       ./images/header/logo_96.png 96w,
       ./images/header/logo_120.png 120w
-      "
-      sizes="(min-width: 1200px) 60px, (min-width: 768px) 48px, (min-width: 480px) 40px, 8vw"
-      src="./images/header/logo_40.png" 
-      alt="Site logo"  
-      loading="lazy" 
-      />
+      " sizes="(min-width: 1200px) 60px, (min-width: 768px) 48px, (min-width: 480px) 40px, 8vw"
+        src="./images/header/logo_40.png" alt="Site logo" loading="lazy" />
     </a>
 
     <!--Navigation-->
@@ -35,38 +30,29 @@
     </ul>
     </nav>
 
-    <button 
-    class="menu-toggle js-open-menu" 
-    aria-expanded="false" 
-    aria-controls="mobile-menu"
-    >
-    <svg class="icon-menu_open" width="32" height="32">
-      <use href="./images/header/icons.svg#icon_open"></use>
-    </svg>    
+    <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="icon-menu_open" width="32" height="32">
+        <use href="./images/header/icons.svg#icon_open"></use>
+      </svg>
     </button>
 
-    <button type="button" class="button" data-modal-open>Buy now
+    <button type="button" class="button" data-modal-open='21'>Buy now
       <svg class="icon-arrow" width="12" height="12">
         <use href="./images/header/icons.svg#arrow-right-bold"></use>
       </svg>
     </button>
 
 
-      <!--Mobile menu-->   
+    <!--Mobile menu-->
     <div class="menu-container js-menu-container" id="mobile-menu">
       <a href="./index.html" class="logo-mobile">
-        <img 
-        srcset="
+        <img srcset="
         ./images/header/logo_40.png 40w,  
         ./images/header/logo_48.png 48w,
         ./images/header/logo_80.png 80w,
         ./images/header/logo_96.png 96w
-        "
-        sizes="(min-width: 768px) 48px, (min-width: 480px) 40px, 8vw"
-        src="./images/header/logo_40.png" 
-        alt="Site logo"  
-        loading="lazy" 
-        />
+        " sizes="(min-width: 768px) 48px, (min-width: 480px) 40px, 8vw" src="./images/header/logo_40.png"
+          alt="Site logo" loading="lazy" />
       </a>
 
       <button class="menu-toggle js-close-menu">
@@ -74,37 +60,35 @@
           <use href="./images/header/icons.svg#icon_close"></use>
         </svg>
       </button>
-     <div class="menu-flex">
-      <ul class="mobile-nav">
-        <li class="mobile-nav__item">
-          <a href="#Home" class="mobile-nav__link">Home</a>
-        </li>
-        <li class="mobile-nav__item">
-          <a href="#How it’s made?" class="mobile-nav__link">How it’s made?</a>
-        </li>
-        <li class="mobile-nav__item">
-          <a href="#Our products" class="mobile-nav__link">Our products</a>
-        </li>
-        <li class="mobile-nav__item">
-          <a href="#Contact" class="mobile-nav__link">Contact</a>
-        </li>
-      </ul>
+      <div class="menu-flex">
+        <ul class="mobile-nav">
+          <li class="mobile-nav__item">
+            <a href="#Home" class="mobile-nav__link">Home</a>
+          </li>
+          <li class="mobile-nav__item">
+            <a href="#How it’s made?" class="mobile-nav__link">How it’s made?</a>
+          </li>
+          <li class="mobile-nav__item">
+            <a href="#Our products" class="mobile-nav__link">Our products</a>
+          </li>
+          <li class="mobile-nav__item">
+            <a href="#Contact" class="mobile-nav__link">Contact</a>
+          </li>
+        </ul>
 
-      <button type="button" class="button-modal" data-modal-open>Buy now
-        <svg class="icon-arrow" width="12" height="12">
-          <use href="./images/header/icons.svg#arrow-right-bold"></use>
-        </svg>
-      </button>  
-     </div> 
+        <button type="button" class="button-modal" data-modal-open>Buy now
+          <svg class="icon-arrow" width="12" height="12">
+            <use href="./images/header/icons.svg#arrow-right-bold"></use>
+          </svg>
+        </button>
+      </div>
     </div>
 
     <!--Modal menu-->
   </div>
-  <script
-    defer
-    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
     integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-    crossorigin="anonymous"
-    ></script>
+    crossorigin="anonymous"></script>
   <script defer src="./js/mobile-menu.js"></script>
+
 </header>
