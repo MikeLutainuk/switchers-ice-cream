@@ -11,8 +11,7 @@
         align-items: center;
       }
       @media screen and (min-width: $tab) {
-       
-        align-items: baseline;
+       align-items: flex-start;
         justify-content: space-between;
       }
     
@@ -60,6 +59,7 @@
         margin-bottom: 32px;
         margin-right: auto;
         margin-left: auto;
+        width: 200px;
         @media screen and (min-width: $tab) {
           width: 454px;
           font-size: 34px;
@@ -74,15 +74,17 @@
       }
       &__box {
         display: flex;
-        align-items: center;
         position: relative;
-        margin-left: auto;
-        margin-right: auto;
         width: 279px;
         height: 278px;
         border-radius: 140px;
         background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
         box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+        @media screen and (max-width: 767px) {
+          align-items: center;
+          margin-left: auto;
+          margin-right: auto;
+        }
         @media screen and (min-width: $tab) {
           top: 26px;
           width: 330px;
@@ -115,6 +117,7 @@
           border-radius: 165px;
           width: 330px;
           height: 330px;
+          margin-right: 38px;
           
         }
         @media screen and (min-width: $desk) {
@@ -124,10 +127,19 @@
         }
 
       }
-      
       &__content {
         list-style: none;
         margin-top: 40px;
+        @media screen and (min-width: $tab) {
+          display: flex;
+          margin-right: 34px;
+          align-items: baseline;
+        }
+      }
+      &__list {
+        list-style: none;
+        margin-top: 40px;
+      
       }
       &__text {
         text-align: center;
@@ -136,14 +148,17 @@
         font-weight: 400;
         font-size: 12px;
         line-height: calc(19 / 12);
-        text-align: center;
         color: $white-color;
         
 
         @media screen and (min-width: $mob) {
             width: 220px;
         }
+        @media screen and (max-width: $tab) {
+          text-align: center;
+        }
         @media screen and (min-width: $tab) {
+            text-align: start;
             width: 334px;
             line-height: calc(21 / 12);
         }
