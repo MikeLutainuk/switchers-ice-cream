@@ -116,22 +116,25 @@
       &__content {
         list-style: none;
         margin-top: 40px;
+
         @media screen and (min-width: $tab) {
           display: flex;
           margin-right: 34px;
           margin-left: 404px;
-          margin-top: -330px;
+          margin-top: -290px;
         }
         @media screen and (min-width: $desk) {
           margin-right: 121px;
           margin-left: 616px;
-          margin-top: -400px;
+          margin-top: -370px;
         }
       }
       &__list {
         list-style: none;
+        
+      @media screen and (max-width: 767px) {
         margin-top: 40px;
-      
+      }
       }
       &__text {
         text-align: center;
@@ -141,6 +144,7 @@
         font-size: 12px;
         line-height: calc(19 / 12);
         color: $white-color;
+        padding: 0;
         
 
         @media screen and (min-width: $mob) {
@@ -153,11 +157,13 @@
             text-align: start;
             width: 334px;
             line-height: calc(21 / 12);
+            letter-spacing: 0.04em;
         }
         @media screen and (min-width: $desk) {
             width: 463px;
             font-size: 16px;
             line-height: calc(28 / 16);
+            letter-spacing: 0.04em;
         }
       }
       
