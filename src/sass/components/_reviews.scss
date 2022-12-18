@@ -11,112 +11,224 @@
     overflow: hidden;
 }
 
-.reviews__foto {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 80px;
+// .reviews__foto {
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+//     margin-bottom: 80px;
 
-    @media screen and (min-width: 768px) {
-    margin-bottom: 100px;
-    }
-    @media screen and (min-width: 1200px) {
-    margin-bottom: 140px;
-    }
-}
+//     @media screen and (min-width: 768px) {
+//     margin-bottom: 100px;
+//     }
+//     @media screen and (min-width: 1200px) {
+//     margin-bottom: 140px;
+//     }
+// }
 
-.reviews__customer-foto {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 32px;
-    border-radius: 50%;
-}
+// .reviews__customer-foto {
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+//     margin-bottom: 32px;
+//     border-radius: 50%;
+// }
 
-.reviews__text {
-    padding: 35px 39px;
-    margin-bottom: 32px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 2.55;
+// .reviews__text {
+//     padding: 35px 39px;
+//     margin-bottom: 32px;
+//     font-family: 'Montserrat';
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 12px;
+//     line-height: 2.55;
     
-    text-align: center;
+//     text-align: center;
     
-    color: #FCFCFC;
-    background-color: #84A178;
-    border-radius: 10px;
+//     color: #FCFCFC;
+//     background-color: #84A178;
+//     border-radius: 10px;
 
-    @media screen and (min-width: 768px) {
-    padding: 28px 80px;
-    border-radius: 24px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.86;
-    letter-spacing: 0.04em;
-    }
-    @media screen and (min-width: 1200px) {
-    width: 968px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 43px 109px;
-    font-size: 16px;
-    }
-}
+//     @media screen and (min-width: 768px) {
+//     padding: 28px 80px;
+//     border-radius: 24px;
+//     font-weight: 500;
+//     font-size: 14px;
+//     line-height: 1.86;
+//     letter-spacing: 0.04em;
+//     }
+//     @media screen and (min-width: 1200px) {
+//     width: 968px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding: 43px 109px;
+//     font-size: 16px;
+//     }
+// }
 
-.reviews__customer {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.86;
+// .reviews__customer {
+//     font-family: 'Montserrat';
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 20px;
+//     line-height: 1.86;
      
-    text-align: center;
-    margin-bottom: 12px;
+//     text-align: center;
+//     margin-bottom: 12px;
     
-    color: #131313;
+//     color: #131313;
 
-    @media screen and (min-width: 768px) {
-    margin-bottom: 32px;
-    font-size: 16px;
+//     @media screen and (min-width: 768px) {
+//     margin-bottom: 32px;
+//     font-size: 16px;
+//     }
+// }
+
+// .pagination-wrapper {
+//     width: 72px;
+//     height: 12px;
+//     margin: 0 auto;
+// }
+
+// .pagination {
+// display: flex;
+// justify-content: space-between;
+// }
+
+// .pagination .dot {
+//     width: 12px;
+//     height: 12px;
+//     border-radius: 50%;
+//     background-color: #D9D9D9;
+// }
+
+// .pagination .active {
+//     background-color: #84A178;
+// }
+
+// .reviews {
+//     padding-top: 80px;
+//     padding-bottom: 40px;
+
+//     @media screen and (min-width: 768px) {
+//     padding-top: 100px;
+//     padding-bottom: 80px;
+//     }
+
+//     @media screen and (min-width: 1200px) {
+//     padding-top: 140px;
+//     padding-bottom: 100px;
+//     }
+// }
+
+// .reviews__customer-foto {
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto;
+//     margin-bottom: 32px;
+//     border-radius: 50%;
+// }
+
+// .reviews__text {
+//     padding: 35px 39px;
+//     margin-bottom: 32px;
+//     font-family: 'Montserrat';
+//     font-style: normal;
+//     font-weight: 400;
+//     font-size: 12px;
+//     line-height: 2.55;
+    
+//     text-align: center;
+    
+//     color: #FCFCFC;
+//     background-color: #84A178;
+//     border-radius: 10px;
+
+//     @media screen and (min-width: 768px) {
+//     padding: 28px 80px;
+//     border-radius: 24px;
+//     font-weight: 500;
+//     font-size: 14px;
+//     line-height: 1.86;
+//     letter-spacing: 0.04em;
+//     }
+//     @media screen and (min-width: 1200px) {
+//     width: 968px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     padding: 43px 109px;
+//     font-size: 16px;
+//     }
+// }
+
+// .reviews__customer {
+//     font-family: 'Montserrat';
+//     font-style: normal;
+//     font-weight: 500;
+//     font-size: 20px;
+//     line-height: 1.86;
+     
+//     text-align: center;
+//     margin-bottom: 12px;
+    
+//     color: #131313;
+
+//     @media screen and (min-width: 768px) {
+//     margin-bottom: 32px;
+//     font-size: 16px;
+//     }
+// }
+
+// .pagination-wrapper {
+//     width: 72px;
+//     height: 12px;
+//     margin: 0 auto;
+// }
+
+// .pagination {
+// display: flex;
+// justify-content: space-between;
+// }
+
+// .pagination .dot {
+//     width: 12px;
+//     height: 12px;
+//     border-radius: 50%;
+//     background-color: #D9D9D9;
+// }
+
+// .pagination .active {
+//     background-color: #84A178;
+// }
+.reviews-wrap {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-position: center;
+    background-color: $white-color;
+    background-image: url(../images/products/bg_mobile.svg);
+
+    @media screen and (min-width: $tab) {
+        background-image: url(../images/products/bg_tablet.svg);
+    }
+
+    @media screen and (min-width: $desk) {
+        background-image: url(../images/products/bg_desktop.svg);
     }
 }
 
-.pagination-wrapper {
-    width: 72px;
-    height: 12px;
-    margin: 0 auto;
-}
 
-.pagination {
-display: flex;
-justify-content: space-between;
-}
-
-.pagination .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #D9D9D9;
-}
-
-.pagination .active {
-    background-color: #84A178;
-}
 
 .reviews {
     padding-top: 80px;
     padding-bottom: 40px;
 
     @media screen and (min-width: 768px) {
-    padding-top: 100px;
-    padding-bottom: 80px;
+        padding-top: 100px;
+        padding-bottom: 80px;
     }
 
     @media screen and (min-width: 1200px) {
-    padding-top: 140px;
-    padding-bottom: 100px;
+        padding-top: 140px;
+        padding-bottom: 100px;
     }
 }
 
@@ -136,27 +248,28 @@ justify-content: space-between;
     font-weight: 400;
     font-size: 12px;
     line-height: 2.55;
-    
+
     text-align: center;
-    
+
     color: #FCFCFC;
     background-color: #84A178;
     border-radius: 10px;
 
     @media screen and (min-width: 768px) {
-    padding: 28px 80px;
-    border-radius: 24px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.86;
-    letter-spacing: 0.04em;
+        padding: 28px 80px;
+        border-radius: 24px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.86;
+        letter-spacing: 0.04em;
     }
+
     @media screen and (min-width: 1200px) {
-    width: 968px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 43px 109px;
-    font-size: 16px;
+        width: 968px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 43px 109px;
+        font-size: 16px;
     }
 }
 
@@ -166,36 +279,36 @@ justify-content: space-between;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.86;
-     
+
     text-align: center;
-    margin-bottom: 12px;
-    
+
     color: #131313;
 
     @media screen and (min-width: 768px) {
-    margin-bottom: 32px;
-    font-size: 16px;
+        font-size: 16px;
     }
 }
 
-.pagination-wrapper {
-    width: 72px;
-    height: 12px;
-    margin: 0 auto;
+.swiper-wrapper {
+    margin-bottom: 32px;
+
+    @media screen and (min-width: 768px) {
+    margin-bottom: 52px;
+    }
 }
 
-.pagination {
-display: flex;
-justify-content: space-between;
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-.pagination .dot {
+.swiper-pagination-bullet {
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background-color: #D9D9D9;
 }
-
-.pagination .active {
+.swiper-pagination-bullet-active {
     background-color: #84A178;
 }

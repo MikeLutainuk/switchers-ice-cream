@@ -1,60 +1,63 @@
-<section class="hero container">
-  <div class="hero__left">
-    <div class="hero__main">
-      <h1 class="hero__title">ice cream made with passion</h1>
-      <ul class="main-btn">
-        <li class="main-btn__position">
-          <a href="#products_section" class="main-btn__prod">Products</a>
+<section class="hero">
+  <div class="container hero-container">
+    <div class="hero__left">
+      <div class="hero__main">
+        <h1 class="hero__title">ice cream made with passion</h1>
+        <ul class="main-btn">
+          <li class="main-btn__position">
+            <a href="#products_section" class="main-btn__prod">Products</a>
+          </li>
+          <li class="main-btn__position">
+            <a href="#how_section" class="main-btn__how">How it’s made?</a>
+          </li>
+        </ul>
+      </div>
+      <div class="hero-product">
+        <img
+          srcset="
+            ./images/hero/plate_152@1x.png 152w,
+            ./images/hero/plate_225@1x.png 225w,
+            ./images/hero/plate_304@2x.png 304w,
+            ./images/hero/plate_450@2x.png 450w
+          "
+          sizes="(min-width: 1200px) 225px, (min-width: 768px) 152px, 100vw"
+          src="./images/hero/plate_152@1x.png"
+          alt="Тарілка з морозивом"
+          class="hero-product__img"
+        />
+        <p class="hero-product__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+          <a
+            ><svg class="hero-product__icon" width="40" height="16">
+              <use href="./images/hero/svg-sprite.svg#icon-Arrow"></use></svg
+          ></a>
+        </p>
+      </div>
+    </div>
+    <img
+      srcset="
+        ./images/hero/icecream_177@1x.png 177w,
+        ./images/hero/icecream_268@1x.png 268w,
+        ./images/hero/icecream_354@2x.png 354w,
+        ./images/hero/icecream_456@1x.png 456w,
+        ./images/hero/icecream_536@2x.png 536w,
+        ./images/hero/icecream_912@2x.png 912w
+      "
+      sizes="(min-width: 1200px) 456px, (min-width: 768px) 268px, (max-width: 767px) 177px, 100vw"
+      src="./images/hero/icecream_177@1x.png"
+      alt="Ріжок з морозивом"
+      class="main__img"
+    />
+    <div class="sale-place">
+      <ul>
+        <li class="sale-place__text">
+          <span class="sale-place__number">16</span> cafes
         </li>
-        <li class="main-btn__position">
-          <a href="#how_section" class="main-btn__how">How it’s made?</a>
+        <li class="sale-place__text">
+          <span class="sale-place__number">23</span> food trucks
         </li>
       </ul>
     </div>
-    <div class="hero-product">
-      <img
-        srcset="
-          ./images/hero/plate_152@1x.png 152w,
-          ./images/hero/plate_225@1x.png 225w,
-          ./images/hero/plate_304@2x.png 304w,
-          ./images/hero/plate_450@2x.png 450w
-        "
-        sizes="(min-width: 1200px) 225px, (min-width: 768px) 152px, 100vw"
-        src="./images/hero/plate_152@1x.png"
-        alt="Тарілка з морозивом"
-        class="hero-product__img"
-      />
-      <p class="hero-product__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et
-        <a
-          ><svg class="hero-product__icon" width="40" height="16">
-            <use href="./images/hero/svg-sprite.svg#icon-Arrow"></use></svg ></a>
-      </p>
-    </div>
-  </div>
-  <img
-    srcset="
-      ./images/hero/icecream_177@1x.png 177w,
-      ./images/hero/icecream_268@1x.png 268w,
-      ./images/hero/icecream_354@2x.png 354w,
-      ./images/hero/icecream_456@1x.png 456w,
-      ./images/hero/icecream_536@2x.png 536w,
-      ./images/hero/icecream_912@2x.png 912w
-    "
-    sizes="(min-width: 1200px) 456px, (min-width: 768px) 268px, (max-width: 767px) 177px, 100vw"
-    src="./images/hero/icecream_177@1x.png"
-    alt="Ріжок з морозивом"
-    class="main__img"
-  />
-  <div class="sale-place">
-    <ul>
-      <li class="sale-place__text">
-        <span class="sale-place__number">16</span> cafes
-      </li>
-      <li class="sale-place__text">
-        <span class="sale-place__number">23</span> food trucks
-      </li>
-    </ul>
   </div>
 </section>

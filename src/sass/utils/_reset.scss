@@ -6,7 +6,17 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   letter-spacing: 0.04em;
-  background-color: $background-color;
+  background-position: center;
+    background-color: $white-color;
+    background-image: url(../images/products/bg_mobile.svg);
+  
+    @media screen and (min-width: $tab) {
+      background-image: url(../images/products/bg_tablet.svg);
+    }
+  
+    @media screen and (min-width: $desk) {
+      background-image: url(../images/products/bg_desktop.svg);
+    }
 }
 
 h1,
