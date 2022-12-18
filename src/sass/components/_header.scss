@@ -1,249 +1,492 @@
 .header {
-    padding-top: 12px;
+  padding-top: 12px;
 
-    @media screen and (min-width: $tab) {
-        padding-top: 20px; 
-    }
+  @media screen and (min-width: $tab) {
+    padding-top: 20px; 
+  }
 
-    @media screen and (min-width: $desk) {
-        padding-top: 8px; 
-    }
+  @media screen and (min-width: $desk) {
+    padding-top: 8px; 
+  }
 
   & .flex-container {
-     display: flex;
-     align-items: center;    
+  display: flex;
+  align-items: center;    
 
-      @media screen and (min-width: $desk) {
-        justify-content: space-between;
-        }
+    @media screen and (min-width: $desk) {
+      align-items: flex-end;
+      justify-content: space-between;
     }
-
+  }
 }  
 
 .navigation-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navigation {
-    display: none;
+  display: none;
 
     @media screen and (min-width: $desk) {
-        display: flex;
+      display: flex;
     }
 }
 .navigation__item:not(:last-child) {
-    margin-right: 28px;
+  margin-right: 28px;
 }
-.navigation-link {
+.navigation__link {
+  display: block;
 
-       display: block;
-       padding-bottom: 13px;
+  padding-top: 32px;
+  padding-bottom: 13px;
 
-       font-weight: 700;
-       font-size: 16px; 
-       line-height: 1.25;
-       color: #FCFCFC;
-       text-decoration: none;
+  font-weight: 700;
+  font-size: 16px; 
+  line-height: 1.25;
+  color: #FCFCFC;
 
-
-
-
+  &:hover,
+  &:focus {
+    color: $default-color;
+    transition: background-color $function-time $display-time;
+  }
 
 }
 
 
 //button
 .button {
+  display: none;
 
-    display: none;
+  @media screen and (min-width: $tab) {
+    display: flex;
+    align-items: center;
 
-    @media screen and (min-width: $tab) {
-        display: block;
+    padding: 12px 36px;
+    margin-left: 32px;
 
-        padding: 12px 35px;
-        margin-left: 32px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2;
 
-        font-family: inherit;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 1.2;
-        cursor: pointer;
-        border-color: transparent;
-        border-radius: 10px;
-        color: #000;
-        background-color: #F8D24E;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        transition: background-color $display-time $function-time;
-        text-align: center;
+    cursor: pointer;
+    border-color: transparent;
+    border-radius: 10px;
+    color: #000;
+    background-color: #F8D24E;
+    transition: background-color $display-time $function-time;
 
-      &:hover,
-      &:focus {
-         background-color: #188ce8;
-         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        }
-
+    &:hover {
+      background-color: $accent-color;
     }
-
-
-  @media screen and (min-width: $desk) {
-     padding: 10px 32px;
-     margin: 0;
+    &:focus {
+      fill: #fff;
+      color: #fff;
+      background-color: $accent-color;
     }
+    &:disabled {
+      background-color: $disabled-color;
+    }
+  }
 }
 .icon-arrow {
-    margin-left: 4px;
+  margin-left: 4px;
 }
+
+
 
 //mobile menu
 .menu-toggle {
-    min-height: 40px;
-    min-width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-height: 32px;
+  min-width: 32px;
 
-    margin-left: auto;
-    padding: 0;
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    border-radius: 50%;
-    outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+  padding: 0;
+
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  
+
+  @media screen and (min-width: $desk) {
+   display: none;    
+  }
+}
+.icon-menu_open,
+.icon-menu_close {
+  fill: #fff;
+}
+
+.flex-container .menu-toggle:hover,
+.flex-container .menu-toggle:focus {
+  transition: $function-time $display-time;
+
+  & .icon-menu_open,
+  & .icon-menu_open {
+    fill: $default-color;
+  }
+}
+
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 0 32px;
+  padding-top: 12px;
+  padding-bottom: 64px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: $background-color;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform $display-time $function-time;
+
+  @media screen and (min-width: $desk) {
+    
+    display: none;    
+   }
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+
+  &:hover,
+  &:focus {
+    transition: $function-time $display-time;
   }
 
-  @media (min-width: $desk) {
-    .menu-toggle {
-      display: none;
-    }
+  &:hover .icon-menu_close,
+  &:focus .icon-menu_close {
+    fill: $default-color;
+  }
+}
+
+.logo-mobile {
+  margin-bottom: 51px;
+}
+.menu-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mobile-nav {  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom:  110px;
   }
 
-  .menu-toggle:hover,
-  .menu-toggle:focus {
-    background-color: rgba(0, 0, 0, 0.1);
+  &__item:not(:last-child){
+    margin-bottom:  32px;
   }
 
-  .menu-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+  &__link {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
 
-    padding: 48px 40px;
+    color: $white-color;
 
-    display: flex;
-    flex-direction: column;
-
-    background-color: $white-color;
-    z-index: 999;
-
-    transform: translateX(100%);
-    transition: transform $display-time $function-time;
-  }
-
-  .menu-container.is-open {
-    transform: translateX(0);
-  }
-
-  .menu-container .menu-toggle {
-    position: absolute;
-    top: 21px;
-    right: 25px;
-
-      &:hover,
-      &:focus {
-        color: $accent-color;
-      }
-
-  }
-
-  .mobile-nav {
-      margin-bottom: auto;  
-
-    &__item:not(:last-child){
-      margin-bottom:  32px;
-      }
-
-
-    &__link {
-
-
-
-      font-weight: 500;
-      font-size: 40px;
-      line-height: 1.17;
-      letter-spacing: 0.02em;
+    &:hover,
+    &:focus {
       color: $black-color;
-      text-decoration: none;
-
-
-      &.current {
-        color: $accent-color;
-      }
+      transition: background-color $function-time $display-time;
     }
   }
+}
 
-  .mobile-cont {
-     margin-bottom: 64px;
+.button-mobile {
 
+  display: flex;
+  align-items: center;
 
-      &__item:not(:last-child){
-        margin-bottom:  32px;
-      }
+  padding: 12px 36px;
 
-      &__link {       
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
 
-        font-weight: 500;
-        font-size: 34px;
-        line-height: 1.17;
-        letter-spacing: 0.02em;
-        color: $accent-color;
-        text-decoration: none;
+  cursor: pointer;
+  border-color: transparent;
+  border-radius: 10px;
+  color: #000;
+  background-color: #F8D24E;
+  transition: color $display-time $function-time;
 
-      }
-
-      &__link-mail {
-
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 1.16;
-        letter-spacing: 0.02em;
-        color: $black-color;        
-        text-decoration: none;
-      }
-
+  &:hover {
+    background-color: $accent-color;
+  }
+  &:focus {
+    fill: #fff;
+    color: #fff;
+    background-color: $accent-color;
+  }
+  &:disabled {
+    background-color: $disabled-color;
   }
 
-  .mobile-soc {
+  @media screen and (min-width: $tab) {
+    display: none;
+  }
+}
 
-    display: flex;  
+//Modal menu
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 
-    &__item:not(:last-child) {
+  width: 100%;
+  height: 100%;
 
-      display: flex;
-      align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  transition: opacity $display-time $function-time, visibility $display-time $function-time,
+  transform $display-time $function-time;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 
+  & .modal {
+   transform: translate(-50%, -50%) scale(0);
+  }
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
 
-      &::after {
-        content: '';
+  width: 450px;
+  padding: 40px;
 
-        width: 22px;
+  background-color: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  transition: transform $display-time $function-time;
 
-        border: border rgba(33, 33, 33, 0.2);
-        transform: rotate(90deg);
-      }
-
-    }
-
-    &__link {        
-
-      line-height: 1.22;
-      letter-spacing: 0.02em;
-      color: $accent-color;        
-      text-decoration: none;
-      font-weight: 500;        
-      font-size: 18px;
-    }
+  @media screen and (min-width: $desk) {
+    width: 568px;
+    padding: 32px 54px;
 
   }
+}
+.modal-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  cursor: pointer;
+  border: transparent;
+  background-color: transparent;
+  transition: transform $display-time $function-time;
+  // fill $display-time $function-time, border $display-time $function-time;
+
+
+  &:hover,
+  &:focus {
+    fill: $default-color;
+  }
+}  
+
+//Forms
+
+.modal-form {
+
+
+  @media screen and (min-width: $desk) {
+   margin-bottom: 40px;
+  
+   text-align: center;
+   font-family: 'Seymour One';
+   font-weight: 400;
+   font-size: 20px;
+   line-height: 1.4;
+   color: $black-color;
+  }
+}
+
+.form-field,
+.form-comment {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.form-field:not(:last-child) {
+  margin-bottom: 10px;
+}
+.form-comment {
+  margin-bottom: 20px;
+}
+.form-field label,
+.form-comment label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.2;
+  color: $black-color;
+}
+.form-field input {
+  padding-left: 42px;
+
+  width: 100%;
+  height: 40px;
+  
+  cursor: pointer;
+  outline: none;
+  border: border rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: $function-time $display-time;
+
+  &:hover,
+  &:focus {
+   border: border $accent-color;
+ }
+}
+.field-pos {
+  position: relative;
+
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+  
+    transition: $function-time $display-time;
+  }
+}
+
+.field-pos input:focus + .icon-modal {
+  fill: $accent-color;
+}
+
+.form-comment textarea {
+  padding: 12px 16px;
+
+  cursor: pointer;
+  outline: none;
+  resize: none;
+  border: border rgba(33, 33, 33, 0.2);
+  border-radius: 2px;
+  transition: $function-time $display-time;
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:hover,
+  &:focus {
+   border: border $accent-color;
+ }
+}
+
+
+
+.form-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 30px;
+
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $black-color;
+
+  @media screen and (min-width: $desk) {
+
+    font-size: 14px;
+    line-height: 1.71;
+  }
+
+  & input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    /*appearance: none;*/
+  }
+
+  & a {
+    margin-left: 3px;
+    color: $accent-color;
+  }
+}
+
+.check {
+  width: 16px;
+  height: 15px;
+
+  margin-right: 8px;
+
+  border-radius: 2px;
+  border: 2px solid $black-color;
+}
+.form-check input:checked + .check {
+  background-color: $accent-color;
+  border-color: $accent-color;
+  border-radius: 2px;
+
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: $function-time $display-time;
+}
+
+form .button {
+  display: block;
+
+  margin: auto;
+  padding: 10px 52px;
+
+  &:hover,
+  &:focus {
+  background-color: #188ce8;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+ }
+}
+

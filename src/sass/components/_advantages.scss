@@ -1,28 +1,18 @@
 .advantages__section {
-    padding-top: 50px;
-    padding-bottom: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     background-color: #84A178;
 
-}
-
-.advantages__container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 20px;
-    padding-left: 20px;
-
-    @media screen and (min-width: 480px) {
-        width: 480px;
-    }
-
     @media screen and (min-width: 768px) {
-        width: 768px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     @media screen and (min-width: 1200px) {
-        width: 1200px;
+        padding-bottom: 80px;
     }
+
 }
 
 .advantages__hiddentitle {
@@ -40,7 +30,7 @@
 }
 
 .advantages__list {
-    width: 230px;
+    width: calc(100% - 170px);
     margin: 0;
     padding: 0;
     margin-right: auto;
@@ -49,9 +39,10 @@
     @media screen and (min-width: 768px) {
         display: flex;
         gap: 80px;
+        width: 100%;
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1200px) {
         gap: 32px;
     }
 }
@@ -63,27 +54,49 @@
     padding: 0;
 
     &::before {
-        content: "";
-        display: inline-block;
-        height: 50px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+            content: "";
+            display: inline-block;
+            height: 50px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+    @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: 28px;
+        }
     }
 
     @media screen and (min-width: 768px) {
-        max-width: calc((100% - 2 * 80px)/ 3);
+        width: calc((100% - 2 * 80px)/ 3);
     }
 
     @media screen and (min-width: 1200px) {
-        max-width: calc((100% - 2 * 32px)/ 3);
+        width: calc((100% - 2 * 32px)/ 3);
     }
 }
 
-/*.adv__item--cow {
-    background-image: url();
-}*/
+.advantages__item--cow {
+    &::before {
+            background-image: url(../images/advantages/cowicon.png);
+        }
+}
 
+.advantages__item--weight {
+    &::before {
+        background-image: url(../images/advantages/weighticon.png);
+        
+        }
+    
+}
+
+.advantages__item--icecream {
+    &::before {
+            background-image: url(../images/advantages/icecreamicon.png);
+        }
+}
 .advantages__title {
     font-family: 'Montserrat';
     font-style: normal;
@@ -118,6 +131,7 @@
     color: #FCFCFC;
 
     margin: 0;
+    padding: 0;
 
     @media screen and (min-width: 1200px) {
         font-size: 16px;

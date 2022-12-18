@@ -1,10 +1,15 @@
 @import './common';
-@import './example';
+// @import './example';
 
 @import './utils/variables';
 @import './utils/reset';
 @import './components/products';
 @import './components/hero';
 @import './components/header';
+
+@import './components/about';
 @import './components/advantages';
+@import './components/contacts';
+@import './components/reviews';
+@import "./components/about-modal";
 @import './components/modal-prod-menu.scss';

@@ -1,0 +1,306 @@
+.contacts {
+    padding-top: 40px;
+	padding-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+		padding-top: 80px;
+		padding-bottom: 40px;
+	}
+
+	@media screen and (min-width: 1200px) {
+		padding-top: 100px;
+		padding-bottom: 120px;
+	}
+}
+
+.contacts__list {
+    display: flex;
+    
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+    
+    @media screen and (min-width: 768px) {
+        justify-content: space-between;
+    }   
+}
+
+.contacts__item {  
+    background: #FCFCFC;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+
+    @media screen and (max-width: 767px) {
+        width: 280px;
+        height: 412px;
+        padding-top: 40px;
+        padding-bottom: 24px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 224px;
+        height: 537px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-bottom: 40px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 368px;
+        height: 542px;
+        padding: 40px;
+        margin-bottom: 60px;
+    }
+}
+
+.contacts__label {
+    display: block;
+    width: 80px;
+    height: 22px;
+    margin-bottom: 20px;
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(14/12);
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $black-color;
+    background-color: $default-color;
+    border-radius: 4px;
+
+    &.food {
+        width: 133px;  
+    }
+    
+    @media screen and (min-width: 768px) {
+        width: 73px;
+        height: 30px;
+        margin-bottom: 32px;
+        padding-left: 13px;
+        padding-right: 13px;
+        font-size: 16px;
+        line-height: calc(22/16);
+        border-radius: 6px;
+
+        &.food {
+            width: 138px;
+            padding-left: 10px;
+            padding-right: 10px;  
+        }
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: 76px;
+        padding-left: 14px;
+        padding-right: 14px;
+
+        &.food {
+            width: 148px;  
+        }
+    }  
+}
+
+.contacts__address {
+    display: block;
+    height: 95px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #E1E1E1;
+
+    @media screen and (min-width: 768px) {
+        height: 142px;
+        margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        height: 121px;
+    }
+}
+
+.contacts__title {
+    display: block;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(22/12);
+    letter-spacing: 0.04em;
+    color: $black-color;
+
+    &.location {
+        color: #D6936D;
+        transition: color $display-time $function-time;
+
+        &:hover, 
+        &:focus {
+        color: $accent-color;
+        }
+    }
+
+    &.time {
+        color: $disabled-color;;
+    }
+
+    &.weekend {
+        margin-top: 8px;
+    }
+    
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: calc(26/14);   
+    }
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 16px;
+        line-height: calc(30/16);
+        
+        &.weekend {
+            margin-top: 12px;
+        }
+    }
+}
+
+.contacts__schedule {
+    display: block;
+    height: 121px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #E1E1E1;
+
+    @media screen and (min-width: 768px) {
+        height: 145px;
+        margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        height: 165px;
+    }
+}
+
+.contacts__tel {
+    margin-bottom: 6px;
+}
+
+.contacts__tel,
+.contacts__mail {
+    font-size: 12px;
+    line-height: calc(19/12);
+    color: $black-color;
+
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: calc(21/14);
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 16px;
+        line-height: calc(24/16);
+    }
+
+    transition: color $display-time $function-time;
+
+    &:hover, 
+    &:focus {
+    color: $accent-color;
+    }
+}
+
+.contacts__btn-wrap {
+    display: flex;
+    gap: 16px;
+    
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    @media screen and (min-width: 768px) {
+        justify-content: center; 
+    }   
+}
+
+.btn {
+    
+    @media screen and (max-width: 767px) {
+        margin-top: 20px;
+    }
+}
+
+.contacts__btn {
+    width: 196px;
+    height: 42px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: calc(18/14);
+    text-align: center;
+
+}
+
+.contacts__btn--orange {
+    color: $black-color;
+    background-color: $default-color;
+    border-radius: 10px; 
+    border: 0 solid transparent;
+    cursor: pointer;
+
+    transition: color $display-time $function-time, 
+    background-color $display-time $function-time;
+
+    &:hover {
+    color: #000000;
+    background-color: $accent-color;
+    }
+
+    &:focus {
+    color: #FFFFFF;
+    background-color: $accent-color;
+    }
+
+    &:disabled {
+    color: $black-color;
+    background-color: $disabled-color;
+    }
+}
+
+.contacts__btn--transparent {
+    color: #000000;
+    background-color: transparent;
+    border: 2px solid $default-color;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: color $display-time $function-time, 
+    border $display-time $function-time;
+
+    &:hover {
+        color: #000000;
+        border: 2px solid $accent-color;
+        }
+        
+        &:focus {
+        color: #FFFFFF;
+        border: 2px solid $accent-color;
+        }
+        
+        &:disabled {
+        color: #000000;
+        border: 2px solid $disabled-color;
+        }
+}
+
+.contacts__icon {
+    fill: currentColor;
+}
