@@ -1,0 +1,21 @@
+.header,
+.hero{
+    background-color: $background-color;
+}
+.contacts-background{
+    background-image: linear-gradient(to bottom,
+                transparent 390px,
+                $background-color 390px);
+    
+        @media screen and (min-width: 768px) {
+            background-image: linear-gradient(to bottom,
+                    transparent 380px,
+                    $background-color 380px);
+        }
+    
+        @media screen and (min-width: 1200px) {
+            background-image: linear-gradient(to bottom,
+                    transparent 228px,
+                    $background-color 228px);
+        }
+}
