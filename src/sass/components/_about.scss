@@ -19,6 +19,7 @@
 .about {
     margin: 0;
     padding-top: 60px;
+    padding-bottom: 0;
 
     background-color:$background-color;
     @media screen and (min-width: $tab) {
@@ -193,17 +194,20 @@
           margin-left: auto;
           margin-right: auto;
           margin-top: 10px;
+          margin-bottom: 18px;
         }
         
         @media screen and (min-width: $tab) {
             margin-top: 32px;
             margin-left: 398px;
             margin-right: 206px;
+            margin-bottom: 48px;
         }
         @media screen and (min-width: $desk) {
             margin-top: 54px;
             margin-left: 616px;
             margin-right: 420px;
+            margin-bottom: 114px;
         }
       }
       &-button__text {
