@@ -23,7 +23,6 @@
 .franchise-modal {
     position: relative;
     width: 280px;
-    height: 674px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
@@ -36,7 +35,6 @@
     @media screen and (min-width: 768px) {
         position: absolute;
         width: 568px;
-        height: 668px;
         padding: 32px 60px;
     }
 }
@@ -74,7 +72,6 @@
 }
 
 .modal-title-fr {
-    // width: 100%;
     margin-bottom: 20px;
     font-family: 'Seymour One';
     font-style: normal;
@@ -102,16 +99,11 @@
     color: #131313;
 
     @media screen and (min-width: 768px) {
-        // width: 322px;
         margin-bottom: 32px;
         font-size: 16px;
         line-height: calc(22/16);
     }
 }
-
-// .form-modal-field {
-//     position: relative;
-// }
 
 .form-modal-field-fr input {
     width: 224px;
