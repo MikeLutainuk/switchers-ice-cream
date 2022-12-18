@@ -41,7 +41,7 @@
       </svg>
     </button>
 
-    <button type="button" class="button" data-modal-open='21'>Buy now
+    <button type="button" class="button" data-modal-open='header'>Buy now
       <svg class="icon-arrow" width="12" height="12">
         <use href="./images/header/icons.svg#arrow-right-bold"></use>
       </svg>
@@ -87,7 +87,7 @@
         </li>
       </ul>
 
-      <button type="button" class="button button__button-mobile" data-modal-open="333">Buy now
+      <button type="button" class="button button__button--mobile" data-modal-open="header">Buy now
         <svg class="icon-arrow" width="12" height="12">
           <use href="./images/header/icons.svg#arrow-right-bold"></use>
         </svg>
@@ -96,9 +96,9 @@
     </div>
 
     <!--Modal menu  is-hidden  -->
-    <div class="backdrop " data-modal="333">
+    <div class="backdrop is-hidden" data-modal="header">
       <div class="modal">
-        <button class="modal-button" data-modal-close="333">
+        <button class="modal-button" data-modal-close="header">
           <svg class="modal-icon" width="14" height="14">
             <use href="./images/header/icons.svg#close_modal"></use>
           </svg>
@@ -121,28 +121,35 @@
        </ul>
 
         <form class="form">
-          <div class="form-field">
-           <label for="usermame">Name</label>  
-            <div class="field-pos">           
-             <input type="text" name="usermame" id="usermame" required/>
-             <svg class="icon-modal" width="12" height="12">
-             <use href="./images/icons.svg#user"></use></svg>
-            </div>   
+          <div class="form__field">        
+            <input 
+             type="text" 
+             name="usermame" 
+             id="usermame" 
+             placeholder="Name" 
+             pattern="[A-Za-z]{1,32}" 
+             required
+             />
           </div>
-          <div class="form-field">
-            <label for="user-tel">Phone</label>
-            <div class="field-pos">
-             <input type="tel" name="tel" id="user-tel" required/>
-             <svg class="icon-modal" width="13" height="13">
-             <use href="./images/icons.svg#tel"></use></svg>
+          <div class="form__field">
+            <input 
+             type="tel" 
+             name="tel" 
+             id="user-tel" 
+             placeholder="Phone"
+             pattern="[0-9]{1,32}"             
+             required
+             />
             </div>
-          </div>
-          <div class="form-comment">
-           <label for="user-comment">Comment</label>
-           <textarea name="comment" rows="5" placeholder="Введіть текст" id="user-comment"></textarea>
+          <div class="form__comment">
+           <textarea 
+            name="comment" 
+            rows="5" 
+            placeholder="Comment" 
+            id="user-comment"></textarea>
           </div>          
           
-          <button type="submit" class="button">Submit</button>
+          <button type="submit" class="button button__button--modal">Submit</button>
         </form>
 
  

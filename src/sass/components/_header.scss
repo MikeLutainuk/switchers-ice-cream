@@ -218,7 +218,7 @@
   }
 }
 
-.button__button-mobile {
+.button__button--mobile {
   display: flex;
   align-items: center;
 
@@ -325,8 +325,8 @@
   }
 }  
 
-//Forms
 
+//Forms
 .modal-form {
 
 
@@ -509,152 +509,132 @@
 
 
 
-.form-field,
-.form-comment {
+.form__field,
+.form__comment {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
-.form-field:not(:last-child) {
-  margin-bottom: 10px;
+.form__field:not(:last-child) {
+  margin-bottom: 12px;
 }
-.form-comment {
-  margin-bottom: 20px;
+.form__comment {
+  margin-bottom: 26px;
 }
-.form-field label,
-.form-comment label {
-  margin-bottom: 4px;
 
-  font-size: 12px;
-  line-height: 1.2;
-  color: $black-color;
-}
-.form-field input {
-  padding-left: 42px;
+.form__field input,
+.form__comment textarea {
+  padding: 8px 12px;
 
   width: 100%;
-  height: 40px;
+  height: 32px;
   
   cursor: pointer;
   outline: none;
-  border: border rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  transition: $function-time $display-time;
-
-  &:hover,
-  &:focus {
-   border: border $accent-color;
- }
-}
-.field-pos {
-  position: relative;
-
-  & svg {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-  
-    transition: $function-time $display-time;
-  }
-}
-
-.field-pos input:focus + .icon-modal {
-  fill: $accent-color;
-}
-
-.form-comment textarea {
-  padding: 12px 16px;
-
-  cursor: pointer;
-  outline: none;
-  resize: none;
-  border: border rgba(33, 33, 33, 0.2);
-  border-radius: 2px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid $background-color;
+  border-radius: 10px;
   transition: $function-time $display-time;
 
   &::placeholder {
     font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
+    line-height: 1.4;
+    color: $black-color
   }
 
   &:hover,
   &:focus {
    border: border $accent-color;
- }
-}
-
-
-
-.form-check {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 30px;
-
-  cursor: pointer;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: $black-color;
-
-  @media screen and (min-width: $desk) {
-
-    font-size: 14px;
-    line-height: 1.71;
-  }
-
-  & input {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-    /*appearance: none;*/
-  }
-
-  & a {
-    margin-left: 3px;
-    color: $accent-color;
   }
 }
 
-.check {
-  width: 16px;
-  height: 15px;
-
-  margin-right: 8px;
-
-  border-radius: 2px;
-  border: 2px solid $black-color;
+.form__field input:not(:placeholder-shown):required:valid {
+  border-color: $background-color;
 }
-.form-check input:checked + .check {
-  background-color: $accent-color;
-  border-color: $accent-color;
-  border-radius: 2px;
+.form__field input:not(:placeholder-shown):required:invalid {
+  border-color: red;
+}
+.form__comment textarea {
 
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: $function-time $display-time;
+  height: auto;
+  resize: none;
 }
 
-form .button {
+.button__button--modal {
   display: block;
-
   margin: auto;
-  padding: 10px 52px;
-
-  &:hover,
-  &:focus {
-  background-color: #188ce8;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
- }
+  padding: 12px 34px;
 }
+
+
+
+// .form-check {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   margin-bottom: 30px;
+
+//   cursor: pointer;
+//   font-size: 12px;
+//   line-height: 1.17;
+//   letter-spacing: 0.01em;
+//   color: $black-color;
+
+//   @media screen and (min-width: $desk) {
+
+//     font-size: 14px;
+//     line-height: 1.71;
+//   }
+
+//   & input {
+//     position: absolute;
+//     width: 1px;
+//     height: 1px;
+//     margin: -1px;
+//     border: 0;
+//     padding: 0;
+//     clip: rect(0 0 0 0);
+//     overflow: hidden;
+//     /*appearance: none;*/
+//   }
+
+//   & a {
+//     margin-left: 3px;
+//     color: $accent-color;
+//   }
+// }
+
+// .check {
+//   width: 16px;
+//   height: 15px;
+
+//   margin-right: 8px;
+
+//   border-radius: 2px;
+//   border: 2px solid $black-color;
+// }
+// .form-check input:checked + .check {
+//   background-color: $accent-color;
+//   border-color: $accent-color;
+//   border-radius: 2px;
+
+//   background-size: contain;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   transition: $function-time $display-time;
+// }
+
+// form .button {
+//   display: block;
+
+//   margin: auto;
+//   padding: 10px 52px;
+
+//   &:hover,
+//   &:focus {
+//   background-color: #188ce8;
+//   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+//  }
+// }
 
