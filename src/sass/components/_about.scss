@@ -1,32 +1,32 @@
-.container {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-right: auto;
-    margin-left: auto;
+// .container {
+//     padding-left: 20px;
+//     padding-right: 20px;
+//     margin-right: auto;
+//     margin-left: auto;
 
-    @media screen and (min-width: $mob) {
-        width: 480px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      @media screen and (min-width: $tab) {
-        width: 768px;
-        padding-left: 32px;
-        padding-right: 32px;
-        align-items: flex-start;
-        justify-content: space-between;
-      }
+//     @media screen and (min-width: $mob) {
+//         width: 480px;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//       }
+//       @media screen and (min-width: $tab) {
+//         width: 768px;
+//         padding-left: 32px;
+//         padding-right: 32px;
+//         align-items: flex-start;
+//         justify-content: space-between;
+//       }
     
-      @media screen and (min-width: $desk) {
-        width: 1200px;
-        margin: 0 auto;
-        padding-left: 16px;
-        padding-right: 16px;
-      }
+//       @media screen and (min-width: $desk) {
+//         width: 1200px;
+//         margin: 0 auto;
+//         padding-left: 16px;
+//         padding-right: 16px;
+//       }
       
     
-}
+// }
 .about {
     margin: 0;
     padding-top: 60px;
