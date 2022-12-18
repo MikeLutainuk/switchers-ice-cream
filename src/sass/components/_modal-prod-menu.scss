@@ -1,102 +1,102 @@
-/* Основні кольори */
-$white-color: #fcfcfc;
-$black-color: #131313;
+// /* Основні кольори */
+// $white-color: #fcfcfc;
+// $black-color: #131313;
 
-/* Колір фону*/
-$background-color: #84a278;
+// /* Колір фону*/
+// $background-color: #84a278;
 
-/* Колір кнопок */
-$default-color: #f8d24e;
-$accent-color: #0a8817;
-$disabled-color: #ababab;
+// /* Колір кнопок */
+// $default-color: #f8d24e;
+// $accent-color: #0a8817;
+// $disabled-color: #ababab;
 
-/* Анімація */
-$display-time: $display-time;
-$function-time: $function-time;
+// /* Анімація */
+// $display-time: $display-time;
+// $function-time: $function-time;
 
-/* z-index */
-$main-index: 1000;
-$second-index: 100;
-$third-index: 10;
+// /* z-index */
+// $main-index: 1000;
+// $second-index: 100;
+// $third-index: 10;
 
-$mob: 480px;
-$tab: 768px;
-$desk: 1200px;
+// $mob: 480px;
+// $tab: 768px;
+// $desk: 1200px;
 
-html {
-  scroll-behavior: smooth;
-}
+// html {
+//   scroll-behavior: smooth;
+// }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  background-color: $background-color;
-}
+// body {
+//   font-family: 'Montserrat', sans-serif;
+//   font-size: 14px;
+//   letter-spacing: 0.04em;
+//   background-color: $background-color;
+// }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin: 0;
-  padding: 0;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p,
+// ul {
+//   margin: 0;
+//   padding: 0;
+// }
 
-ul {
-  list-style: none;
-}
+// ul {
+//   list-style: none;
+// }
 
-a {
-  text-decoration: none;
-  cursor: pointer;
-}
+// a {
+//   text-decoration: none;
+//   cursor: pointer;
+// }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+// img {
+//   display: block;
+//   max-width: 100%;
+//   height: auto;
+// }
 
-.container {
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  @media screen and (min-width: 480px) {
-    width: 480px;
-  }
+// .container {
+//   margin: 0 auto;
+//   padding-left: 20px;
+//   padding-right: 20px;
+//   @media screen and (min-width: 480px) {
+//     width: 480px;
+//   }
 
-  @media screen and (min-width: 768px) {
-    width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
+//   @media screen and (min-width: 768px) {
+//     width: 768px;
+//     padding-left: 32px;
+//     padding-right: 32px;
+//   }
 
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-.list {
-  text-decoration: none;
-  list-style: none;
-}
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  visibility: visible;
-  transition: opacity $display-time, visibility $function-time;
-  transform: scale(1);
-}
+//   @media screen and (min-width: 1200px) {
+//     width: 1200px;
+//     padding-left: 16px;
+//     padding-right: 16px;
+//   }
+// }
+// .list {
+//   text-decoration: none;
+//   list-style: none;
+// }
+// .backdrop {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(0, 0, 0, 0.2);
+//   opacity: 1;
+//   visibility: visible;
+//   transition: opacity $display-time, visibility $function-time;
+//   transform: scale(1);
+// }
 
 // .backdrop.is-hidden {
 //   opacity: 0;
