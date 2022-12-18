@@ -116,10 +116,9 @@
   outline: none;
   
 
-  @media (min-width: $desk) {
-    .menu-toggle {
-      display: none;
-    }
+  @media screen and (min-width: $desk) {
+
+   display: none;    
   }
 
   &:hover,
@@ -147,6 +146,11 @@
 
   transform: translateX(100%);
   transition: transform $display-time $function-time;
+
+  @media screen and (min-width: $desk) {
+    
+    display: none;    
+   }
 }
 
 .menu-container.is-open {
