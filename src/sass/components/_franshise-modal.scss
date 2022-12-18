@@ -1,0 +1,196 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity $display-time $function-time;
+    overflow-y: scroll;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .franchise-modal {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+}
+
+.franchise-modal {
+    position: relative;
+    width: 280px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 28px;
+    background-color: $white-color;
+    border: 2px solid $default-color;
+    border-radius: 10px;
+    opacity: 1;
+
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        width: 568px;
+        padding: 32px 60px;
+    }
+}
+
+.franchise__modal-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    color: $black-color;;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: color $display-time $function-time;  
+}
+
+.franchise__close-modal {
+    fill: currentColor;
+}
+
+.franchise__modal-btn:hover,
+.franchise__modal-btn:focus {
+    color: $accent-color;
+}
+
+.form-modal-fr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-title-fr {
+    margin-bottom: 20px;
+    font-family: 'Seymour One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(24/16);
+    text-align: center;
+    color: $black-color;
+
+    @media screen and (min-width: 768px) {
+        width: 322px;
+        margin-bottom: 24px;
+        font-size: 20px;
+        line-height: calc(28/20);
+    }
+}
+
+.modal-text-fr {
+    margin-bottom: 24px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(20/14);
+    color: $black-color;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 32px;
+        font-size: 16px;
+        line-height: calc(22/16);
+    }
+}
+
+.form-modal-field-fr input {
+    width: 224px;
+    height: 32px; 
+    margin-bottom: 12px;
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    background-color: rgba(248, 210, 78, 0.1);
+    border: 1px solid $background-color;
+    border-radius: 10px;
+
+    @media screen and (min-width: 768px) {
+        width: 368px;
+        height: 42px;
+        margin-bottom: 24px;
+        padding-left: 16px;
+        padding-top: 11px; 
+        padding-bottom: 11px;
+    }
+}
+
+.form-modal-field-fr textarea {
+    width: 224px;
+    height: 64px; 
+    margin-bottom: 24px;
+    padding-left: 12px;
+    padding-top: 8px;
+    background-color: rgba(248, 210, 78, 0.1);
+    border: 1px solid $background-color;
+    border-radius: 10px;
+
+    @media screen and (min-width: 768px) {
+        width: 368px;
+        height: 84px;
+        margin-bottom: 32px;
+        padding-left: 16px;
+        padding-top: 11px;
+    }
+}
+
+.form-modal-field-fr input::placeholder,
+.form-modal-field-fr textarea::placeholder {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 12px;
+    line-height: calc(17/12);
+    color: $black-color;
+    
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: calc(20/14);
+    }
+}
+
+.modal-btn-fr {
+    width: 114px;
+    height: 42px;
+    padding: 12px 34px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(15/12);
+    color: $black-color;   
+    background-color: $default-color;
+    border: 0 solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: color $display-time $function-time, 
+    background-color $display-time $function-time;
+
+    &:hover {
+    color: #000000;
+    background-color: $accent-color;
+    }
+
+    &:focus {
+    color: #FFFFFF;
+    background-color: $accent-color;
+    }
+
+    &:disabled {
+    color: $black-color;
+    background-color: $disabled-color;
+    }
+}
+

@@ -1,4 +1,4 @@
-<section class="section">
+<!-- <section class="section">
     <div class="container section-container">
         <h2 class="visually-hidden">Відгуки клієнтів</h2>
         <img class="reviews__foto" srcset="
@@ -9,8 +9,8 @@
                         ./images/reviews/review-foto1t@2x.jpg 1408w,
                         ./images/reviews/review-foto1d@2x.jpg 2026w"
             sizes="(min-width: 1200px) 1013px, (min-width: 768px) 704px, (min-width: 480px) 560px, 100vw"
-            src="./images/reviews/review-foto1m.jpg" alt="foto ice-cream">
-        <!-- <img class="reviews__customer-foto"
+            src="./images/reviews/review-foto1m.jpg" alt="foto ice-cream"> -->
+<!-- <img class="reviews__customer-foto"
             srcset="./images/reviews/customer-foto1.jpg 1x, ./images/reviews/customer-foto1@2x.jpg 2x"
             src="./images/reviews/customer-foto1.jpg" alt="customer-Emily">
         <p class="reviews__text">I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles! In
@@ -25,18 +25,66 @@
         </div>
     </div>
 </section> -->
-<img class="reviews__customer-foto"
-    srcset="./images/reviews/customer-foto1.jpg 1x, ./images/reviews/customer-foto1@2x.jpg 2x"
-    src="./images/reviews/customer-foto1.jpg" alt="customer-Emily">
-<p class="reviews__text">I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles! In
-    addition, you have beautiful serving, cozy atmosphere and polite staff.</p>
-<p class="reviews__customer">Emily, Los Angeles</p>
-<div class="pagination-wrapper">
-    <ul class="pagination">
-        <li class="active dot"></li>
-        <li class="dot"></li>
-        <li class="dot"></li>
-    </ul>
-</div>
-</div>
+
+<section class="reviews reviews-wrap">
+  <div class="container">
+    <h2 class="visually-hidden">Відгуки клієнтів</h2>
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img
+            class="reviews__customer-foto"
+            srcset="
+              ./images/reviews/customer-foto1.jpg    1x,
+              ./images/reviews/customer-foto1@2x.jpg 2x
+            "
+            src="./images/reviews/customer-foto1.jpg"
+            alt="customer-Emily"
+          />
+          <p class="reviews__text">
+            I love visiting your cafe. You prepare the most delicious ice cream
+            in Los Angeles! In addition, you have beautiful serving, cozy
+            atmosphere and polite staff.
+          </p>
+          <p class="reviews__customer">Emily, Los Angeles</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="reviews__customer-foto"
+            srcset="
+              ./images/reviews/customer-foto2.jpg    1x,
+              ./images/reviews/customer-foto2@2x.jpg 2x
+            "
+            src="./images/reviews/customer-foto2.jpg"
+            alt="customer-Bryan"
+          />
+          <p class="reviews__text">
+            Every day we come to you with friends after classes in college. We
+            love your ice cream and casual atmosphere!
+          </p>
+          <p class="reviews__customer">Bryan, New-York</p>
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="reviews__customer-foto"
+            srcset="
+              ./images/reviews/customer-foto3.jpg    1x,
+              ./images/reviews/customer-foto3@2x.jpg 2x
+            "
+            src="./images/reviews/customer-foto3.jpg"
+            alt="customer-Diana"
+          />
+          <p class="reviews__text">
+            Ice cream is my passion! I love your chocolate hazelnut ice cream!
+            And I really like the excellent service - always served politely and
+            quickly!
+          </p>
+          <p class="reviews__customer">Diana, Chicago</p>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
 </section>
