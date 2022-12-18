@@ -1,15 +1,15 @@
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector("[data-modal-open=7]"),
-    closeModalBtn: document.querySelector("[data-modal-close7]"),
-    modal: document.querySelector("[data-modal7]"),
-  };
+// (() => {
+//   const refs = {
+//     openModalBtn: document.querySelector("[data-modal-open=7]"),
+//     closeModalBtn: document.querySelector("[data-modal-close7]"),
+//     modal: document.querySelector("[data-modal7]"),
+//   };
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
+//   refs.openModalBtn.addEventListener("click", toggleModal);
+//   refs.closeModalBtn.addEventListener("click", toggleModal);
 
-  function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
-  }
-})();
+//   function toggleModal() {
+//     refs.modal.classList.toggle("is-hidden");
+//   }
+// })();
 
