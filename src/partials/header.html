@@ -1,71 +1,67 @@
 <header class="header">
   <div class="container flex-container">
     <a href="./index.html" class="logo">
-      <img 
-      srcset="
+
+      <img srcset="
       ./images/header/logo_40.png 40w,  
       ./images/header/logo_48.png 48w, 
       ./images/header/logo_60.png 60w,
       ./images/header/logo_80.png 80w,
       ./images/header/logo_96.png 96w,
       ./images/header/logo_120.png 120w
-      "
+      " 
       sizes="(min-width: 1200px) 60px, (min-width: 768px) 48px, (min-width: 480px) 40px, 8vw"
       src="./images/header/logo_40.png" 
-      alt="Site logo"  
+      alt="Site logo" 
       loading="lazy" 
       />
     </a>
 
     <!--Navigation-->
     <nav class="navigation-container"></nav>
-    <ul class="navigation">
-      <li class="navigation__item">
-        <a href="./index.html" class="navigation__link">Home</a>
-      </li>
-      <li class="navigation__item">
-        <a href="#about" class="navigation__link">How it’s made?</a>
-      </li>
-      <li class="navigation__item">
-        <a href="#product" class="navigation__link">Our products</a>
-      </li>
-      <li class="navigation__item">
-        <a href="#contacts" class="navigation__link">Contact</a>
-      </li>
-    </ul>
+      <ul class="navigation">
+       <li class="navigation__item">
+         <a href="./index.html" class="navigation__link">Home</a>
+       </li>
+       <li class="navigation__item">
+         <a href="#about" class="navigation__link">How it’s made?</a>
+       </li>
+       <li class="navigation__item">
+         <a href="#product" class="navigation__link">Our products</a>
+       </li>
+       <li class="navigation__item">
+         <a href="#contacts" class="navigation__link">Contact</a>
+       </li>
+      </ul>
     </nav>
 
-    <button 
-    class="menu-toggle js-open-menu" 
-    aria-expanded="false" 
-    aria-controls="mobile-menu"
-    >
-    <svg class="icon-menu_open" width="32" height="32">
-      <use href="./images/header/icons.svg#icon_open"></use>
-    </svg>    
+    <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg class="icon-menu_open" width="32" height="32">
+        <use href="./images/header/icons.svg#icon_open"></use>
+      </svg>
     </button>
 
-    <button type="button" class="button" data-modal-open>Buy now
+    <button type="button" class="button" data-modal-open='21'>Buy now
       <svg class="icon-arrow" width="12" height="12">
         <use href="./images/header/icons.svg#arrow-right-bold"></use>
       </svg>
     </button>
 
 
-      <!--Mobile menu-->   
+    <!--Mobile menu-->
     <div class="menu-container js-menu-container" id="mobile-menu">
       <a href="./index.html" class="logo-mobile">
         <img 
-        srcset="
-        ./images/header/logo_40.png 40w,  
-        ./images/header/logo_48.png 48w,
-        ./images/header/logo_80.png 80w,
-        ./images/header/logo_96.png 96w
-        "
-        sizes="(min-width: 768px) 48px, (min-width: 480px) 40px, 8vw"
-        src="./images/header/logo_40.png" 
-        alt="Site logo"  
-        loading="lazy" 
+         srcset="
+         ./images/header/logo_40.png 40w,  
+         ./images/header/logo_48.png 48w,
+         ./images/header/logo_80.png 80w,
+         ./images/header/logo_96.png 96w
+         "
+         sizes="(min-width: 768px) 48px, (min-width: 480px) 40px, 8vw"
+         src="./images/header/logo_40.png" 
+         alt="Site logo"  
+         loading="lazy" 
         />
       </a>
 
@@ -74,23 +70,24 @@
           <use href="./images/header/icons.svg#icon_close"></use>
         </svg>
       </button>
+
      <div class="menu-flex">
       <ul class="mobile-nav">
         <li class="mobile-nav__item">
           <a href="#Home" class="mobile-nav__link">Home</a>
         </li>
         <li class="mobile-nav__item">
-          <a href="#How it’s made?" class="mobile-nav__link">How it’s made?</a>
+          <a href="#" class="mobile-nav__link">How it’s made?</a>
         </li>
         <li class="mobile-nav__item">
-          <a href="#Our products" class="mobile-nav__link">Our products</a>
+          <a href="#" class="mobile-nav__link">Our products</a>
         </li>
         <li class="mobile-nav__item">
           <a href="#Contact" class="mobile-nav__link">Contact</a>
         </li>
       </ul>
 
-      <button type="button" class="button-modal" data-modal-open>Buy now
+      <button type="button" class="button-mobile" data-modal-open>Buy now
         <svg class="icon-arrow" width="12" height="12">
           <use href="./images/header/icons.svg#arrow-right-bold"></use>
         </svg>
@@ -98,13 +95,53 @@
      </div> 
     </div>
 
-    <!--Modal menu-->
+    <!--Modal menu  is-hidden  -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <p class="modal-form">Buy now</p>
+       <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+       </ul>
+
+        <form class="form">
+          <div class="form-field">
+           <label for="usermame">Name</label>  
+            <div class="field-pos">           
+             <input type="text" name="usermame" id="usermame" required/>
+             <svg class="icon-modal" width="12" height="12">
+             <use href="./images/icons.svg#user"></use></svg>
+            </div>   
+          </div>
+          <div class="form-field">
+            <label for="user-tel">Phone</label>
+            <div class="field-pos">
+             <input type="tel" name="tel" id="user-tel" required/>
+             <svg class="icon-modal" width="13" height="13">
+             <use href="./images/icons.svg#tel"></use></svg>
+            </div>
+          </div>
+          <div class="form-comment">
+           <label for="user-comment">Comment</label>
+           <textarea name="comment" rows="5" placeholder="Введіть текст" id="user-comment"></textarea>
+          </div>          
+          
+          <button type="submit" class="button">Submit</button>
+        </form>
+
+        <button class="modal-button" data-modal-close>
+          <svg class="modal-icon" width="14" height="14">
+            <use href="./images/header/icons.svg#close_modal"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
-  <script
-    defer
-    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
     integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-    crossorigin="anonymous"
-    ></script>
+    crossorigin="anonymous"></script>
   <script defer src="./js/mobile-menu.js"></script>
+
 </header>
