@@ -37,7 +37,7 @@
         display: flex;
         gap: 16px;
     }
-    @media screen and (min-width: $tab) {
+    @media screen and (min-width: $desk) {
         display: flex;
          gap: 29px;
     }
@@ -80,6 +80,7 @@
     }
 
     @media screen and (min-width: $tab) {
+        min-width: 224px;
         flex-basis: calc((100% - 32px) / 2);
         min-height: 430px;
         padding: 108px 26px 12px 26px;
