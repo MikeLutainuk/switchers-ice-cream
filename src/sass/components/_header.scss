@@ -117,15 +117,24 @@
   
 
   @media screen and (min-width: $desk) {
-
    display: none;    
   }
+}
+.icon-menu_open,
+.icon-menu_close {
+  fill: #fff;
+}
 
-  &:hover,
-  &:focus {
-    background-color: #f8d24e;
+.flex-container .menu-toggle:hover,
+.flex-container .menu-toggle:focus {
+  transition: $function-time $display-time;
+
+  & .icon-menu_open,
+  & .icon-menu_open {
+    fill: $default-color;
   }
 }
+
 
 .menu-container {
   position: fixed;
@@ -164,10 +173,15 @@
 
   &:hover,
   &:focus {
-    color: $accent-color;
+    transition: $function-time $display-time;
   }
 
+  &:hover .icon-menu_close,
+  &:focus .icon-menu_close {
+    fill: $default-color;
+  }
 }
+
 .logo-mobile {
   margin-bottom: 51px;
 }
@@ -184,8 +198,6 @@
   @media screen and (max-width: 767px) {
     margin-bottom:  110px;
   }
-
-
 
   &__item:not(:last-child){
     margin-bottom:  32px;
@@ -223,7 +235,7 @@
   border-radius: 10px;
   color: #000;
   background-color: #F8D24E;
-  transition: background-color $display-time $function-time;
+  transition: color $display-time $function-time;
 
   &:hover {
     background-color: $accent-color;
@@ -253,17 +265,18 @@
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
   transition: opacity $display-time $function-time, visibility $display-time $function-time,
-    transform $display-time $function-time;
+  transform $display-time $function-time;
 }
 .backdrop.is-hidden {
-opacity: 0;
-pointer-events: none;
-visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 
-& .modal {
- transform: translate(-50%, -50%) scale(0);
-}
+  & .modal {
+   transform: translate(-50%, -50%) scale(0);
+  }
 }
 .modal {
   position: absolute;
@@ -277,39 +290,37 @@ visibility: hidden;
   background-color: $white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: 10px;
   transition: transform $display-time $function-time;
 
   @media screen and (min-width: $desk) {
-    width: 528px;
-    padding: 40px 39px 40px 41px;
+    width: 568px;
+    padding: 32px 54px;
 
   }
 }
 .modal-button {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 12px;
+  right: 12px;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 30px;
-  height: 30px;
-  margin-top: 8px;
-  margin-right: 8px;
+  width: 24px;
+  height: 24px;
 
   cursor: pointer;
-  border: border #0000001a;
-  border-radius: 50%;
-  background-color: $white-color;
-  transition: fill $display-time $function-time, border $display-time $function-time;
+  border: transparent;
+  background-color: transparent;
+  transition: transform $display-time $function-time;
+  // fill $display-time $function-time, border $display-time $function-time;
 
 
   &:hover,
   &:focus {
-  fill: $accent-color;
-  border-color: $accent-color;
-}
+    fill: $default-color;
+  }
 }  
 
