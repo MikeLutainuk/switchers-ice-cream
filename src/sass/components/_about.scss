@@ -1,32 +1,32 @@
-.about-container {
-    display: block;
+.container {
     padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
     margin-left: auto;
 
-    @media screen and (min-width: 480px) {
-        width: 450px;
-        
-      }
-      @media screen and (min-width: 767px) {
+    @media screen and (min-width: $mob) {
+       
         display: flex;
         flex-direction: column;
         align-items: center;
       }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $tab) {
+       
         align-items: baseline;
-    
+        justify-content: space-between;
       }
+    
 }
 .about {
     margin: 0;
     padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #84A178;;
-    @media screen and (min-width: $desktop) {
-        padding-bottom: 80;
-      }
+
+    background-color:$background-color;
+    @media screen and (min-width: $tab) {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
       &__label {
         font-family: 'Montserrat';
         font-style: normal;
@@ -35,13 +35,15 @@
         line-height: calc(22 / 18);
         text-align: center;
         text-transform: uppercase;
-        color: #FCFCFC;
+        color: $white-color;
         margin-bottom: 12px;
+        margin-left: auto;
+        margin-right: auto;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $tab) {
             font-size: 22px;
         }
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: $desk) {
             font-size: 30px;
         }
       }
@@ -54,38 +56,76 @@
         text-align: center;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-        color: #FCFCFC;
+        color: $white-color;
         margin-bottom: 32px;
-        @media screen and (min-width: 768px) {
-            font-size: 34px;
-            margin-bottom: 72px;
+        margin-right: auto;
+        margin-left: auto;
+        @media screen and (min-width: $tab) {
+          width: 454px;
+          font-size: 34px;
+          margin-bottom: 72px;
         }
-        @media screen and (min-width: 1200px) {
-            font-size: 36px;
-            margin-bottom: 82px;
+        @media screen and (min-width: $desk) {
+          width: 481px;  
+          font-size: 36px;
+          margin-bottom: 82px;
         }
 
       }
       &__box {
-        display: block;
-        text-align: center;
-
-        @media screen and (min-width: 768px) {
-            display: flex;
-            align-items: baseline;
-        }
-      }
-      &.img {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 279px;
+        height: 278px;
         border-radius: 140px;
-        @media screen and (min-width: 768px) {
-            border-radius: 1228px;
-        }
-        @media screen and (min-width: 1200px) {
-            border-radius: 1852.2px;
-        }
+        background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+        box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+        @media screen and (min-width: $tab) {
+          top: 26px;
+          width: 330px;
+          height: 330px;
+          border-radius: 1228px;
+          
+          }
+        
+        @media screen and (min-width: $desk) {
+          top: 39px;
+          width: 490px;
+          height: 490px;
+          border-radius: 1852.2px;
+          }
       }
+      &__image {
+        position: absolute;
+      
+        top: 22px;
+        width: 279px;
+        height: 278px;
+        border-radius: 140px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        
+        @media screen and (min-width: $tab) {
+          border-radius: 165px;
+          width: 330px;
+          height: 330px;
+          
+        }
+        @media screen and (min-width: $desk) {
+          border-radius: 250px;
+          width: 490px;
+          height: 490px;
+        }
+
+      }
+      
       &__content {
         list-style: none;
+        margin-top: 40px;
       }
       &__text {
         text-align: center;
@@ -95,36 +135,25 @@
         font-size: 12px;
         line-height: calc(19 / 12);
         text-align: center;
-        color: #FCFCFC;
+        color: $white-color;
         
 
-        @media screen and (min-width: 480px) {
+        @media screen and (min-width: $mob) {
             width: 220px;
         }
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: $tab) {
             width: 334px;
             line-height: calc(21 / 12);
         }
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: $desk) {
             width: 463px;
             font-size: 16px;
             line-height: calc(28 / 16);
         }
       }
-      @media screen and (max-width: 479px) {
-        &__text:last-child {
-            display: none;
-        } 
-        &__text:not(:last-child) {
-            margin-bottom: 4px;
-        }
-      }
-      @media screen and (min-width: 768px) {
-        &__text:not(:last-child) {
-            margin-bottom: 8px;
-        }
-      }
+      
       &-button {
+        display: flex;
         position: relative;
         cursor: pointer;
         width: 164px;
@@ -132,6 +161,9 @@
         border-radius: 10px;
         background-color: $default-color;
         border: none;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
         @media screen and (max-width: 767px) {
            margin-top: 10px; 
         }
@@ -143,18 +175,20 @@
         }
       }
       &-button__text {
+        position: absolute;
+        top: 30%;
+        left: 34px;
         font-family: 'Montserrat';
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
         line-height: calc(18 / 14);
-        text-align: center;
         color: #000000;
       }
       &-button__icon {
         position: absolute;
-        top: 20%;
-        left: 121px;
+        top: 38%;
+        left: 120px;
         fill: #000000;;
       }
       &-button:hover {
@@ -173,4 +207,18 @@
         fill: #000000;
       }
      
+}
+
+@media screen and (max-width: 767px) {
+  .about__text:last-child {
+      display: none;
+  } 
+  .about__text:not(:last-child) {
+      margin-bottom: 4px;
+  }
+}
+@media screen and (min-width: $tab) {
+  .about__text:not(:last-child) {
+      margin-bottom: 8px;
+  }
 }
