@@ -40,7 +40,6 @@
         display: flex;
         gap: 80px;
         width: 100%;
-
     }
 
     @media screen and (min-width: 1200px) {
@@ -54,15 +53,15 @@
     margin: 0;
     padding: 0;
 
-
     &::before {
-        content: "";
-        display: inline-block;
-        height: 50px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+            content: "";
+            display: inline-block;
+            height: 50px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
 
     @media screen and (max-width: 767px) {
         &:not(:last-child) {
@@ -72,8 +71,6 @@
 
     @media screen and (min-width: 768px) {
         width: calc((100% - 2 * 80px)/ 3);
-
-
     }
 
     @media screen and (min-width: 1200px) {
@@ -81,10 +78,25 @@
     }
 }
 
-/*.advantages__item--cow {
-    background-image: url();
-}*/
+.advantages__item--cow {
+    &::before {
+            background-image: url(../images/advantages/cowicon.png);
+        }
+}
 
+.advantages__item--weight {
+    &::before {
+        background-image: url(../images/advantages/weighticon.png);
+        
+        }
+    
+}
+
+.advantages__item--icecream {
+    &::before {
+            background-image: url(../images/advantages/icecreamicon.png);
+        }
+}
 .advantages__title {
     font-family: 'Montserrat';
     font-style: normal;
