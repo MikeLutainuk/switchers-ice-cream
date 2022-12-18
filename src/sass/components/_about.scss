@@ -114,6 +114,7 @@
         }
         
         @media screen and (min-width: $tab) {
+          top: 26px;
           border-radius: 165px;
           width: 330px;
           height: 330px;
@@ -121,6 +122,7 @@
           
         }
         @media screen and (min-width: $desk) {
+          top: 39px;
           border-radius: 250px;
           width: 490px;
           height: 490px;
@@ -133,7 +135,13 @@
         @media screen and (min-width: $tab) {
           display: flex;
           margin-right: 34px;
-          align-items: baseline;
+          margin-left: 404px;
+          margin-top: -330px;
+        }
+        @media screen and (min-width: $desk) {
+          margin-right: 121px;
+          margin-left: 616px;
+          margin-top: -400px;
         }
       }
       &__list {
@@ -182,13 +190,20 @@
         margin-right: auto;
         align-items: center;
         @media screen and (max-width: 767px) {
-           margin-top: 10px; 
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 10px;
         }
+        
         @media screen and (min-width: $tab) {
             margin-top: 32px;
+            margin-left: 398px;
+            margin-right: 206px;
         }
         @media screen and (min-width: $desk) {
             margin-top: 54px;
+            margin-left: 616px;
+            margin-right: 420px;
         }
       }
       &-button__text {
