@@ -6,7 +6,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity $display-time $function-time;
     overflow-y: scroll;
 }
 
@@ -27,8 +27,8 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     padding: 28px;
-    background-color: #FCFCFC;
-    border: 2px solid #F8D24E;
+    background-color: $white-color;
+    border: 2px solid $default-color;
     border-radius: 10px;
     opacity: 1;
 
@@ -41,19 +41,19 @@
 
 .franchise__modal-btn {
     position: absolute;
-    top: 8px;
-    right: 8px;
+    top: 12px;
+    right: 12px;
 
     display: flex;
     width: 24px;
     height: 24px;
     align-items: center;
     justify-content: center;
-    color: #131313;;
+    color: $black-color;;
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
+    transition: color $display-time $function-time;  
 }
 
 .franchise__close-modal {
@@ -62,7 +62,7 @@
 
 .franchise__modal-btn:hover,
 .franchise__modal-btn:focus {
-    color: #0a8817;
+    color: $accent-color;
 }
 
 .form-modal-fr {
@@ -79,7 +79,7 @@
     font-size: 16px;
     line-height: calc(24/16);
     text-align: center;
-    color: #131313;
+    color: $black-color;
 
     @media screen and (min-width: 768px) {
         width: 322px;
@@ -96,7 +96,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: calc(20/14);
-    color: #131313;
+    color: $black-color;
 
     @media screen and (min-width: 768px) {
         margin-bottom: 32px;
@@ -113,7 +113,7 @@
     padding-top: 8px;
     padding-bottom: 7px;
     background-color: rgba(248, 210, 78, 0.1);
-    border: 1px solid #84A178;
+    border: 1px solid $background-color;
     border-radius: 10px;
 
     @media screen and (min-width: 768px) {
@@ -133,7 +133,7 @@
     padding-left: 12px;
     padding-top: 8px;
     background-color: rgba(248, 210, 78, 0.1);
-    border: 1px solid #84A178;
+    border: 1px solid $background-color;
     border-radius: 10px;
 
     @media screen and (min-width: 768px) {
@@ -152,7 +152,7 @@
     font-weight: 400px;
     font-size: 12px;
     line-height: calc(17/12);
-    color: #131313;
+    color: $black-color;
     
     @media screen and (min-width: 768px) {
         font-size: 14px;
@@ -169,28 +169,28 @@
     font-weight: 600;
     font-size: 12px;
     line-height: calc(15/12);
-    color: #131313;   
-    background-color: #F8D24E;
+    color: $black-color;   
+    background-color: $default-color;
     border: 0 solid transparent;
     border-radius: 10px;
     cursor: pointer;
 
-    transition: color var(--animation-time) var(--animation-timing-function), 
-    background-color var(--animation-time) var(--animation-timing-function);
+    transition: color $display-time $function-time, 
+    background-color $display-time $function-time;
 
     &:hover {
     color: #000000;
-    background-color: #0a8817;
+    background-color: $accent-color;
     }
 
     &:focus {
     color: #FFFFFF;
-    background-color: #0a8817;
+    background-color: $accent-color;
     }
 
     &:disabled {
-    color: #131313;
-    background-color: #ABABAB;
+    color: $black-color;
+    background-color: $disabled-color;
     }
 }
 
