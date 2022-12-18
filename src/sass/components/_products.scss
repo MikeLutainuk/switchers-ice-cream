@@ -76,7 +76,7 @@
     text-align: center;
 
     @media screen and (max-width: 767px) {
-        max-width: 440px;
+        // max-width: 440px;
     }
 
     @media screen and (min-width: $tab) {
@@ -161,62 +161,32 @@
     }
 
     &--first::before {
-        background-image: url(../images/products/img_1_mobile@1x.jpg);
+        background-image: url(../images/header/img-1_132.jpg);
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-            background-image: url(../images/products/img_1_mobile@2x.jpg)
-        }
-
-        @media screen and (min-width: $desk) {
-            background-image: url(../images/products/img_1_desktop@1x.jpg);
-
-            @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-                background-image: url(../images/products/img_1_desktop@2x.jpg)
-            }
+            background-image: url(../images/header/img-1_264.jpg)
         }
     }
 
     &--second::before {
-        background-image: url(../images/products/img_2_mobile@1x.jpg);
+        background-image: url(../images/header/img-2_132.jpg);
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-            background-image: url(../images/products/img_2_mobile@2x.jpg)
-        }
-
-        @media screen and (min-width: $desk) {
-            background-image: url(../images/products/img_2_desktop@1x.jpg);
-
-            @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-                background-image: url(../images/products/img_2_desktop@2x.jpg)
-            }
+            background-image: url(../images/header/img-2_264.jpg)
         }
     }
 
     &--third::before {
-        background-image: url(../images/products/img_3_mobile@1x.jpg);
+        background-image: url(../images/header/img-3_132.jpg);
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-            background-image: url(../images/products/img_3_mobile@2x.jpg)
-        }
-
-        @media screen and (min-width: $desk) {
-            background-image: url(../images/products/img_3_desktop@1x.jpg);
-
-            @media (min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-                background-image: url(../images/products/img_3_desktop@2x.jpg)
-            }
+            background-image: url(../images/header/img-3_264.jpg)
         }
     }
 }
