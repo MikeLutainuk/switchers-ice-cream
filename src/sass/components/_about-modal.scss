@@ -54,36 +54,46 @@
 
 .modal-about__btn-close {
     position: absolute;
-    width: 11pxpx;
-    height: 11pxpx;
+    width: 15px;
+    height: 15px;
     top: 16px;
     right: 16px;
     border: 0px transparent;
-    /*background-color: transparent;*/
+    border-radius: 10px;
+    background-color: transparent;
     cursor: pointer;
     z-index: 6;
     padding: 0;
 
+    &:hover {
+        background-color: $default-color;
+    }
+    &:hover .modal-about__close-icon {
+        fill: white;
+    }
+
     @media screen and (min-width: 768px) {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
+        padding: 5px;
     }
 }
 
 .modal-about__close-icon {
-    width: 11px;
-    height: 11px;
+    width: 15px;
+    height: 15px;
     fill:black;
 
     @media screen and (min-width:768px) {
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
     }
 }
 
 .modal-about__video {
     width: 100%;
     border: 0px transparent;
+    border-radius: 10px;
 
     @media screen and (min-width: 768px) {
         min-height: 210px;
