@@ -206,7 +206,7 @@
   }
 }
 
-.button-modal {
+.button-mobile {
 
   display: flex;
   align-items: center;
@@ -241,4 +241,75 @@
     display: none;
   }
 }
+
+//Modal menu
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity $display-time $function-time, visibility $display-time $function-time,
+    transform $display-time $function-time;
+}
+.backdrop.is-hidden {
+opacity: 0;
+pointer-events: none;
+visibility: hidden;
+
+& .modal {
+ transform: translate(-50%, -50%) scale(0);
+}
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  width: 450px;
+  padding: 40px;
+
+  background-color: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform $display-time $function-time;
+
+  @media screen and (min-width: $desk) {
+    width: 528px;
+    padding: 40px 39px 40px 41px;
+
+  }
+}
+.modal-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+  margin-top: 8px;
+  margin-right: 8px;
+
+  cursor: pointer;
+  border: border #0000001a;
+  border-radius: 50%;
+  background-color: $white-color;
+  transition: fill $display-time $function-time, border $display-time $function-time;
+
+
+  &:hover,
+  &:focus {
+  fill: $accent-color;
+  border-color: $accent-color;
+}
+}  
 
