@@ -6,9 +6,10 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
 
+    transition: opacity $display-time ease-in-out;
     overflow-y: scroll;
 
-    @media screen and (max-width:767px) {
+    @media screen and (max-width: $tab) {
         padding-top: 93px;
         padding-right: 15px;
         padding-left: 15px;
@@ -25,31 +26,34 @@
     position: relative;
     margin-right: auto;
     margin-left: auto;
-
     width: 80vw;
-    min-height: 50vh;
     padding: 28px;
-    background-color: #FCFCFC;
-    border: 2px solid #F8D24E;
+    background-color: $white-color;
+    border: 2px solid $default-color;
     border-radius: 10px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         position: absolute;
-        z-index: 5;
+        z-index: $second-index;
         top: 50%;
         left: 50%;
         padding: 32px 60px 32px 60px;
+        transition: transform $display-time $function-time;
+        transition: scale $display-time $function-time;
+
+        .modal-about__backdrop.is-hidden & {
+            transform: translate(-50%, -50%) scale(0.9);
+        }
 
         transform: translate(-50%, -50%) scale(1);
         min-width: 568px;
         max-width: 700px;
         min-height: 449px;
 
-        .modal-readmore__backdrop.is-hidden & {
-            transform: translate(-50%, -50%) scale(0.9);
-        }
-
+        
     }
+
+            
 }
 
 .modal-about__btn-close {
@@ -62,17 +66,19 @@
     border-radius: 10px;
     background-color: transparent;
     cursor: pointer;
-    z-index: 6;
+    z-index: $second-index;
     padding: 0;
+
+    transition: background-color $display-time $function-time;
 
     &:hover {
         background-color: $default-color;
     }
     &:hover .modal-about__close-icon {
-        fill: white;
+        fill: $white-color;
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         width: 35px;
         height: 35px;
         padding: 5px;
@@ -82,9 +88,10 @@
 .modal-about__close-icon {
     width: 15px;
     height: 15px;
-    fill:black;
+    fill: $black-color;
+    transition: fill $display-time $function-time;
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width: $tab) {
         width: 25px;
         height: 25px;
     }
@@ -95,7 +102,7 @@
     border: 0px transparent;
     border-radius: 10px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         min-height: 210px;
     }
 }
@@ -108,7 +115,7 @@
     line-height: 1.5;
     text-align: center;
 
-    color: #131313;
+    color: $black-color;
 }
 
 .modal-about__text {
@@ -118,5 +125,5 @@
     font-size: 14px;
     line-height: 1.4;
 
-    color: #131313;
+    color: $black-color;
 }
