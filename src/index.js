@@ -8,4 +8,6 @@ import './js/about-modal';
 
 
 import './js/sliding-menu';
+
 import './js/mobile-menu';
+import './js/modal';
