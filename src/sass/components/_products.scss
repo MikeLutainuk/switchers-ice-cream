@@ -1,17 +1,7 @@
 .product {
     padding-top: 60px;
     padding-bottom: 60px;
-    background-position: center;
-    background-color: $white-color;
-    background-image: url(../images/products/bg_mobile.svg);
-
-    @media screen and (min-width: $tab) {
-        background-image: url(../images/products/bg_tablet.svg);
-    }
-
-    @media screen and (min-width: $desk) {
-        background-image: url(../images/products/bg_desktop.svg);
-    }
+   
 }
 
 .product__label {
