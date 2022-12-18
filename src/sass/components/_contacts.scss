@@ -76,8 +76,8 @@
     line-height: calc(14/12);
     text-align: center;
     letter-spacing: 0.04em;
-    color: #131313;
-    background-color: #F8D24E;
+    color: $black-color;
+    background-color: $default-color;
     border-radius: 4px;
 
     &.food {
@@ -136,14 +136,20 @@
     font-size: 12px;
     line-height: calc(22/12);
     letter-spacing: 0.04em;
-    color: #131313;
+    color: $black-color;
 
     &.location {
         color: #D6936D;
+        transition: color $display-time $function-time;
+
+        &:hover, 
+        &:focus {
+        color: $accent-color;
+        }
     }
 
     &.time {
-        color: #ABABAB;;
+        color: $disabled-color;;
     }
 
     &.weekend {
@@ -183,24 +189,13 @@
 
 .contacts__tel {
     margin-bottom: 6px;
-    font-size: 12px;
-    line-height: calc(19/12);
-    
-    @media screen and (min-width: 768px) {
-        margin-bottom: 4px;
-        font-size: 14px;
-        line-height: calc(21/14);
-    }
-
-    @media screen and (min-width: 1200px) {
-        font-size: 16px;
-        line-height: calc(24/16);
-    }
 }
 
+.contacts__tel,
 .contacts__mail {
     font-size: 12px;
     line-height: calc(19/12);
+    color: $black-color;
 
     @media screen and (min-width: 768px) {
         font-size: 14px;
@@ -210,6 +205,13 @@
     @media screen and (min-width: 1200px) {
         font-size: 16px;
         line-height: calc(24/16);
+    }
+
+    transition: color $display-time $function-time;
+
+    &:hover, 
+    &:focus {
+    color: $accent-color;
     }
 }
 
@@ -248,28 +250,55 @@
 }
 
 .contacts__btn--orange {
-    color: #131313;
-    background-color: #F8D24E;
+    color: $black-color;
+    background-color: $default-color;
     border-radius: 10px; 
     border: 0 solid transparent;
     cursor: pointer;
+
+    transition: color $display-time $function-time, 
+    background-color $display-time $function-time;
+
+    &:hover {
+    color: #000000;
+    background-color: $accent-color;
+    }
+
+    &:focus {
+    color: #FFFFFF;
+    background-color: $accent-color;
+    }
+
+    &:disabled {
+    color: $black-color;
+    background-color: $disabled-color;
+    }
 }
 
 .contacts__btn--transparent {
     color: #000000;
     background-color: transparent;
-    border: 2px solid #F8D24E;
+    border: 2px solid $default-color;
     border-radius: 10px;
     cursor: pointer;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color $display-time $function-time, 
+    border $display-time $function-time;
 
-    &:hover, 
-    &:focus {
-    color: #131313;
-    background-color: #FCFCFC;
-    }
+    &:hover {
+        color: #000000;
+        border: 2px solid $accent-color;
+        }
+        
+        &:focus {
+        color: #FFFFFF;
+        border: 2px solid $accent-color;
+        }
+        
+        &:disabled {
+        color: #000000;
+        border: 2px solid $disabled-color;
+        }
 }
 
 .contacts__icon {
