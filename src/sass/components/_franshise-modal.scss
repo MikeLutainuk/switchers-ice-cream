@@ -20,7 +20,7 @@
     opacity: 0;
 }
 
-.franchise-modal {
+.contacts-modal {
     position: relative;
     width: 280px;
     top: 50%;
@@ -39,14 +39,13 @@
     }
 }
 
-.franchise__modal-btn {
+.contacts-modal-btn {
     position: absolute;
-    top: 12px;
-    right: 12px;
-
+    top: 10px;
+    right: 10px;
     display: flex;
-    width: 33px;
-    height: 33px;
+    width: 30px;
+    height: 30px;
     align-items: center;
     justify-content: center;
     color: $black-color;;
@@ -61,22 +60,24 @@
     }
 
     @media screen and (min-width: 768px) {
-        width: 40px;
-        height: 40px;
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
     } 
 }
 
-.franchise__close-modal {
+.contacts-modal-close {
     fill: currentColor;
 }
 
-.form-modal-fr {
+.contacts-modal-form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.modal-title-fr {
+.contacts-modal-title {
     margin-bottom: 20px;
     font-family: 'Seymour One';
     font-style: normal;
@@ -94,7 +95,21 @@
     }
 }
 
-.modal-text-fr {
+.location-picture {
+    display: block;
+    width: 224px;
+    height: 199px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+
+    @media screen and (min-width: 768px) {
+        width: 448px;
+        height: 260px;
+        margin-bottom: 32px;
+    }
+} 
+
+.contacts-modal-description {
     margin-bottom: 24px;
     font-family: 'Montserrat';
     font-style: normal;
@@ -110,7 +125,7 @@
     }
 }
 
-.form-modal-field-fr input {
+.contacts-modal-field input {
     width: 224px;
     height: 32px; 
     margin-bottom: 12px;
@@ -131,7 +146,7 @@
     }
 }
 
-.form-modal-field-fr textarea {
+.contacts-modal-field textarea {
     width: 224px;
     height: 64px; 
     margin-bottom: 24px;
@@ -150,8 +165,8 @@
     }
 }
 
-.form-modal-field-fr input::placeholder,
-.form-modal-field-fr textarea::placeholder {
+.contacts-modal-field input::placeholder,
+.contacts-modal-field textarea::placeholder {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400px;
@@ -165,15 +180,16 @@
     }
 }
 
-.modal-btn-fr {
-    width: 114px;
+.contacts-modal-form-btn {
     height: 42px;
-    padding: 12px 34px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: calc(15/12);
+    text-align: center;
     color: $black-color;   
     background-color: $default-color;
     border: 0 solid transparent;
@@ -205,3 +221,19 @@
     }
 }
 
+.contacts-modal-form-btn.location {
+    display: block;
+    width: 134px;
+
+    @media screen and (min-width: 768px) {
+        width: 145px;
+    }
+}
+
+.contacts-modal-form-btn.franshise {
+    width: 114px;
+
+    @media screen and (min-width: 768px) {
+        width: 121px;
+    }
+}
