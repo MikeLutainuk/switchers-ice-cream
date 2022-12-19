@@ -42,7 +42,7 @@
     </button>
 
 
-    <button type="button" class="button" data-modal-open='21' data-modal-open7>Buy now
+    <button type="button" class="button" data-modal-open="333">Buy now
 
       <svg class="icon-arrow" width="12" height="12">
         <use href="./images/header/icons.svg#arrow-right-bold"></use>
@@ -79,17 +79,17 @@
           <a href="#Home" class="mobile-nav__link">Home</a>
         </li>
         <li class="mobile-nav__item">
-          <a href="#" class="mobile-nav__link">How it’s made?</a>
+          <a href="#about" class="mobile-nav__link">How it’s made?</a>
         </li>
         <li class="mobile-nav__item">
-          <a href="#" class="mobile-nav__link">Our products</a>
+          <a href="#products_section" class="mobile-nav__link">Our products</a>
         </li>
         <li class="mobile-nav__item">
           <a href="#Contact" class="mobile-nav__link">Contact</a>
         </li>
       </ul>
 
-      <button type="button" class="button button__button-mobile" data-modal-open="333">Buy now
+      <button type="button" class="button button__button--mobile" data-modal-open="333">Buy now
         <svg class="icon-arrow" width="12" height="12">
           <use href="./images/header/icons.svg#arrow-right-bold"></use>
         </svg>
@@ -99,14 +99,14 @@
 
     <!--Modal menu  is-hidden  -->
     <div class="backdrop is-hidden"  data-modal="333">
-      <div class="modal">
-        <button class="modal-button" data-modal-close="333">
-          <svg class="modal-icon" width="14" height="14">
+      <div class="modal-hd">
+        <button class="modal__button" data-modal-close="333">
+          <svg class="modal__icon" width="14" height="14">
             <use href="./images/header/icons.svg#close_modal"></use>
           </svg>
         </button>
 
-        <h1 class="modal-form">Buy now</h1>
+        <h1 class="modal__form">Buy now</h1>
         
        <ul class="card__list">
         <li class="card__item card__item--first">
@@ -123,23 +123,35 @@
        </ul>
 
         <form class="form">
-          <div class="form-field">
-           <label for="usermame">Name</label>  
-            <div class="field-pos">           
-             <input type="text" name="usermame" id="usermame" required/>
-             <svg class="icon-modal" width="12" height="12">
-             <use href="./images/icons.svg#user"></use></svg>
-            </div>   
+          <div class="form__field">         
+            <input 
+             type="text" 
+             name="usermame" 
+             id="usermame" 
+             placeholder="Name" 
+             pattern="[A-Za-z]{1,32}"
+             required
+             />   
           </div>
-          <div class="form-field">
-             <input type="tel" name="tel" id="user-tel" required/>
+          <div class="form__field">
+            <input 
+             type="tel" 
+             name="tel" 
+             id="user-tel" 
+             placeholder="Phone" 
+             pattern="[+,0-9]{1,32}"
+             required
+             />
           </div>
-          <div class="form-comment">
-           <label for="user-comment">Comment</label>
-           <textarea name="comment" rows="5" placeholder="Введіть текст" id="user-comment"></textarea>
+          <div class="form__comment">
+           <textarea 
+            name="comment" 
+            rows="5" 
+            placeholder="Comment" 
+            id="user-comment"></textarea>
           </div>          
           
-          <button type="submit" class="button">Submit</button>
+          <button type="submit" class="button button__button--modal">Submit</button>
         </form>
 
  
