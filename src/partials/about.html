@@ -1,24 +1,27 @@
 <section class="about" id="how_section">
-  <div class="about-container">
+  <div class="container">
     <h1 class="about__label">tradition and love</h1>
     <h2 class="about__title">how it’s made?</h2>
     <div class="about__box">
       <img
         srcset="
-          ./images/about/cow280.jpg 280w,
+          ./images/about/cow279.jpg 279w,
           ./images/about/cow330.jpg 330w,
-          ./images/about/cow491.jpg 491w,
-          ./images/about/cow560.jpg 560w,
+          ./images/about/cow490.jpg 490w,
+          ./images/about/cow558.jpg 558w,
           ./images/about/cow660.jpg 660w,
-          ./images/about/cow982.jpg 982w
+          ./images/about/cow980.jpg 982w
         "
-        sizes="(min-width: 1200px) 280px, (min-width: 768px) 330px, (min-width: 480px) 491px, 100vw"
-        src="./images/about/cow491.jpg"
+        sizes="(min-width: 1200px) 490px, (min-width: 768px) 330px, (min-width: 480px) 279px, 100vw"
+        src="./images/about/cow279.jpg"
         alt="Cow"
-        width="491"
-        height="529"
+        width="279"
+        height="278"
+        class="about__image"
       />
-      <ul class="about__content">
+    </div>
+    <div class="about__content">
+      <ul class="about__list">
         <li class="about__text">
           Ice is a place where you will become not only a little happier, but
           also healthier. Health is the main value for us, and we follow it when
@@ -34,33 +37,13 @@
           This is enough to choose ice cream and coffee for any mood!
         </li>
       </ul>
-      <button type="button" class="about-button" data-modal-open="111">
-        <span class="about-button__text">Read more</span>
-        <svg class="about-button__icon" width="12" height="12">
-          <use href="./images/about/symbol-defs.svg#icon-arrow-right"></use>
-        </svg>
-      </button>
     </div>
+    <button type="button" class="about-button" data-modal-open="111">
+      <span class="about-button__text">Read more</span>
+      <svg class="about-button__icon" width="12" height="12">
+        <use href="./images/about/symbol-defs.svg#icon-arrow-right"></use>
+      </svg>
+    </button>
   </div>
-  <!-- <div class="modal-about__backdrop is-hidden" data-modal="111">
-        <div class="modal-about">
-            <button class="modal-about__btn-close" data-modal-close="111">
-                <svg class="modal-about__close-icon">
-                    <use href="./images/header/icons.svg#icon_close"></use>
-                </svg>
-            </button>
-            <h2 class="modal-about__title">How it’s made?</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/LhDS2-PNiBE"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen class="modal-about__video"></iframe>
-
-            <p class="modal-about__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                Lorem
-                ipsum dolor
-                sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            </p>
-        </div>
-</section> -->
+  
 </section>

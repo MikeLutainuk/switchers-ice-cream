@@ -3,20 +3,18 @@
 
 @import './utils/variables';
 @import './utils/reset';
+@import './utils/background';
 @import './components/products';
 @import './components/hero';
 @import './components/header';
 @import './components/about';
 @import './components/advantages';
 @import './components/contacts';
-
+@import './components/gallery';
 @import './components/locations-modal';
 @import './components/franshise-modal';
-
 @import './components/reviews';
 @import "./components/about-modal";
-
-@import './utils/background';
-
-
+@import './components/modal-prod-menu.scss';
+@import './components/footer';
 
