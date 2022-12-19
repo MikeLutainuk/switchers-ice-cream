@@ -1,5 +1,5 @@
 .hero-container {
-  height: 405px;
+  height: 453px;
   position: relative;
   @media screen and (min-width: $tab) {
     display: flex;
@@ -39,14 +39,12 @@
   }
 }
 .hero__left {
-  margin-top: 50px;
-  margin-bottom: 19px;
+  padding-top: 50px;
   @media screen and (min-width: $tab) {
-    margin-top: 14px;
-    margin-bottom: 0;
+    padding-top: 14px;
   }
   @media screen and (min-width: $desk) {
-    margin-top: 45px;
+    padding-top: 45px;
   }
 }
 .hero__main {
@@ -97,6 +95,10 @@
   line-height: 1.29;
   color: #000000;
 
+  transition-property: border, color;
+  transition-duration: $display-time;
+  transition-timing-function: $function-time;
+
   &:hover {
     border: 2px solid $accent-color;
   }
@@ -120,6 +122,10 @@
 
   color: $default-color;
 
+  transition-property: color;
+  transition-duration: $display-time;
+  transition-timing-function: $function-time;
+
   &:hover {
     color: $accent-color;
   }
@@ -141,14 +147,57 @@
   position: absolute;
   top: 100%;
   left: 50%;
-  transform: translate(-50%, -100%);
+
+  animation: main__img-to-top-mob 1500ms ease-out 200ms both;
+
   @media screen and (min-width: $tab) {
-    transform: translate(0, -100%);
+    animation: main__img-to-left-tab 1500ms ease-out 200ms both;
   }
   @media screen and (min-width: $desk) {
+    animation: main__img-to-left-desk 1500ms ease-out 200ms both;
+  }
+}
+
+@keyframes main__img-to-top-mob {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -100%);
+  }
+}
+@keyframes main__img-to-left-tab {
+  0% {
+    opacity: 0;
+    transform: translate(50%, -100%);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, -100%);
+  }
+}
+@keyframes main__img-to-left-desk {
+  0% {
+    opacity: 0;
+    transform: translate(60%, -100%);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
     transform: translate(10%, -100%);
   }
 }
+
 .hero-product {
   display: none;
   @media screen and (min-width: $tab) {
@@ -161,12 +210,37 @@
   @media screen and (min-width: $tab) {
     display: block;
     position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(32px, 185px);
+    animation: hero-product__img-to-right-tab 1500ms ease-out 200ms both;
   }
   @media screen and (min-width: $desk) {
-    transform: translate(16px, 301px);
+    animation: hero-product__img-to-right-desk 1500ms ease-out 200ms both;
+  }
+}
+
+@keyframes hero-product__img-to-right-tab {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 10%);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 10%);
+  }
+}
+@keyframes hero-product__img-to-right-desk {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }
 .hero-product__text {
