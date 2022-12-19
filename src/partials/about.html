@@ -1,38 +1,51 @@
-<section class="about">
-    <div class="container">
-        <h1 class="about__label">tradition and love</h1>
-        <h2 class="about__title">how it’s made?</h2>
-        <div class="about__box">
-            <img srcset="./images/about/cow279.jpg 279w,
-            ./images/about/cow330.jpg 330w,
-            ./images/about/cow490.jpg 490w,
-            ./images/about/cow558.jpg 558w,
-            ./images/about/cow660.jpg 660w,
-            ./images/about/cow980.jpg 982w"
-            sizes="(min-width: 1200px) 490px, (min-width: 768px) 330px, (min-width: 480px) 279px, 100vw"
-            src="./images/about/cow279.jpg"
-            alt="Cow"
-            width="279"
-            height="278"
-            class="about__image"/>
-        </div>
-        <div class="about__content">
-       <ul class="about__list">
-        <li class="about__text">Ice is a place where you will become not only a little happier, but also healthier. Health is the main value for us, and we follow it when creating our handmade desserts. </li>
-        <li class="about__text">We use traditional recipes and 100% natural ingredients. Our products are so natural that they can be given to children from the age of three years. Sweets lovers can expect 55 types of ice cream, 15 types of coffee and 23 milkshakes. </li>
-        <li class="about__text">This is enough to choose ice cream and 
-            coffee for any mood!</li>
-       </ul>
+<section class="about" id="how_section">
+  <div class="container">
+    <h1 class="about__label">tradition and love</h1>
+    <h2 class="about__title">how it’s made?</h2>
+    <div class="about__box">
+      <img
+        srcset="
+          ./images/about/cow279.jpg 279w,
+          ./images/about/cow330.jpg 330w,
+          ./images/about/cow490.jpg 490w,
+          ./images/about/cow558.jpg 558w,
+          ./images/about/cow660.jpg 660w,
+          ./images/about/cow980.jpg 982w
+        "
+        sizes="(min-width: 1200px) 490px, (min-width: 768px) 330px, (min-width: 480px) 279px, 100vw"
+        src="./images/about/cow279.jpg"
+        alt="Cow"
+        width="279"
+        height="278"
+        class="about__image"
+      />
     </div>
-       <button type="button" class="about-button" data-modal-open='111'>
-        <span class="about-button__text">Read more</span>
-        <svg class="about-button__icon" width="12" height="12">
-            <use href="./images/about/symbol-defs.svg#icon-arrow-right"></use>
-        </svg>
-       </button>
-
+    <div class="about__content">
+      <ul class="about__list">
+        <li class="about__text">
+          Ice is a place where you will become not only a little happier, but
+          also healthier. Health is the main value for us, and we follow it when
+          creating our handmade desserts.
+        </li>
+        <li class="about__text">
+          We use traditional recipes and 100% natural ingredients. Our products
+          are so natural that they can be given to children from the age of
+          three years. Sweets lovers can expect 55 types of ice cream, 15 types
+          of coffee and 23 milkshakes.
+        </li>
+        <li class="about__text">
+          This is enough to choose ice cream and coffee for any mood!
+        </li>
+      </ul>
     </div>
-    <!-- <div class="modal-about__backdrop is-hidden" data-modal="111">
+    <button type="button" class="about-button" data-modal-open="111">
+      <span class="about-button__text">Read more</span>
+      <svg class="about-button__icon" width="12" height="12">
+        <use href="./images/about/symbol-defs.svg#icon-arrow-right"></use>
+      </svg>
+    </button>
+  </div>
+  <!-- <div class="modal-about__backdrop is-hidden" data-modal="111">
         <div class="modal-about">
             <button class="modal-about__btn-close" data-modal-close="111">
                 <svg class="modal-about__close-icon">
