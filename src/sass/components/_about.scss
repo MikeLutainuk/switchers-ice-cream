@@ -146,6 +146,7 @@
       }
       }
       &__text {
+        width: 220px;
         text-align: center;
         font-family: 'Montserrat';
         font-style: normal;
@@ -156,17 +157,13 @@
         padding: 0;
         
 
-        @media screen and (min-width: $mob) {
-            width: 220px;
-        }
-        @media screen and (max-width: $tab) {
-          text-align: center;
-        }
+        
+       
         @media screen and (min-width: $tab) {
             text-align: start;
             width: 334px;
             line-height: calc(21 / 12);
-            letter-spacing: 0.04em;
+         
         }
         @media screen and (min-width: $desk) {
             width: 463px;
@@ -175,7 +172,20 @@
             letter-spacing: 0.04em;
         }
       }
-      
+      &__text--primarily {
+        @media screen and (max-width: 767px) {
+          letter-spacing: 0.04em;
+          line-height: calc(21 / 12);
+        }
+        
+
+      }
+      &__text--secondary {
+        @media screen and (max-width: 767px) {
+          letter-spacing: 0;
+          line-height: calc(19 / 12);
+        }
+      }
       &-button {
         display: flex;
         position: relative;
