@@ -1,10 +1,11 @@
-<div class="location backdrop is-hidden" data-modal="5">
-    <div class="location__block">
-      <button class="location__modal-btn" type="button" data-modal-close="5">
-        <svg class="location__close-modal" width="24" height="24">
-          <use href="./images/icons.svg#icon-close-m"></use>
-        </svg>
-      </button>
+<div class="backdrop is-hidden" data-modal="5">
+  <div class="location-modal">
+    <button class="location__modal-btn" type="button" data-modal-close="5">
+      <svg class="location__close-modal" width="24" height="24">
+        <use href="./images/icons.svg#icon-close-m"></use>
+      </svg>
+    </button>
+    <form class="form-modal-loc">
       <h2 class="location__text title">Our Locations</h2>
       <iframe
         class="location__picture"
@@ -12,15 +13,16 @@
         style="border: 0"
         allowfullscreen=""
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
       <div class="location__wrap">
         <a
           target="_blank"
-          class="btn location__btn"
-          href="https://goo.gl/maps/GcAWXVkWYvkYx3WE9"
-          >Open map</a
-        >
+          class="location__btn"
+          href="https://goo.gl/maps/GcAWXVkWYvkYx3WE9">
+          Open map
+        </a>
       </div>
-    </div>
+    </form>
   </div>
+</div>
