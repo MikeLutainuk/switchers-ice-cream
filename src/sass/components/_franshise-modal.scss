@@ -45,8 +45,8 @@
     right: 12px;
 
     display: flex;
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
     align-items: center;
     justify-content: center;
     color: $black-color;;
@@ -191,6 +191,12 @@
     &:disabled {
     color: $black-color;
     background-color: $disabled-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 121px;
+        font-size: 14px;
+        line-height: calc(17/14);
     }
 }
 
