@@ -12,7 +12,7 @@
       padding-bottom: 20px;
     }
     @media screen and (min-width: $desk) {
-      padding-bottom: 40px;
+      padding-bottom: 70px;
     }
       &__label {
         font-family: 'Montserrat';
@@ -130,7 +130,7 @@
         @media screen and (min-width: $desk) {
           margin-right: 121px;
           margin-left: 616px;
-          margin-top: -370px;
+          margin-top: -350px;
         }
       }
       &__list {
@@ -167,8 +167,6 @@
         }
         @media screen and (min-width: $desk) {
             width: 463px;
-            font-size: 16px;
-            line-height: calc(28 / 16);
             letter-spacing: 0.04em;
         }
       }
@@ -178,12 +176,33 @@
           line-height: calc(21 / 12);
         }
         
+        @media screen and (min-width: $desk) {
+          font-size: 16px;
+          line-height: calc(28 / 16);
+        }
 
       }
       &__text--secondary {
         @media screen and (max-width: 767px) {
           letter-spacing: 0;
           line-height: calc(19 / 12);
+        }
+          @media screen and (min-width: $tab) {
+            line-height: calc(21 / 12);
+          
+        }
+        @media screen and (min-width: $desk) {
+          font-size: 14px;
+          line-height: calc(27 / 14);
+        }
+      }
+      &__text--thirdly {
+        @media screen and (min-width: $tab) {
+          line-height: calc(23 / 12);
+        }
+        @media screen and (min-width: $desk) {
+          font-size: 14px;
+          line-height: calc(27 / 14);
         }
       }
       &-button {
