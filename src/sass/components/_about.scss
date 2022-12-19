@@ -1,4 +1,3 @@
-
 .about {
     margin: 0;
     padding-top: 60px;
@@ -133,7 +132,12 @@
         list-style: none;
         
       @media screen and (max-width: 767px) {
-        margin-top: 40px;
+          margin-top: 40px;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
       }
       }
       &__text {
