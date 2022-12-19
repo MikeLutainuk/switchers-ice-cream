@@ -45,24 +45,29 @@
     right: 12px;
 
     display: flex;
-    width: 40px;
-    height: 40px;
+    width: 33px;
+    height: 33px;
     align-items: center;
     justify-content: center;
     color: $black-color;;
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    transition: color $display-time $function-time;  
+    transition: color $display-time $function-time;
+    
+    &:hover,
+    &:focus {
+    color: $accent-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .location__close-modal {
     fill: currentColor;
-}
-
-.location__modal-btn:hover,
-.location__modal-btn:focus {
-    color: $accent-color;
 }
 
 .form-modal-loc {
@@ -105,6 +110,7 @@
 } 
 
 .location__btn {
+    display: block;
     width: 134px;
     height: 42px;
     padding: 12px 34px;

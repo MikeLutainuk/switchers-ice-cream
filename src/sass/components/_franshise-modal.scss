@@ -45,24 +45,29 @@
     right: 12px;
 
     display: flex;
-    width: 40px;
-    height: 40px;
+    width: 33px;
+    height: 33px;
     align-items: center;
     justify-content: center;
     color: $black-color;;
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    transition: color $display-time $function-time;  
+    transition: color $display-time $function-time;
+    
+    &:hover,
+    &:focus {
+    color: $accent-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 40px;
+        height: 40px;
+    } 
 }
 
 .franchise__close-modal {
     fill: currentColor;
-}
-
-.franchise__modal-btn:hover,
-.franchise__modal-btn:focus {
-    color: $accent-color;
 }
 
 .form-modal-fr {
