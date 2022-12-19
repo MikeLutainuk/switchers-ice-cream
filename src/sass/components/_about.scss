@@ -116,11 +116,6 @@
         list-style: none;
         margin-top: 40px;
 
-        @media screen and (max-width: 767px) {
-          margin-left: auto;
-          margin-right: auto;
-        }
-
         @media screen and (min-width: $tab) {
           display: flex;
           margin-right: 34px;
@@ -137,7 +132,12 @@
         list-style: none;
         
       @media screen and (max-width: 767px) {
-        margin-top: 40px;
+          margin-top: 40px;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
       }
       }
       &__text {
