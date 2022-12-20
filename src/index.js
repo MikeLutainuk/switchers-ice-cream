@@ -1,5 +1,4 @@
 
-
 import './js/locations-modal';
 import './js/franshise-modal';
 import './js/about-modal';
