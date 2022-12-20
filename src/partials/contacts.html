@@ -170,13 +170,16 @@
         information. We appreciate your patience.
       </p>
       <div class="contacts-modal-field">
-          <input type="text" name="name" placeholder="Name"/>
+          <input type="text" name="name" id="user_name" placeholder="Name" pattern="[A-Za-z]{1,32}"
+          required/>
       </div>
       <div class="contacts-modal-field">            
-          <input type="tel" name="tel" placeholder="Phone"/>
+          <input type="tel" name="tel" id="user_tel" placeholder="Phone" pattern="[+,0-9]{10,15}"
+          required/>
       </div>
       <div class="contacts-modal-field">
-          <input type="email" name="email" placeholder="Email"/>
+          <input type="email" name="email" id="user_email" placeholder="Email" 
+          required/>
       </div>
       <div class="contacts-modal-field">
           <textarea name="comment" id="comment" placeholder="Comment"></textarea>
