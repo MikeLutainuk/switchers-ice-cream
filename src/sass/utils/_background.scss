@@ -4,18 +4,18 @@
 }
 .contacts-background{
     background-image: linear-gradient(to bottom,
-                transparent 390px,
-                $background-color 390px);
+                transparent 350px,
+                $background-color 350px);
     
         @media screen and (min-width: 768px) {
             background-image: linear-gradient(to bottom,
-                    transparent 380px,
-                    $background-color 380px);
+                    transparent 300px,
+                    $background-color 300px);
         }
     
         @media screen and (min-width: 1200px) {
             background-image: linear-gradient(to bottom,
-                    transparent 228px,
-                    $background-color 228px);
+                    transparent 126px,
+                    $background-color 126px);
         }
 }
