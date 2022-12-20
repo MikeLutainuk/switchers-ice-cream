@@ -11,7 +11,6 @@
   transition: opacity $display-time $function-time,
     visibility $display-time $function-time,
     transform $display-time $function-time;
-  overflow: auto;
 }
 
 .backdrop_modal_prud.is-hidden {
@@ -24,7 +23,6 @@
   visibility: hidden;
   opacity: 1;
   transform: translate(30%) scale(70%);
-  pointer-events: none;
 }
 
 .modal {
@@ -52,9 +50,22 @@
     min-height: 644px;
     padding: 32px 54px;
   }
+
   @media screen and (min-width: $tab) {
     top: 50%;
   }
+}
+
+.backdrop_modal_prud.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop_modal_prud.is-hidden .modal {
+  visibility: hidden;
+  opacity: 1;
+  transform: translate(30%) scale(70%);
 }
 
 .modal__close {
