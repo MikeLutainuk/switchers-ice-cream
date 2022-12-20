@@ -8,6 +8,10 @@
     }
 }
 
+.container-footer {
+    display: block;
+}
+
 .card-footer {
     margin-bottom: 60px;
 
@@ -23,12 +27,45 @@
     font-size: 18px;
     line-height: 1.2;
     color: $white-color;
+
+    @media screen and (min-width: $tab) {
+        margin-bottom: 8px;
+        font-size: 26px;
+    }
+    @media screen and (min-width: $desk) {
+        margin-bottom: 14px;
+        font-weight: 400;
+        font-size: 30px;
+    }
+
+    & br {
+        @media screen and (min-width: $desk) {
+            display: none;
+        }
+    }
 }
+
+
 .card-footer__subtitle {
     font-weight: 700;
     font-size: 34px;
     line-height: 1.2;
     color: $white-color;
+
+    @media screen and (min-width: $tab) {
+        font-size: 48px;
+        letter-spacing: 0.06em;
+    }
+    @media screen and (min-width: $desk) {
+        font-size: 58px;
+        line-height: 1.4;
+    }
+
+    & br {
+        @media screen and (min-width: $desk) {
+            display: none;
+        }
+    }
 }
 
 .social__list {
@@ -39,6 +76,9 @@
 
     @media screen and (min-width: $tab) {
         margin-bottom: 34px;
+    }
+    @media screen and (min-width: $desk) {
+        margin-bottom: 40px;
     }
 }
 
@@ -75,6 +115,21 @@
     @media screen and (min-width: $tab) {
         margin-bottom: 72px;
     }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        left: 1px;
+        bottom: 40px;
+        border: 1px solid;
+        color: #E1E1E1;
+
+        @media screen and (min-width: $tab) {
+            bottom: 60px;
+        }
+     
+    }
 }
 
 
@@ -101,16 +156,16 @@
       gap: 4px;
     }
 
-   &::before {
-       content: "";
-       position: absolute;
-       width: 100%;
-       left: 1px;
-       bottom: 85px;
-       border: 1px solid;
-       color: #E1E1E1;
+    //    &::before {
+    //        content: "";
+    //        position: absolute;
+    //        width: 100%;
+    //        left: 1px;
+    //        bottom: 85px;
+    //        border: 1px solid;
+    //        color: #E1E1E1;
+    //     }
     
-    }
 }
 .rights__right,
 .rights__left {
