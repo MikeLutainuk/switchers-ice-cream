@@ -1,3 +1,4 @@
+<!-- Секція "Контакти" -->
 <section class="section contacts contacts-background" id="contacts">
   <div class="container">
     <h2 class="visually-hidden">Our contacts</h2>
@@ -95,7 +96,7 @@
     </ul>
     <div class="contacts__btn-wrap">
       <button
-        class="btn contacts__btn contacts__btn--orange"
+        class="contacts__btn contacts__btn--orange"
         type="button"
         data-modal-open="5"
       >
@@ -106,7 +107,7 @@
         </svg>
       </button>
       <button
-        class="contour-btn contacts__btn contacts__btn--transparent"
+        class="contacts__btn contacts__btn--transparent"
         type="button"
         data-modal-open="6"
       >
@@ -119,3 +120,68 @@
     </div>
   </div>
 </section>
+
+<!-- Модальне вікно "Наші локації" -->
+<div class="backdrop is-hidden" data-modal="5">
+  <div class="contacts-modal">
+    <button class="contacts-modal-btn" type="button" data-modal-close="5">
+      <svg class="contacts-modal-close" width="24" height="24">
+        <use href="./images/icons.svg#icon-close-m"></use>
+      </svg>
+    </button>
+    <form class="contacts-modal-form">
+      <h2 class="contacts-modal-title">Our Locations</h2>
+      <iframe
+        class="location-picture"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2322.371221614389!2d18.570346799999996!3d54.403420399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd752e64ecb627%3A0x85a6e97b20566095!2zQWxlamEgR3J1bndhbGR6a2EgNDcyYywgODAtMzA5IEdkYcWEc2ssINCf0L7Qu9GM0YnQsA!5e0!3m2!1suk!2sua!4v1665571697147!5m2!1suk!2sua"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <a 
+        class="contacts-modal-form-btn location"
+        target="_blank"
+        href="https://goo.gl/maps/GcAWXVkWYvkYx3WE9">
+        Open map
+      </a>
+    </form>
+  </div>
+</div>
+
+<!-- Модальне вікно "Франшиза" -->
+<div class="backdrop is-hidden" data-modal="6">
+  <div class="contacts-modal">
+    <button class="contacts-modal-btn" data-modal-close="6">
+      <svg class="contacts-modal-close" width="24" height="24">
+        <use href="./images/icons.svg#icon-close-m"></use>
+      </svg>
+    </button>
+    
+    <form class="contacts-modal-form">
+      <h2 class="contacts-modal-title">
+        Thank you for your interest in owning an Ice Cream shop
+      </h2>
+      <p class="contacts-modal-description">
+        Due to the overwhelming volume of franchise requests we are not accepting
+        new franchisee applications at this time. Once the application process
+        resumes, we will contact you for further information. Please fill out the
+        contact information below and we will reach out for additional
+        information. We appreciate your patience.
+      </p>
+      <div class="contacts-modal-field">
+          <input type="text" name="name" placeholder="Name"/>
+      </div>
+      <div class="contacts-modal-field">            
+          <input type="tel" name="tel" placeholder="Phone"/>
+      </div>
+      <div class="contacts-modal-field">
+          <input type="email" name="email" placeholder="Email"/>
+      </div>
+      <div class="contacts-modal-field">
+          <textarea name="comment" id="comment" placeholder="Comment"></textarea>
+      </div>
+      <button type="button" class="contacts-modal-form-btn franshise">Submit</button>
+    </form>
+  </div>
+</div>

@@ -20,8 +20,7 @@ import './js/sliding-menu';
 import './js/mobile-menu';
 
 import './js/modal';
-import './js/modal-prod-menu';
-
 
 import './js/modal-header';
 
+import './js/modal-prod-menu';

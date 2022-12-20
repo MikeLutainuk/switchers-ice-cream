@@ -20,7 +20,7 @@
     opacity: 0;
 }
 
-.franchise-modal {
+.contacts-modal {
     position: relative;
     width: 280px;
     top: 50%;
@@ -39,39 +39,45 @@
     }
 }
 
-.franchise__modal-btn {
+.contacts-modal-btn {
     position: absolute;
-    top: 12px;
-    right: 12px;
-
+    top: 10px;
+    right: 10px;
     display: flex;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     align-items: center;
     justify-content: center;
     color: $black-color;;
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    transition: color $display-time $function-time;  
+    transition: color $display-time $function-time;
+    
+    &:hover,
+    &:focus {
+    color: $accent-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+    } 
 }
 
-.franchise__close-modal {
+.contacts-modal-close {
     fill: currentColor;
 }
 
-.franchise__modal-btn:hover,
-.franchise__modal-btn:focus {
-    color: $accent-color;
-}
-
-.form-modal-fr {
+.contacts-modal-form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.modal-title-fr {
+.contacts-modal-title {
     margin-bottom: 20px;
     font-family: 'Seymour One';
     font-style: normal;
@@ -89,7 +95,21 @@
     }
 }
 
-.modal-text-fr {
+.location-picture {
+    display: block;
+    width: 224px;
+    height: 199px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+
+    @media screen and (min-width: 768px) {
+        width: 448px;
+        height: 260px;
+        margin-bottom: 32px;
+    }
+} 
+
+.contacts-modal-description {
     margin-bottom: 24px;
     font-family: 'Montserrat';
     font-style: normal;
@@ -105,7 +125,7 @@
     }
 }
 
-.form-modal-field-fr input {
+.contacts-modal-field input {
     width: 224px;
     height: 32px; 
     margin-bottom: 12px;
@@ -126,7 +146,7 @@
     }
 }
 
-.form-modal-field-fr textarea {
+.contacts-modal-field textarea {
     width: 224px;
     height: 64px; 
     margin-bottom: 24px;
@@ -145,8 +165,8 @@
     }
 }
 
-.form-modal-field-fr input::placeholder,
-.form-modal-field-fr textarea::placeholder {
+.contacts-modal-field input::placeholder,
+.contacts-modal-field textarea::placeholder {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400px;
@@ -160,15 +180,16 @@
     }
 }
 
-.modal-btn-fr {
-    width: 114px;
+.contacts-modal-form-btn {
     height: 42px;
-    padding: 12px 34px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
     font-size: 12px;
     line-height: calc(15/12);
+    text-align: center;
     color: $black-color;   
     background-color: $default-color;
     border: 0 solid transparent;
@@ -192,5 +213,27 @@
     color: $black-color;
     background-color: $disabled-color;
     }
+
+    @media screen and (min-width: 768px) {
+        width: 121px;
+        font-size: 14px;
+        line-height: calc(17/14);
+    }
 }
 
+.contacts-modal-form-btn.location {
+    display: block;
+    width: 134px;
+
+    @media screen and (min-width: 768px) {
+        width: 145px;
+    }
+}
+
+.contacts-modal-form-btn.franshise {
+    width: 114px;
+
+    @media screen and (min-width: 768px) {
+        width: 121px;
+    }
+}

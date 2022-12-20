@@ -34,6 +34,9 @@
 
 }
 
+
+
+
 .product__title {
     margin-bottom: 148px;
     font-family: 'Seymour One';
@@ -64,6 +67,7 @@
     padding: 123px 40px 16px 40px;
     border-radius: 24px;
     text-align: center;
+    transition: box-shadow $display-time $function-time;
 
     @media screen and (min-width: $tab) {
         min-width: 224px;
@@ -107,6 +111,7 @@
     box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
     width: 200px;
     height: 200px;
+    transition: translate $display-time $function-time;
 
     @media screen and (min-width: $desk) {
         width: 300px;
@@ -147,7 +152,9 @@
     }
 
     &--first::before {
+        
         background-image: url(../images/products/img_1_mobile@1x.jpg);
+        background-size: cover;
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -168,6 +175,7 @@
 
     &--second::before {
         background-image: url(../images/products/img_2_mobile@1x.jpg);
+        background-size: cover;
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -188,6 +196,7 @@
 
     &--third::before {
         background-image: url(../images/products/img_3_mobile@1x.jpg);
+        background-size: cover;
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -217,6 +226,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $black-color;
+    transition: color $display-time $function-time;
 
     @media screen and (min-width: $tab) {
         font-size: 22px;
@@ -236,11 +246,13 @@
     text-align: center;
     letter-spacing: 0.04em;
     color: $black-color;
+    transition: color $display-time $function-time;
 
     @media screen and (min-width: $desk) {
         font-size: 16px;
     }
 }
+
 .product-list__btn{
     margin-top: auto;
     background-color: transparent;
@@ -252,5 +264,27 @@
     .product-list__btn:hover &,
     .product-list__btn:focus &{
     fill: $white-color;
+    }
+    transition: fill $display-time $function-time;
+}
+
+.product__item:hover .product__decor {
+    animation-name: move-circle;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+}
+
+@keyframes move-circle {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        box-shadow: inset 0px 5.40397px 20.2649px white;
+        top: -15px;
+    }
+
+    100% {
+        top: 0px;
     }
 }
