@@ -2,10 +2,18 @@
     padding-bottom: 20px;
     background-color: $background-color;
     position: relative;
+
+    @media screen and (min-width: $tab) {
+        padding-bottom: 12px;
+    }
 }
 
 .card-footer {
     margin-bottom: 60px;
+
+    @media screen and (min-width: $tab) {
+        margin-bottom: 44px;
+    }
 }
 
 .card-footer__title {
@@ -28,6 +36,10 @@
     justify-content: flex-end;
     gap: 20px;
     margin-bottom: 20px;
+
+    @media screen and (min-width: $tab) {
+        margin-bottom: 34px;
+    }
 }
 
 
@@ -49,9 +61,6 @@
       fill: $white-color;
     }
 }
-.soc-icon {
-    fill: $background-color;
-}
 
 
 
@@ -60,8 +69,12 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 5px;
+    gap: 4px;
     margin-bottom: 60px;
+
+    @media screen and (min-width: $tab) {
+        margin-bottom: 72px;
+    }
 }
 
 
@@ -79,20 +92,32 @@
     color: $white-color;
 }
 .rights {
+   display: block;
+
+   @media screen and (min-width: $tab) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+    }
+
+   &::before {
+       content: "";
+       position: absolute;
+       width: 100%;
+       left: 1px;
+       bottom: 85px;
+       border: 1px solid;
+       color: #E1E1E1;
+    
+    }
+}
+.rights__right,
+.rights__left {
     text-align: center;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.5;
     color: #7a7a7a;
-
-    &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        left: 1px;
-        bottom: 85px;
-        border: 1px solid;
-        color: #E1E1E1;
-    }
 }
 
