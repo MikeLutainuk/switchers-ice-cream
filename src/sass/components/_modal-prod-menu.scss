@@ -1,124 +1,43 @@
-/* Основні кольори */
-$white-color: #fcfcfc;
-$black-color: #131313;
-
-/* Колір фону*/
-$background-color: #84a278;
-
-/* Колір кнопок */
-$default-color: #f8d24e;
-$accent-color: #0a8817;
-$disabled-color: #ababab;
-
-/* Анімація */
-$display-time: $display-time;
-$function-time: $function-time;
-
-/* z-index */
-$main-index: 1000;
-$second-index: 100;
-$third-index: 10;
-
-$mob: 480px;
-$tab: 768px;
-$desk: 1200px;
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  background-color: $background-color;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  cursor: pointer;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.container {
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  @media screen and (min-width: 480px) {
-    width: 480px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-.list {
-  text-decoration: none;
-  list-style: none;
-}
-.backdrop {
+.backdrop_modal_prud {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 999;
+  overflow-y: scroll;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  visibility: visible;
-  transition: opacity $display-time, visibility $function-time;
-  transform: scale(1);
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(1px);
+  transition: opacity $display-time $function-time,
+    visibility $display-time $function-time,
+    transform $display-time $function-time;
+  overflow: auto;
 }
 
-// .backdrop.is-hidden {
-//   opacity: 0;
-//   visibility: hidden;
-//   pointer-events: none;
-// }
+.backdrop_modal_prud.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 
-// .backdrop.is-hidden .modal {
-//   visibility: hidden;
-//   opacity: 1;
-//   transform: translate(30%) scale(70%);
-// }
+.backdrop_modal_prud.is-hidden .modal {
+  visibility: hidden;
+  opacity: 1;
+  transform: translate(30%) scale(70%);
+  pointer-events: none;
+}
 
 .modal {
   padding: 28px;
   visibility: visible;
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   min-width: 280px;
   min-height: 991px;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -132,6 +51,9 @@ img {
     min-width: 568px;
     min-height: 644px;
     padding: 32px 54px;
+  }
+  @media screen and (min-width: $tab) {
+    top: 50%;
   }
 }
 
@@ -211,12 +133,13 @@ img {
   border: 1px solid #84a178;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform var(--animation), border var(--animation);
+  transition: transform $display-time $function-time,
+    border $display-time $function-time;
   &:hover,
   &:focus {
-    border-color: var(--cursor);
-    outline: var(--cursor);
-    fill: var(--cursor);
+    border-color: $default-color;
+    outline: $default-color;
+    fill: $default-color;
   }
   margin-bottom: 12px;
   font-style: normal;
@@ -241,27 +164,31 @@ img {
   bottom: 11px;
   left: 12px;
   fill: var(--main-color-text);
-  transition: transform var(--animation), fill var(--animation);
+  transition: transform $display-time $function-time,
+    fill $display-time $function-time;
 }
 
 .order__textarea {
   margin-bottom: 26px;
   background-color: rgba(248, 210, 78, 0.1);
   font-style: normal;
-  border: 1px solid #84a178;
+  border: 1px solid $background-color;
   border-radius: 10px;
   height: 65px;
   resize: none;
   padding: 8px 12px;
   cursor: pointer;
-  transition: transform var(--animation), border var(--animation);
+  transition: transform $display-time $function-time,
+    $display-time $function-time;
   font-weight: 400;
   font-size: 12px;
   line-height: 140%;
 
   &:hover,
   &:focus {
-    border-color: var(--cursor);
+    border-color: $default-color;
+    outline: $default-color;
+    fill: $default-color;
   }
 
   @media screen and (min-width: $tab) {
@@ -287,6 +214,10 @@ img {
   cursor: pointer;
   @media screen and (min-width: $tab) {
     font-size: 14px;
+  }
+  &:hover,
+  &:focus {
+    border-color: $default-color;
   }
 }
 
