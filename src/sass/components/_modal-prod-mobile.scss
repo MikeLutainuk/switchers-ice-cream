@@ -1,4 +1,4 @@
-.backdrop-modal {
+.backdrop-modal-mobile {
   position: fixed;
   top: 0;
   left: 0;
@@ -14,13 +14,13 @@
   transform: scale(1);
 }
 
-.backdrop-modal.is-hidden {
+.backdrop-modal-mobile.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.backdrop-modal.is-hidden .modal {
+.backdrop-modal-mobile.is-hidden .modal {
   visibility: hidden;
   opacity: 1;
   transform: translate(30%) scale(70%);
