@@ -31,6 +31,7 @@
           name="name"
           id="name"
           placeholder="Name"
+          pattern="[A-Za-z]{1,32}"
           required
         />
       </div>
@@ -42,6 +43,7 @@
           name="phone"
           id="tel"
           placeholder="Phone"
+          pattern="[+,0-9]{1,32}"
           required
         />
       </div>
@@ -56,7 +58,7 @@
           placeholder="Comment"
         ></textarea>
       </div>
-      <button class="submint" data-modal-close="7">Submint</button>
+      <button class="submint" data-modal-close="7">Submit</button>
     </form>
   </div>
 </div>
