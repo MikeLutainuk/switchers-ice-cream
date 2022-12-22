@@ -101,11 +101,18 @@
   fill: $background-color;
   background-color: $default-color;
   border-radius: 50%;
-  transition: fill $display-time $function-time;
+  // transition: fill $display-time $function-time;
+  transition: all ease 500ms;
 
   &:hover .soc-icon,
   &:focus .soc-icon {
     fill: $white-color;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.3);
+    transition: all ease 500ms;
   }
 }
 
@@ -144,12 +151,15 @@
 .contact__tel--white {
   text-decoration: none;
 
-  transition: $display-time $function-time;
+  // transition: $display-time $function-time;
+  transition: all ease 500ms;
   color: $white-color;
 
   &:hover,
   &:focus {
     color: $default-color;
+
+    transition: all ease 500ms;
   }
 }
 

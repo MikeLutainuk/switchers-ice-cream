@@ -2,23 +2,23 @@
   padding-top: 12px;
 
   @media screen and (min-width: $tab) {
-    padding-top: 20px; 
+    padding-top: 20px;
   }
 
   @media screen and (min-width: $desk) {
-    padding-top: 8px; 
+    padding-top: 8px;
   }
 
   & .flex-container {
-  display: flex;
-  align-items: center;    
+    display: flex;
+    align-items: center;
 
     @media screen and (min-width: $desk) {
       align-items: flex-end;
       justify-content: space-between;
     }
   }
-}  
+}
 
 .navigation-container {
   display: flex;
@@ -28,9 +28,9 @@
 .navigation {
   display: none;
 
-    @media screen and (min-width: $desk) {
-      display: flex;
-    }
+  @media screen and (min-width: $desk) {
+    display: flex;
+  }
 }
 .navigation__item:not(:last-child) {
   margin-right: 28px;
@@ -42,18 +42,33 @@
   padding-bottom: 13px;
 
   font-weight: 700;
-  font-size: 16px; 
+  font-size: 16px;
   line-height: 1.25;
-  color: #FCFCFC;
+  color: #fcfcfc;
 
   &:hover,
   &:focus {
+    // transition: background-color $function-time $display-time;
+    // animation: falls 1s ease forwards;
+
     color: $default-color;
-    transition: background-color $function-time $display-time;
+
+    animation: pulse 2s infinite;
+    animation-timing-function: linear;
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
   }
-
 }
-
 
 //button
 .button {
@@ -75,12 +90,28 @@
     border-color: transparent;
     border-radius: 10px;
     color: #000;
-    background-color: #F8D24E;
-    transition: background-color $display-time $function-time;
+    background-color: #f8d24e;
+    // transition: background-color $display-time $function-time;
 
     &:hover {
       background-color: $accent-color;
+
+      animation: wiggle 750ms infinite;
+      animation-timing-function: linear;
+
+      @keyframes wiggle {
+        0% {
+          transform: translate(2px, 0);
+        }
+        50% {
+          transform: translate(-2px, 0);
+        }
+        100% {
+          transform: translate(2px, 0);
+        }
+      }
     }
+
     &:focus {
       fill: #fff;
       color: #fff;
@@ -91,11 +122,10 @@
     }
   }
 }
+
 .icon-arrow {
   margin-left: 4px;
 }
-
-
 
 //mobile menu
 .menu-toggle {
@@ -114,27 +144,27 @@
   border: none;
   border-radius: 50%;
   outline: none;
-  
 
   @media screen and (min-width: $desk) {
-   display: none;    
+    display: none;
   }
 }
 .icon-menu_open,
 .icon-menu_close {
   fill: #fff;
+  transition: all ease 500ms;
 }
 
 .flex-container .menu-toggle:hover,
 .flex-container .menu-toggle:focus {
-  transition: $function-time $display-time;
+  // transition: $function-time $display-time;
+  transition: all ease 500ms;
 
   & .icon-menu_open,
   & .icon-menu_open {
     fill: $default-color;
   }
 }
-
 
 .menu-container {
   position: fixed;
@@ -157,9 +187,8 @@
   transition: transform $display-time $function-time;
 
   @media screen and (min-width: $desk) {
-    
-    display: none;    
-   }
+    display: none;
+  }
 }
 
 .menu-container.is-open {
@@ -190,17 +219,17 @@
   flex-direction: column;
   align-items: center;
 }
-.mobile-nav {  
+.mobile-nav {
   display: flex;
   align-items: center;
   flex-direction: column;
 
   @media screen and (max-width: 767px) {
-    margin-bottom:  110px;
+    margin-bottom: 110px;
   }
 
-  &__item:not(:last-child){
-    margin-bottom:  32px;
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
   }
 
   &__link {
@@ -209,11 +238,12 @@
     line-height: 1.2;
 
     color: $white-color;
+    transition: all ease 500ms;
 
     &:hover,
     &:focus {
       color: $black-color;
-      transition: background-color $function-time $display-time;
+      transition: all ease 500ms;
     }
   }
 }
@@ -233,11 +263,25 @@
   border-color: transparent;
   border-radius: 10px;
   color: #000;
-  background-color: #F8D24E;
+  background-color: #f8d24e;
   transition: color $display-time $function-time;
 
   &:hover {
     background-color: $accent-color;
+    animation: wiggle 750ms infinite;
+    animation-timing-function: linear;
+
+    @keyframes wiggle {
+      0% {
+        transform: translate(2px, 0);
+      }
+      50% {
+        transform: translate(-2px, 0);
+      }
+      100% {
+        transform: translate(2px, 0);
+      }
+    }
   }
   &:focus {
     fill: #fff;
@@ -261,14 +305,14 @@
   z-index: 1;
   overflow-y: scroll;
 
-
   width: 100%;
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(2px);
-  transition: opacity $display-time $function-time, visibility $display-time $function-time,
-  transform $display-time $function-time;
+  transition: opacity $display-time $function-time,
+    visibility $display-time $function-time,
+    transform $display-time $function-time;
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -276,7 +320,7 @@
   pointer-events: none;
 
   & .modal {
-   transform: translate(-50%, -50%) scale(0);
+    transform: translate(-50%, -50%) scale(0);
   }
 }
 .modal-hd {
@@ -293,7 +337,8 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  transition: transform $display-time $function-time, visibility $display-time $function-time;
+  transition: transform $display-time $function-time,
+    visibility $display-time $function-time;
 
   //   visibility: visible;
 
@@ -302,7 +347,6 @@
     padding: 32px 54px;
   }
 }
-
 
 .modal__button {
   position: absolute;
@@ -321,12 +365,11 @@
   background-color: transparent;
   transition: transform $display-time $function-time;
 
-
   &:hover,
   &:focus {
     fill: $default-color;
   }
-}  
+}
 
 //Forms
 .form {
@@ -346,13 +389,12 @@
   color: $black-color;
 
   @media screen and (min-width: $tab) {
-   margin-bottom: 103px;
-  
-   font-size: 20px;
-   line-height: 1.4;
+    margin-bottom: 103px;
+
+    font-size: 20px;
+    line-height: 1.4;
   }
 }
-
 
 .card__list {
   @media screen and (min-width: $tab) {
@@ -376,29 +418,26 @@
   text-align: center;
   border-radius: 15px;
   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
-  
 
   &:not(:last-child) {
-    @media screen and  (max-width: 767.98px) {
+    @media screen and (max-width: 767.98px) {
       margin-bottom: 84px;
-    }  
+    }
   }
- 
 
   &--first {
-    border: 2px solid #96AF8C;
+    border: 2px solid #96af8c;
   }
 
   &--second {
-    background-color: #EFD478;
-    border: 2px solid #EFD478;
+    background-color: #efd478;
+    border: 2px solid #efd478;
   }
 
   &--third {
-    border: 2px solid #D6936D;    
+    border: 2px solid #d6936d;
   }
 }
-
 
 //   // @media screen and (max-width: 767px) {
 //   //     max-width: 440px;
@@ -423,9 +462,7 @@
 //   //     }
 //   // }
 
-
 // }
-
 
 .card__decor {
   position: absolute;
@@ -437,24 +474,43 @@
 
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
   box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
 
   //   display: block;
 
-
   &--first {
-    background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
+    background: linear-gradient(
+        0deg,
+        rgba(156, 190, 143, 0.7),
+        rgba(156, 190, 143, 0.7)
+      ),
+      #d9d9d9;
     box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
   }
 
   &--second {
-    background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
+    background: linear-gradient(
+        0deg,
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      #d9d9d9;
     box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
   }
 
   &--third {
-    background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
+    background: linear-gradient(
+        0deg,
+        rgba(213, 117, 63, 0.7),
+        rgba(213, 117, 63, 0.7)
+      ),
+      #d9d9d9;
     box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
   }
 
@@ -467,19 +523,18 @@
     width: 132px;
     height: 132px;
     display: block;
-  }    
+  }
   //   height: 300px;
   // }
   // @media screen and (min-width: $desk) {     //   top: -16px;     //   width: 300px;
-   
 
   &--first::before {
     background-image: url(../images/header/img-1_132.jpg);
 
     @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-      background-image: url(../images/header/img-1_264.jpg)
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/header/img-1_264.jpg);
     }
   }
 
@@ -487,9 +542,9 @@
     background-image: url(../images/header/img-2_132.jpg);
 
     @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-      background-image: url(../images/header/img-2_264.jpg)
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/header/img-2_264.jpg);
     }
   }
 
@@ -497,9 +552,9 @@
     background-image: url(../images/header/img-3_132.jpg);
 
     @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-      background-image: url(../images/header/img-3_264.jpg)
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/header/img-3_264.jpg);
     }
   }
 }
@@ -519,13 +574,6 @@
 //   //     font-size: 30px;
 //   // }
 // }
-
-
-
-
-
-
-
 
 .form__field:not(:last-child) {
   margin-bottom: 12px;
@@ -548,7 +596,7 @@
 
   width: 100%;
   height: 40px;
-  
+
   cursor: pointer;
   outline: none;
   background: rgba(248, 210, 78, 0.1);
@@ -574,8 +622,8 @@
 
   &:hover,
   &:focus {
-   border: border $accent-color;
- }
+    border: border $accent-color;
+  }
 }
 
 .form__field input:not(:placeholder-shown):required:valid {
@@ -609,12 +657,11 @@
     line-height: 1.2;
   }
 
-  &:hover{
+  &:hover {
     background-color: $accent-color;
   }
   &:focus {
-   background-color: $accent-color;
-   color: #fff;
+    background-color: $accent-color;
+    color: #fff;
   }
 }
-
