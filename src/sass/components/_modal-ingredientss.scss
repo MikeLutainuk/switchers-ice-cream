@@ -2,10 +2,13 @@
     padding: 28px 20px;
     visibility: visible;
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
     max-height: 968px;
     transition: transform $display-time $function-time,
       visibility $display-time $function-time;
@@ -14,7 +17,7 @@
     border-radius: 10px;
 
     @media screen and (min-width: $tab) {
-        max-width: 568px;
+        width: 568px;
         max-height: 996px;
         padding: 32px 40px;
     }
@@ -31,12 +34,18 @@
         cursor: pointer;
     }
     &__close-icon {
+        width: 11px;
+        height: 11px;
         background-color: $white-color;
         align-items: center;
         text-transform: none;
+        @media screen and (min-width: $tab){
+            width: 13px;
+            height: 13px;
+        }
     }
     &__btn-close:hover &__close-icon {
-        fill: var(--cursor);
+        fill: $accent-color;
     }
     &__title {
         font-family: 'Seymour One';
@@ -163,6 +172,7 @@
     &__components {
         display: flex;
         justify-content: space-between;
+        width: 100%;
         margin-bottom: 40px;
         @media screen and (min-width: $tab) {
            margin-bottom: 48px; 
@@ -172,6 +182,7 @@
         display: flex;
         flex-direction: column;
         gap: 11px;
+        width: 100%;
 
     }
     &__item {
@@ -192,9 +203,10 @@
         text-align: end;
     }
     &__form {
-        justify-content: center;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         color: $black-color;
     }
     &__label {
@@ -210,6 +222,7 @@
             height: 42px;
         }
     }
+   
     &__input {
         
         font-family: 'Montserrat';
@@ -223,6 +236,7 @@
         background-color: transparent;
     }
     &__textarea {
+        
         margin-bottom: 24px;
         width: 240px;
         height: 84px;
@@ -231,6 +245,7 @@
         border-radius: 10px;
         padding-top: 11px;
         padding-left: 11px;
+        resize: none;
 
         @media screen and (min-width: $tab) {
             margin-bottom: 32px;
@@ -242,7 +257,7 @@
         height: 42px;
         margin-right: auto;
         margin-left: auto;
-        background: #F8D24E;
+        background-color: #F8D24E;
         border-radius: 10px;
         border: none;
         font-family: 'Montserrat';
@@ -254,14 +269,34 @@
         display: flex;
         align-items: center;
         text-align: center;
+        &:hover {
+                background-color: $accent-color;
+            }
         @media screen and (min-width: $tab) {
             width: 121px;
 
         }
+        
     }
 }
-.ingredients__backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+.ingredients__backdrop {
+    position: fixed;
+    
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+        z-index: 2;
+        overflow-y: scroll;
+        visibility: visible;
+        transition: opacity $display-time $function-time,
+            visibility $display-time $function-time;
+        transform: scale(1);
+        &.is-hidden {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+            }
 }
