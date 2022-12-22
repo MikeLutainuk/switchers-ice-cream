@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: var(--backdrop-index);
+    z-index: 1000;
     opacity: 1;
     visibility: visible;
     pointer-events: initial;
@@ -143,14 +143,14 @@ ul {
 @media screen and (min-width: 480px) {
     .ingredients__box {
         margin-left: 102px;
-        margin-right: 90px;
+        margin-right: 102px;
     }
 }
 
 @media screen and (min-width: 768px) {
     .ingredients__box {
         margin-left: 178px;
-        margin-right: 218px;
+        margin-right: 178px;
     }
 }
 
@@ -164,14 +164,14 @@ ul {
 @media screen and (min-width: 480px) {
     .ingredients__picture {
         margin-left: 102px;
-        margin-right: 90px;
+        margin-right: 102px;
     }
 }
 
 @media screen and (min-width: 768px) {
     .ingredients__picture {
         margin-left: 178px;
-        margin-right: 218px;
+        margin-right: 178px;
     }
 }
 
@@ -182,7 +182,7 @@ ul {
 @media screen and (min-width: 480px) {
     .ingredients__center {
         margin-left: 102px;
-        margin-right: 62px;
+        margin-right: 102px;
     }
 }
 
