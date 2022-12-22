@@ -8,8 +8,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 280px;
-    max-height: 968px;
+    // width: 280px;
+    // max-height: 968px;
     transition: transform $display-time $function-time,
       visibility $display-time $function-time;
     background: $white-color;
@@ -17,8 +17,8 @@
     border-radius: 10px;
 
     @media screen and (min-width: $tab) {
-        width: 568px;
-        max-height: 996px;
+        // width: 568px;
+        // max-height: 996px;
         padding: 32px 40px;
     }
     &__btn-close {
