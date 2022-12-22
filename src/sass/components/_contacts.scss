@@ -227,6 +227,9 @@
     @media screen and (min-width: $tab) {
         justify-content: center; 
     }   
+    @media screen and (max-width: $tab) {
+       margin-top: 20px;
+    }
 }
 
 .contacts__btn {
@@ -265,9 +268,7 @@
     background-color: $disabled-color;
     }
 
-    @media screen and (max-width: $tab) {
-       
-    }
+  
 }
 
 .contacts__btn--transparent {
