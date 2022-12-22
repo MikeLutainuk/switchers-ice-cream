@@ -217,6 +217,54 @@
         margin-left: auto;
         margin-right: auto;
         align-items: center;
+
+        transition: background-color ease 750ms, box-shadow ease 750ms, animation ease 750ms;
+
+&:hover {
+    background-color: $accent-color;
+
+    animation: wiggle 750ms infinite;
+    animation-timing-function: linear;
+    box-shadow: -5px -5px 5px 0 $default-color;
+
+    @keyframes wiggle {
+      0% {
+        transform: translate(2px, 0);
+      }
+
+      50% {
+        transform: translate(-2px, 0);
+      }
+
+      100% {
+        transform: translate(2px, 0);
+      }
+    }
+  }
+    &:focus {
+      fill: #fff;
+      color: #fff;
+      background-color: $accent-color;
+  
+      animation: wiggle 750ms infinite;
+      animation-timing-function: linear;
+      box-shadow: -5px -5px 5px 0 $default-color;
+  
+      @keyframes wiggle {
+        0% {
+          transform: translate(2px, 0);
+        }
+  
+        50% {
+          transform: translate(-2px, 0);
+        }
+  
+        100% {
+          transform: translate(2px, 0);
+        }
+      }
+    }
+
         @media screen and (max-width: 767px) {
           margin-left: auto;
           margin-right: auto;
