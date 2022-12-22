@@ -8,8 +8,6 @@ import './js/sliding-menu';
 import './js/mobile-menu';
 import './js/modal-header';
 import './js/modal-prod-menu';
-<<<<<<< Updated upstream
 import './js/modal-prod-mobile';
-=======
 import './js/modal-ingredients';
->>>>>>> Stashed changes
+
