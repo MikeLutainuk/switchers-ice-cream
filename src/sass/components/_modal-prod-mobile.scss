@@ -141,6 +141,12 @@
     font-size: 14px;
   }
 }
+.order__input:not(:placeholder-shown):required:valid {
+  border-color: $background-color;
+}
+.order__input:not(:placeholder-shown):required:invalid {
+  border-color: red;
+}
 
 .order__textarea {
   margin-bottom: 26px;
