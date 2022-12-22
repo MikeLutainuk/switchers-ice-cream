@@ -36,6 +36,7 @@
   margin-right: 28px;
 }
 .navigation__link {
+  position: relative;
   display: block;
 
   padding-top: 32px;
@@ -45,6 +46,7 @@
   font-size: 16px;
   line-height: 1.25;
   color: #fcfcfc;
+  transition: color ease 750ms, transform ease 750ms;
 
   &:hover,
   &:focus {
@@ -53,22 +55,23 @@
 
     color: $default-color;
 
-    animation: pulse 2s infinite;
-    animation-timing-function: linear;
+    transform: scale(1.1);
+    transition: color ease 750ms, transform ease 750ms;
 
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 6px;
+      bottom: -1px;
+      border-radius: 10px;
+      background-color: $default-color;
     }
   }
 }
+
+
 
 //button
 .button {
@@ -91,6 +94,7 @@
     border-radius: 10px;
     color: #000;
     background-color: #f8d24e;
+    transition: background-color ease 750ms, box-shadow ease 750ms, animation ease 750ms ;
     // transition: background-color $display-time $function-time;
 
     &:hover {
@@ -98,7 +102,7 @@
 
       animation: wiggle 750ms infinite;
       animation-timing-function: linear;
-
+      box-shadow: -5px -5px 5px 0 $default-color;
       @keyframes wiggle {
         0% {
           transform: translate(2px, 0);
@@ -116,6 +120,21 @@
       fill: #fff;
       color: #fff;
       background-color: $accent-color;
+
+      animation: wiggle 750ms infinite;
+      animation-timing-function: linear;
+      box-shadow: -5px -5px 5px 0 $default-color;
+      @keyframes wiggle {
+        0% {
+          transform: translate(2px, 0);
+        }
+        50% {
+          transform: translate(-2px, 0);
+        }
+        100% {
+          transform: translate(2px, 0);
+        }
+      }
     }
     &:disabled {
       background-color: $disabled-color;
@@ -233,6 +252,7 @@
   }
 
   &__link {
+    position: relative;
     font-weight: 700;
     font-size: 32px;
     line-height: 1.2;
@@ -244,6 +264,7 @@
     &:focus {
       color: $black-color;
       transition: all ease 500ms;
+      box-shadow: 0 5px 1px -1px #f8d24e;
     }
   }
 }
@@ -264,13 +285,15 @@
   border-radius: 10px;
   color: #000;
   background-color: #f8d24e;
-  transition: color $display-time $function-time;
+  // transition: color $display-time $function-time;
+  transition: background-color ease 750ms, box-shadow ease 750ms;
 
   &:hover {
     background-color: $accent-color;
+
     animation: wiggle 750ms infinite;
     animation-timing-function: linear;
-
+    box-shadow: -5px -5px 5px 0 $default-color;
     @keyframes wiggle {
       0% {
         transform: translate(2px, 0);
@@ -287,6 +310,21 @@
     fill: #fff;
     color: #fff;
     background-color: $accent-color;
+
+    animation: wiggle 750ms infinite;
+    animation-timing-function: linear;
+    box-shadow: -5px -5px 5px 0 $default-color;
+    @keyframes wiggle {
+      0% {
+        transform: translate(2px, 0);
+      }
+      50% {
+        transform: translate(-2px, 0);
+      }
+      100% {
+        transform: translate(2px, 0);
+      }
+    }
   }
   &:disabled {
     background-color: $disabled-color;
@@ -368,6 +406,7 @@
   &:hover,
   &:focus {
     fill: $default-color;
+
   }
 }
 
@@ -651,6 +690,8 @@
   color: $black-color;
   border-radius: 10px;
   background: $default-color;
+  transition: transform ease 750ms, background-color ease 750ms, box-shadow ease 750ms;
+
 
   @media screen and (min-width: $tab) {
     font-size: 124x;
@@ -659,9 +700,37 @@
 
   &:hover {
     background-color: $accent-color;
+    animation: wiggle 750ms infinite;
+    animation-timing-function: linear;
+    box-shadow: -5px -5px 5px 0 $default-color;
+    @keyframes wiggle {
+      0% {
+        transform: translate(2px, 0);
+      }
+      50% {
+        transform: translate(-2px, 0);
+      }
+      100% {
+        transform: translate(2px, 0);
+      }
+    }
   }
   &:focus {
     background-color: $accent-color;
     color: #fff;
+    animation: wiggle 750ms infinite;
+    animation-timing-function: linear;
+    box-shadow: -5px -5px 5px 0 $default-color;
+    @keyframes wiggle {
+      0% {
+        transform: translate(2px, 0);
+      }
+      50% {
+        transform: translate(-2px, 0);
+      }
+      100% {
+        transform: translate(2px, 0);
+      }
+    }
   }
 }
