@@ -1,116 +1,77 @@
-<section>
-    <!-- MODAL WINDOW INGREDIENTS-->
-
-
-
-    <!-- НЕ ЗНАЮ, ЯК ОФОРМИТИ ul НАД ЗАГОЛОВКОМ Ingredients -->
-
-    <!-- першу кнопку видалити i__button, коли буде кнопка з проекта-->
-    <button type="button" class="i__button" data-modal-open='111'>Замовити послугу</button>
-
-    <div class="backdrop is-hidden" data-modal='111'>
-        <div class="ingredients__modal">
-            <button class="ingredients__modalbtn" type="button" data-modal-close='111'>
-                <svg class="ingredients__close--btn" width="20" height="20">
-                    <use href="./images/modal-ingredients/close.svg"></use>
-                </svg>
-            </button>
-
-            <p class="ingredients__title">Chololate icecream</p>
-            <div class="ingredients__container">
-                <div class="ingredients__box"></div>
-                <picture>
-                    <source media="(min-width: 280px)"
-                        srcset="./images/modal-ingredients/cream@1x.webp 1x, ./images/modal-ingredients/cream@2x.webp 2x"
-                        type="image/webp">
-                    <source media="(min-width: 280px)"
-                        srcset="./images/modal-ingredients/cream@1x.jpg 1x, ./images/modal-ingredients/cream@2x.jpg 2x"
-                        type="image/jpg">
-                    <img class="ingredients__picture" src="./images/modal-ingredients/cream@1x.jpg" alt="Icecream"
-                        loading="lazy">
-                </picture>
-                
-
-            </div>
-            <div class="ingredients__center">
-                <ul class="ingredients__rates">
-                    <li>
-                        <div>
-                            <div class="ingredients__rectangle"></div>
-                            <p class="ingredients__word">kcal</p>
-                        </div>
-
-                        <div class="ingredients__circle">320</div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="ingredients__rectangle"></div>
-                            <p class="ingredients__word">Prote...</p>
-                        </div>
-
-                        <div class="ingredients__circle">4g</div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="ingredients__rectangle"></div>
-                            <p class="ingredients__word">Fats</p>
-                        </div>
-
-                        <div class="ingredients__circle">8,2g</div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="ingredients__rectangle"></div>
-                            <p class="ingredients__word">Carbs</p>
-                        </div>
-
-                        <div class="ingredients__circle">40,4g</div>
-                    </li>
-                </ul>
-            </div>
-
-            <p class="ingredients__ingredients">Ingredients</p>
-            <div class="ingredients__recipe">
-                <ul class="ingredients__scrip">
-                    <li>Milk</li>
-                    <li>Belgian chocolate</li>
-                    <li>Cream</li>
-                    <li>Cocoa powder</li>
-                    <li>Sugar</li>
-                    <li>Vanilla sugar</li>
-                </ul>
-                <ul class="ingredients__scripright">
-                    <li class="ingredients__pad">100ml</li>
-                    <li class="ingredients__pad">20g</li>
-                    <li class="ingredients__pad">150ml</li>
-                    <li class="ingredients__pad">30g</li>
-                    <li class="ingredients__pad">40g</li>
-                    <li class="ingredients__pad">10g</li>
-                </ul>
-            </div>
-
-            <form class="ingredients__form">
-                <div class="ingredients__group">
-                    <label class="ingredients__field">
-                        <input class="ingredients__input" type="text" name="ingredients__empty" required minlength="2">
-                        <span class="ingredients__name">Name</span>
-                    </label>
-                    <label class="ingredients__field">
-                        <input class="ingredients__input" type="text" name="ingredients__empty" required minlength="12"
-                            maxlength="12">
-                        <span class="ingredients__name">Phone</span>
-                    </label>
-
-                    <label class="ingredients__field">
-                        <textarea class="ingredients__comment" name="ingredients__empty" rows="10"
-                            placeholder="Comment"></textarea>
-                    </label>
-                </div>
-
-                <button class="ingredients__btn" type="submit">Submit</button>
-            </form>
+<div class="ingredients__backdrop backdrop is-hidden" data-modal="888">
+    <div class="ingredients">
+        <button class="ingredients__btn-close" data-modal-close="888">
+            <svg class="ingredients__close-icon">
+                <use href="./images/modal-mob-menu/modal_x.svg#cross"></use>
+            </svg>
+        </button>
+        <h2 class="ingredients__title">Chololate icecream</h2>
+        <div class="ingredients__box">
+            <img srcset="./images/modal-ingredients/img132.jpg 132w,
+        ./images/modal-ingredients/img264.jpg 264w" sizes="(min-width: 480px) 132px, 100vw"
+                src="./images/modal-ingredients/img132.jpg" alt="Ingredients" width="132" height="132"
+                class="ingredients__image" />
         </div>
+        <div class="ingredients__nutrition">
+            <ul class="ingredients__list">
+                <li class="ingredients__element">
+                    <div class="ingredients__thumb"><span class="ingedients__numbers">320</span></div>
+                    <p class="ingredients__words">kcal</p>
+                </li>
+                <li class="ingredients__element">
+                    <div class="ingredients__thumb"><span class="ingedients__numbers">4g</span></div>
+                    <p class="ingredients__words">Prote...</p>
+                </li>
+                <li class="ingredients__element">
+                    <div class="ingredients__thumb"><span class="ingedients__numbers">8,2g</span></div>
+                    <p class="ingredients__words">Fats</p>
+                </li>
+                <li class="ingredients__element">
+                    <div class="ingredients__thumb"><span class="ingedients__numbers">40,4g</span></div>
+                    <p class="ingredients__words">Carbs</p>
+                </li>
+            </ul>
+        </div>
+        <h3 class="ingredients__name">Ingredients</h3>
+        <div class="ingredients__components">
+            <ul class="ingredients__set">
+                <li class="ingredients__item">
+                    <span class="ingredients__first">Milk</span>
+                    <span class="ingredients__second">100ml</span>
+                </li>
+                <li class="ingredients__item">
+                    <span class="ingredients__first">Belgian chocolate</span>
+                    <span class="ingredients__second">20g</span>
+                </li>
+                <li class="ingredients__item">
+                    <span class="ingredients__first">Cream</span>
+                    <span class="ingredients__second">150 ml</span>
+                </li>
+                <li class="ingredients__item">
+                    <span class="ingredients__first">Cocoa powder</span>
+                    <span class="ingredients__second">30g</span>
+                </li>
+                <li class="ingredients__item">
+                    <span class="ingredients__first">Sugar</span>
+                    <span class="ingredients__second">40g</span>
+                </li>
+                <li class="ingredients__item">
+                    <span class="ingredients__first">Vanilla sugar</span>
+                    <span class="ingredients__second">10g</span>
+                </li>
+            </ul>
+        </div>
+        <div class="ingredients__form">
+            <label class="ingredients__label" for="name">
+                <input class="ingredients__input" type="text" name="name" id="name" placeholder="Name" /></label>
+            <label class="ingredients__label" for="tel">
+                <input class="ingredients__input" type="tel" name="phone" id="tel" placeholder="Phone" /></label>
+            <label for="comment">
+                <textarea class="ingredients__textarea" name="comment" rows="2" id="comment"
+                    placeholder="Comment"></textarea></label>
+        </div>
+        <button class="ingredients__button" type="submit" data-modal-close='888'>Submit</button>
+        </form>
     </div>
-
-    <script src="./js/modal-ingredients.js"></script>
-</section>
+</div>
+<script src="./js/modal-ingredients.js"></script>
