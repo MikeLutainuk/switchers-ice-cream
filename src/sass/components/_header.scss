@@ -198,7 +198,6 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
 
   background-color: $background-color;
@@ -271,13 +270,7 @@
     }
   }
 }
-.button-flex {
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
 .button__button--mobile {
   display: flex;
   align-items: center;
