@@ -26,7 +26,7 @@
     position: relative;
     margin-right: auto;
     margin-left: auto;
-    width: 80vw;
+    width: 70vw;
     padding: 28px;
     background-color: $white-color;
     border: 2px solid $default-color;
@@ -34,15 +34,14 @@
 
     @media screen and (min-width: $tab) {
         position: absolute;
-        z-index: $second-index;
+        z-index: $main-index;
         top: 50%;
         left: 50%;
         padding: 32px 60px 32px 60px;
-        transition: transform $display-time $function-time;
-        transition: scale $display-time $function-time;
+        transition: transform $display-time $function-time, scale $display-time $function-time;
 
         .modal-about__backdrop.is-hidden & {
-            transform: translate(-50%, -50%) scale(0.9);
+            transform: translate(-50%, -50%) scale(0.7);
         }
 
         transform: translate(-50%, -50%) scale(1);
@@ -50,16 +49,14 @@
         max-width: 700px;
         min-height: 449px;
 
-        
     }
-
             
 }
 
 .modal-about__btn-close {
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 27px;
+    height: 27px;
     top: 16px;
     right: 16px;
     border: 0px transparent;
@@ -68,13 +65,17 @@
     cursor: pointer;
     z-index: $second-index;
     padding: 0;
+    align-items: center;
+    text-align: center;
 
     transition: background-color $display-time $function-time;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: $default-color;
     }
-    &:hover .modal-about__close-icon {
+    &:hover .modal-about__close-icon,
+    &:focus .modal-about__close-icon {
         fill: $white-color;
     }
 
