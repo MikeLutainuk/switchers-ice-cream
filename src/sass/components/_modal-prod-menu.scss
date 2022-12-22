@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
   z-index: 1;
   overflow-y: scroll;
@@ -23,7 +23,7 @@
 .backdrop-modal.is-hidden .modal {
   visibility: hidden;
   opacity: 1;
-  transform: translate(30%) scale(70%);
+  transform: translate(-50%, -50%) scale(0.8);
 }
 
 .modal {
@@ -38,8 +38,10 @@
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+    
   transition: transform $display-time $function-time,
     visibility $display-time $function-time;
+
   background-color: $white-color;
   border: 2px solid $default-color;
   border-radius: 10px;
@@ -63,12 +65,18 @@
   top: 12px;
   align-items: center;
   cursor: pointer;
+  transition: fill $display-time $function-time;
+
+  &:hover, &:focus {
+    fill: $background-color;
+  }
 }
 
 .modal__button-X {
   background-color: $white-color;
   align-items: center;
   text-transform: none;
+  
 }
 
 .modal__close:hover .button-X {
@@ -184,6 +192,12 @@
   font-size: 12px;
   line-height: calc(15px / 12px);
   cursor: pointer;
+  transition: background-color $display-time $function-time, border $display-time $function-time;
+
+  &:hover, &:focus {
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
+  }
   @media screen and (min-width: $tab) {
     font-size: 14px;
   }

@@ -310,19 +310,25 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: opacity $display-time $function-time;
+    transition: opacity $display-time $function-time, 
+    visibility $display-time $function-time;
     overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
+    visibility: hidden;
 }
 
-.backdrop.is-hidden .franchise-modal {
-    transform: translate(-50%, -50%) scale(0.9);
+.backdrop.is-hidden .contacts-modal {
+    transform: translate(-50%, -50%) scale(0.8);
     opacity: 0;
 }
+/*.backdrop.is-hidden .franchise-modal {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+}*/
 
 .contacts-modal {
     position: relative;
@@ -335,6 +341,7 @@
     border: 2px solid $default-color;
     border-radius: 10px;
     opacity: 1;
+    transition: transform $display-time $function-time;
 
     @media screen and (min-width: 768px) {
         position: absolute;
@@ -352,9 +359,9 @@
     height: 30px;
     align-items: center;
     justify-content: center;
-    color: $black-color;;
+    color: $black-color;
     background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 0px transparent;
     border-radius: 50%;
     transition: color $display-time $function-time;
     
@@ -366,8 +373,8 @@
     @media screen and (min-width: 768px) {
         top: 12px;
         right: 12px;
-        width: 36px;
-        height: 36px;
+        width: 34px;
+        height: 34px;
     } 
 }
 

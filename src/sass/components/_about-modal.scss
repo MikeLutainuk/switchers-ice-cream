@@ -6,7 +6,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
 
-    transition: opacity $display-time ease-in-out;
+    transition: opacity $display-time $function-time, visibility $display-time $function-time;
     overflow-y: scroll;
 
     @media screen and (max-width: $tab) {
@@ -19,7 +19,7 @@
 .modal-about__backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
-    visibility: visible;
+    visibility: hidden;
 }
 
 .modal-about {
@@ -38,10 +38,10 @@
         top: 50%;
         left: 50%;
         padding: 32px 60px 32px 60px;
-        transition: transform $display-time $function-time, scale $display-time $function-time;
+        transition: transform $display-time $function-time;
 
         .modal-about__backdrop.is-hidden & {
-            transform: translate(-50%, -50%) scale(0.7);
+            transform: translate(-50%, -50%) scale(0.8);
         }
 
         transform: translate(-50%, -50%) scale(1);
@@ -55,8 +55,8 @@
 
 .modal-about__btn-close {
     position: absolute;
-    width: 27px;
-    height: 27px;
+    width: 20px;
+    height: 20px;
     top: 16px;
     right: 16px;
     border: 0px transparent;
@@ -68,21 +68,14 @@
     align-items: center;
     text-align: center;
 
-    transition: background-color $display-time $function-time;
-
-    &:hover,
-    &:focus {
-        background-color: $default-color;
-    }
     &:hover .modal-about__close-icon,
     &:focus .modal-about__close-icon {
-        fill: $white-color;
+        fill: $accent-color;
     }
 
     @media screen and (min-width: $tab) {
-        width: 35px;
-        height: 35px;
-        padding: 5px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -93,8 +86,8 @@
     transition: fill $display-time $function-time;
 
     @media screen and (min-width: $tab) {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
 }
 
