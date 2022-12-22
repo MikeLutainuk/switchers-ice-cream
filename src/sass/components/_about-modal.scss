@@ -26,7 +26,7 @@
     position: relative;
     margin-right: auto;
     margin-left: auto;
-    width: 70vw;
+    width: 280px;
     padding: 28px;
     background-color: $white-color;
     border: 2px solid $default-color;
@@ -34,6 +34,9 @@
 
     @media screen and (min-width: $tab) {
         position: absolute;
+        min-width: 400px;
+        width: 568px;
+        min-height: 449px;
         z-index: $main-index;
         top: 50%;
         left: 50%;
@@ -45,18 +48,14 @@
         }
 
         transform: translate(-50%, -50%) scale(1);
-        min-width: 568px;
-        max-width: 700px;
-        min-height: 449px;
-
     }
             
 }
 
 .modal-about__btn-close {
     position: absolute;
-    width: 27px;
-    height: 27px;
+    width: 11px;
+    height: 11px;
     top: 16px;
     right: 16px;
     border: 0px transparent;
@@ -68,33 +67,29 @@
     align-items: center;
     text-align: center;
 
-    transition: background-color $display-time $function-time;
-
-    &:hover,
-    &:focus {
-        background-color: $default-color;
-    }
     &:hover .modal-about__close-icon,
     &:focus .modal-about__close-icon {
-        fill: $white-color;
+        fill: $accent-color;
     }
 
     @media screen and (min-width: $tab) {
-        width: 35px;
-        height: 35px;
+        width: 24px;
+        height: 24px;
         padding: 5px;
+        top: 17px;
+        right: 17px;
     }
 }
 
 .modal-about__close-icon {
-    width: 15px;
-    height: 15px;
+    width: 11px;
+    height: 11px;
     fill: $black-color;
     transition: fill $display-time $function-time;
 
     @media screen and (min-width: $tab) {
-        width: 25px;
-        height: 25px;
+        width: 14px;
+        height: 14px;
     }
 }
 
@@ -102,6 +97,7 @@
     width: 100%;
     border: 0px transparent;
     border-radius: 10px;
+    max-height: 199px;
 
     @media screen and (min-width: $tab) {
         min-height: 210px;
