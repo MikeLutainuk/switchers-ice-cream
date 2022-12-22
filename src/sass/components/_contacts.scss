@@ -319,7 +319,7 @@
     pointer-events: none;
 }
 
-.backdrop.is-hidden .franchise-modal {
+.backdrop.is-hidden .contacts-modal {
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
 }
@@ -345,34 +345,51 @@
 
 .contacts-modal-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 8px;
+    right: 8px;
     display: flex;
     width: 30px;
     height: 30px;
+    padding: 0;
     align-items: center;
     justify-content: center;
     color: $black-color;;
     background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    transition: color $display-time $function-time;
+    border: 0px transparent;
+    border-radius: 10px;
+    z-index: $second-index;
+    cursor: pointer;
+    transition: background-color $display-time $function-time;
     
     &:hover,
     &:focus {
-    color: $accent-color;
+        background-color: $default-color;
+    }
+
+    &:hover .contacts-modal-close,
+    &:focus .contacts-modal-close {
+        fill: $white-color;
     }
 
     @media screen and (min-width: 768px) {
-        top: 12px;
-        right: 12px;
+        top: 10px;
+        right: 10px;
         width: 36px;
         height: 36px;
+        padding: 6px;
     } 
 }
 
 .contacts-modal-close {
-    fill: currentColor;
+    width: 20px;
+    height: 20px;
+    fill: $black-color;
+    transition: fill $display-time $function-time;
+
+    @media screen and (min-width: 768px) {
+        width: 24px;
+        height: 24px;
+    } 
 }
 
 .contacts-modal-form {
