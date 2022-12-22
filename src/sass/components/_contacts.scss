@@ -3,11 +3,11 @@
 .contacts {
     padding-bottom: 60px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
 		padding-bottom: 40px;
 	}
 
-	@media screen and (min-width: 1200px) {
+	@media screen and (min-width: $desk) {
 		padding-bottom: 120px;
 	}
 }
@@ -22,7 +22,7 @@
         gap: 16px;
     }
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         justify-content: space-between;
     }   
 }
@@ -41,7 +41,7 @@
         padding-right: 32px;
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         width: 224px;
         height: 537px;
         padding-top: 40px;
@@ -51,7 +51,7 @@
         margin-bottom: 40px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desk) {
         width: 368px;
         height: 542px;
         padding: 40px;
@@ -83,7 +83,7 @@
         width: 133px;  
     }
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         width: 73px;
         height: 30px;
         margin-bottom: 32px;
@@ -100,7 +100,7 @@
         }
     }
     
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desk) {
         width: 76px;
         padding-left: 14px;
         padding-right: 14px;
@@ -117,12 +117,12 @@
     margin-bottom: 24px;
     border-bottom: 1px solid #E1E1E1;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         height: 142px;
         margin-bottom: 32px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desk) {
         height: 121px;
     }
 }
@@ -155,12 +155,12 @@
         margin-top: 8px;
     }
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         font-size: 14px;
         line-height: calc(26/14);   
     }
     
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desk) {
         font-size: 16px;
         line-height: calc(30/16);
         
@@ -176,12 +176,12 @@
     margin-bottom: 24px;
     border-bottom: 1px solid #E1E1E1;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         height: 145px;
         margin-bottom: 32px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desk) {
         height: 165px;
     }
 }
@@ -196,12 +196,12 @@
     line-height: calc(19/12);
     color: $black-color;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         font-size: 14px;
         line-height: calc(21/14);
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desk) {
         font-size: 16px;
         line-height: calc(24/16);
     }
@@ -224,7 +224,7 @@
         justify-content: center;
     }
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         justify-content: center; 
     }   
 }
@@ -265,7 +265,7 @@
     background-color: $disabled-color;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: $tab) {
         margin-top: 20px;
     }
 }
@@ -336,7 +336,7 @@
     border-radius: 10px;
     opacity: 1;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         position: absolute;
         width: 568px;
         padding: 32px 60px;
@@ -371,7 +371,7 @@
         fill: $white-color;
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         top: 10px;
         right: 10px;
         width: 36px;
@@ -386,7 +386,7 @@
     fill: $black-color;
     transition: fill $display-time $function-time;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         width: 24px;
         height: 24px;
     } 
@@ -408,7 +408,7 @@
     text-align: center;
     color: $black-color;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         width: 322px;
         margin-bottom: 24px;
         font-size: 20px;
@@ -423,7 +423,7 @@
     margin-bottom: 24px;
     border-radius: 10px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         width: 448px;
         height: 260px;
         margin-bottom: 32px;
@@ -439,7 +439,7 @@
     line-height: calc(20/14);
     color: $black-color;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         margin-bottom: 32px;
         font-size: 16px;
         line-height: calc(22/16);
@@ -457,7 +457,7 @@
     border: 1px solid $background-color;
     border-radius: 10px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         width: 368px;
         height: 42px;
         margin-bottom: 24px;
@@ -477,7 +477,7 @@
     border: 1px solid $background-color;
     border-radius: 10px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         width: 368px;
         height: 84px;
         margin-bottom: 32px;
@@ -495,7 +495,7 @@
     line-height: calc(17/12);
     color: $black-color;
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         font-size: 14px;
         line-height: calc(20/14);
     }
@@ -535,7 +535,7 @@
     background-color: $disabled-color;
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         width: 121px;
         font-size: 14px;
         line-height: calc(17/14);
@@ -546,7 +546,7 @@
     display: block;
     width: 134px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         width: 145px;
     }
 }
@@ -554,7 +554,7 @@
 .contacts-modal-form-btn.franshise {
     width: 114px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tab) {
         width: 121px;
     }
 }
