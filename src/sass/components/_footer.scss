@@ -101,11 +101,32 @@
   fill: $background-color;
   background-color: $default-color;
   border-radius: 50%;
-  transition: fill $display-time $function-time;
+  // transition: fill $display-time $function-time;
+  transition: animation 500ms linear, box-shadow linear 500ms;
+
 
   &:hover .soc-icon,
   &:focus .soc-icon {
     fill: $white-color;
+  }
+
+  &:hover,
+  &:focus {
+    animation: pulse 1.5s infinite;
+    animation-timing-function: linear;
+    box-shadow: 1px 1px 5px 1px $white-color, -1px -1px 5px 1px $white-color;
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
   }
 }
 
@@ -143,13 +164,17 @@
 }
 .contact__tel--white {
   text-decoration: none;
+  transition: color ease 500ms;
+  // transition: $display-time $function-time;
 
-  transition: $display-time $function-time;
   color: $white-color;
 
   &:hover,
   &:focus {
     color: $default-color;
+    transition: color ease 500ms;
+  
+ 
   }
 }
 
