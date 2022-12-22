@@ -268,6 +268,12 @@
     display: block;
     margin-top: 12px;
     fill: $white-color;
+    transition: fill $display-time $function-time;
+
+    &:hover,
+    &:focus {
+      fill: $black-color;
+    }
   }
   @media screen and (min-width: $desk) {
     margin-top: 24px;
