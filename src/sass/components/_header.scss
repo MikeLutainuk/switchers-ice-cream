@@ -199,6 +199,7 @@
   display: flex;
   flex-direction: column;
 
+
   background-color: $background-color;
   z-index: 1;
 
@@ -237,6 +238,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 .mobile-nav {
   display: flex;
@@ -254,16 +256,16 @@
   &__link {
     position: relative;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 31px;
     line-height: 1.2;
 
     color: $white-color;
-    transition: all ease 500ms;
+    transition: color ease 500ms;
 
     &:hover,
     &:focus {
       color: $black-color;
-      transition: all ease 500ms;
+      transition: color ease 500ms, box-shadow ease 500ms;
       box-shadow: 0 5px 1px -1px #f8d24e;
     }
   }
