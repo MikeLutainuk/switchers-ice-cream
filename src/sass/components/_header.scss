@@ -198,7 +198,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: center;
 
 
   background-color: $background-color;
@@ -233,12 +233,16 @@
 }
 
 .logo-mobile {
-  margin-bottom: 51px;
+  // margin-bottom: 51px;
+  margin-bottom: auto;
 }
 .menu-flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  display: block;
+  text-align: center;
+  margin-bottom: auto;
 
 }
 .mobile-nav {
@@ -277,6 +281,8 @@
   align-items: center;
 
   padding: 12px 36px;
+  margin-left: auto;
+  margin-right: auto;
 
   font-family: inherit;
   font-weight: 600;
