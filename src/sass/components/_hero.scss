@@ -99,21 +99,51 @@
   transition-duration: $display-time;
   transition-timing-function: $function-time;
 
-  &:hover {
-    border: 2px solid $accent-color;
-  }
-  &:focus {
-    color: $white-color;
-    border: 2px solid $accent-color;
-  }
-  &:disabled {
-    border: 2px solid $disabled-color;
+ 
+    &:hover {
+      background-color: $accent-color;
+
+      animation: wiggle 750ms infinite;
+      animation-timing-function: linear;
+      box-shadow: -5px -5px 5px 0 $default-color;
+      @keyframes wiggle {
+        0% {
+          transform: translate(2px, 0);
+        }
+        50% {
+          transform: translate(-2px, 0);
+        }
+        100% {
+          transform: translate(2px, 0);
+        }
+      }
+    }
+
+    &:focus {
+      fill: #fff;
+      color: #fff;
+      background-color: $accent-color;
+
+      animation: wiggle 750ms infinite;
+      animation-timing-function: linear;
+      box-shadow: -5px -5px 5px 0 $default-color;
+      @keyframes wiggle {
+        0% {
+          transform: translate(2px, 0);
+        }
+        50% {
+          transform: translate(-2px, 0);
+        }
+        100% {
+          transform: translate(2px, 0);
+        }
+      }
+    }
+    &:disabled {
+      background-color: $disabled-color;
+    }
   }
 
-  @media screen and (min-width: $desk) {
-    font-size: 14px;
-  }
-}
 .main-btn__how {
   font-weight: 600;
   font-size: 12px;
